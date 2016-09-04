@@ -1,0 +1,29 @@
+extends layouts/layout
+block content
+    .text-center
+        .add-book-form
+          .book-type.add-book-form__select
+            select#book-type
+              option(value='type') Type
+              option(value='type1') Type 1
+              option(value='type2') Type 2
+          .book-section.add-book-form__select
+            select#book-section
+              option(value='section') Section
+              option(value='section1') Section 1
+              option(value='section2') Section 2
+          .add-book-form__upload.file-upload
+              input#image_file_upload(type="file")
+              .fa.fa-book
+              span.add-book-form__filename
+          .book-language.add-book-form__select
+            select#book-language
+              option(value='en') EN
+              option(value='ru') RU
+              option(value='fr') FR
+          .add-book-form__title
+            input#add-book-title(type='text', placeholder='Title')
+          .add-book-form__add-language
+            .fa.fa-plus.js-add-language
+          button.btn(type="submit") Save
+          

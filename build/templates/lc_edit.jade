@@ -1,0 +1,19 @@
+extends layouts/layout_lc
+block content
+    form.lc.bill-form.lc_edit
+        h3 Edit profile
+        label
+            input(type="text",placeholder="Name")
+        label
+            input(type="text",placeholder="Surname")
+        label
+            input(type="text",placeholder="Date of Birth")
+        label
+            input(type="email",placeholder="Email")
+        label
+            input(type="tel",placeholder="Phone number")
+        label
+            input(type="text",placeholder="Address")
+        button.btn(type="submit") Save
+        .text-center
+            a(href='') Cancel editing

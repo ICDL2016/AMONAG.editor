@@ -1,0 +1,87 @@
+%inline-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+%list-reset {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%transition {
+  transition: all 0.15s ease-in;
+}
+
+%transition-link {
+  transition: color 0.15s ease-in, background-color 0.3s ease-in;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../i/#{$sprite-image});
+}
+
+
+@mixin rotate( $degrees ) {
+  -webkit-transform: rotate(#{$degrees}deg);
+  -moz-transform: rotate(#{$degrees}deg);
+  -ms-transform: rotate(#{$degrees}deg);
+  -o-transform: rotate(#{$degrees}deg);
+  transform: rotate(#{$degrees}deg);
+
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+  zoom: 1;
+}
+
+@mixin vertical-center($width: '', $height: '', $el-align: 'img', $el-help: '') {
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+
+  @if ($width != '') {
+    width: $width;
+  }
+  @if ($height != '') {
+    height: $height;
+  }
+
+  &, #{$el-align} {
+    @extend %inline-block;
+  }
+  #{$el-align} {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @if ($el-help == '') {
+    &:after {
+      content: "";
+      height: 100%;
+      @extend %inline-block;
+    }
+  } @else {
+    #{$el-help} {
+      @extend %inline-block;
+      height: 100%;
+    }
+    
+
+  }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}

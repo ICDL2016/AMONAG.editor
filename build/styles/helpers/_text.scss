@@ -1,0 +1,38 @@
+//@include font-face("DinReg", font-files("fonts/DinReg/DinCyRg_.ttf"));
+//@include font-face("DinBold", font-files("fonts/DinBold/DinCyBg_.ttf"));
+
+$font-default: Arial, Helvetica, sans-serif;
+
+%text-default {
+  font-family: $font-default;
+}
+
+%text-bold {
+  font-weight: bold;
+}
+
+%text-default {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.h1 {
+  font-size: 48px;
+  line-height: 50px;
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 39px;
+}
+
+.h3 {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 18px;
+}
+

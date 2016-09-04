@@ -1,0 +1,23 @@
+extends layouts/layout_lc
+block content
+    .lc
+        .user-info
+            .user-info__upload.file-upload
+                .file-upload__content Загрузить
+                input(type="file")
+        .lc__item
+            .lc__content Name
+        .lc__item
+            .lc__content Surname
+        .lc__item
+            .lc__content 01.01.1980
+        .lc__item
+            a.lc__content(href="") email@email.com
+        .lc__item
+            .lc__content +7 900 000 00 00
+        .lc__item
+            .lc__content Address
+        a.btn(href='') Edit
+        a.btn(href='') Change password
+        a.btn(href='') Exit
+        a.btn.btn-lg(href='') Web portal
