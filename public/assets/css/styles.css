@@ -6106,7 +6106,7 @@ img.book-img-biggest {
 .outside__book_blocks .book__row_block .td_cell {
   display: table-cell;
   border-bottom: 3px solid #cccccc;
-  width: 1000px; 
+  width: 1000px;
   border-right: 3px solid #cccccc;
 }
 .outside__book_blocks .book__row_block .td_cell:last-child {
@@ -6144,12 +6144,16 @@ img.book-img-biggest {
   color: #999999;
   line-height: 12px;
 }
-.section__item .sec__title {
+.section__item .sec__title a {
   display: block;
   font-size: 15px;
   color: #000000;
   padding-bottom: 3px;
   line-height: 17px;
+  text-decoration: none;
+}
+.section__item .sec__title a:hover {
+  text-decoration: underline;
 }
 .section__item p {
   font-size: 14px;
