@@ -6102,6 +6102,7 @@ img.book-img-biggest {
 }
 .outside__book_blocks .book__row_block span a:hover {
   text-decoration: underline;
+  color: #800000;
 }
 .outside__book_blocks .book__row_block .td_cell {
   display: table-cell;
