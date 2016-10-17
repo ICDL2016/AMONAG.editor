@@ -6074,9 +6074,10 @@ img.book-img-biggest {
 
 .outside__book_blocks {
   border: 3px solid #cccccc;
-  padding-top: 0;
+  margin: 0 10px;
   margin-top: 65px;
   display: table;
+  padding-top: 0;
 }
 .outside__book_blocks h2 {
   font-size: 18px;
@@ -6093,11 +6094,12 @@ img.book-img-biggest {
   display: block;
   padding: 5px 10px;
   line-height: 17px;
+  min-width: 300px;
 }
 .outside__book_blocks .book__row_block .td_cell {
   display: table-cell;
   border-bottom: 3px solid #cccccc;
-  width: 33.33%;
+  width: 1000px;
   border-right: 3px solid #cccccc;
 }
 .outside__book_blocks .book__row_block .td_cell:last-child {
