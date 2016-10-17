@@ -6096,6 +6096,13 @@ img.book-img-biggest {
   line-height: 17px;
   min-width: 300px;
 }
+.outside__book_blocks .book__row_block span a {
+  color: #000;
+  text-decoration: none;
+}
+.outside__book_blocks .book__row_block span a:hover {
+  text-decoration: underline;
+}
 .outside__book_blocks .book__row_block .td_cell {
   display: table-cell;
   border-bottom: 3px solid #cccccc;
