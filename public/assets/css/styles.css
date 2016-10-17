@@ -6106,7 +6106,7 @@ img.book-img-biggest {
 .outside__book_blocks .book__row_block .td_cell {
   display: table-cell;
   border-bottom: 3px solid #cccccc;
-  width: 1000px;
+  width: 1000px; 
   border-right: 3px solid #cccccc;
 }
 .outside__book_blocks .book__row_block .td_cell:last-child {
