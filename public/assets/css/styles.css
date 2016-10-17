@@ -6154,6 +6154,7 @@ img.book-img-biggest {
 }
 .section__item .sec__title a:hover {
   text-decoration: underline;
+  color: #800000;
 }
 .section__item p {
   font-size: 14px;
