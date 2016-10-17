@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/i/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/i/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/i/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/i/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/i/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/i/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/i/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/i/favicon/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="assets/i/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/i/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/i/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/i/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="assets/i/favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#800000">
+    <title>gulpApp</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header-container">
+        <header class="header"><a href="" class="header__logo">
+            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="27px" viewbox="0 0 194.269 36.132" enable-background="new 0 0 194.269 36.132" xml:space="preserve">
+              <g class="logo-ico">
+                <path fill="#FFFFFF" d="M29.289,27.552L18.034,2.39c-0.392-0.826-1-1.477-1.825-1.825c-0.869-0.348-1.956-0.348-2.825,0                                    c-0.782,0.348-1.477,0.999-1.825,1.825L0.304,27.552c-0.782,1.738,0,3.824,1.738,4.563c1.52,0.652,3.65,0.217,4.562-1.782                                    l8.214-18.252l8.216,18.332c0.936,1.969,3.104,2.43,4.517,1.702C29.246,31.246,30.071,29.29,29.289,27.552z"></path>&#x9;
+                <path fill="#FFFFFF" d="M14.709,22.219c-1.912,0-3.434,1.565-3.434,3.433v7.317v-0.271c0,1.869,1.564,3.433,3.477,3.433                                    s3.434-1.564,3.434-3.433v0.536v-7.583C18.185,23.784,16.621,22.219,14.709,22.219z"></path>
+              </g>
+            </svg></a>
+          <div class="header__book-actions">
+            <div class="book-avatar js-toggler-book"><img src="assets/i/catalog1.png"></div><a class="book-languages js-languages-menu"><i class="icon-globe"></i></a>
+            <div class="fa fa-volume-up js-play-all"></div>
+            <div class="fa fa-play js-translation-slideshow-all"></div>
+          </div>
+          <div class="header__actions"><a href="" target="_blank" class="open-text">
+              <div class="fa-stack"><i class="icon-globe fa-stack-1x"></i><i class="fa fa-sun-o fa-stack-2x"></i></div></a><a href="" target="_blank"><i class="fa fa-user"></i></a></div>
+        </header>
+      </div>
+      <div class="book-nav">
+        <div class="book-upload">
+          <!--
+          .file-upload-wrapper
+            .preview.img-wrapper
+            input.file-upload-native#image_file_upload(type='file', name='file', accept='image/*')
+            i.fa.fa-book
+          input.file-upload-text(type='text', disabled='')
+          -->
+        </div>
+        <ul class="book-nav__languages-list languages-list">
+          <li class="languages-list__item"><a href="#" data-target="en" class="languages-list__link js-languages-item">EN</a></li>
+          <li class="languages-list__item"><a href="#" data-target="es" class="languages-list__link js-languages-item">ES</a></li>
+          <li class="languages-list__item"><a href="#" data-target="de" class="languages-list__link js-languages-item">DE</a></li>
+          <li class="languages-list__item"><a href="#" data-target="fr" class="languages-list__link js-languages-item">FR</a></li>
+          <li class="languages-list__item"><a href="#" data-target="it" class="languages-list__link js-languages-item">IT</a></li>
+        </ul>
+        <div data-content="en" class="book-nav__languages-content languages-content">
+          <div data-content-title="en" class="languages-content__title">Title EN<i data-lang="en" class="fa fa-pencil edit-book__title"></i></div>
+          <div class="languages-content__content js-slide-parent"><a href="#" class="book-nav__link">Content EN
+              <div title="Включение/выключение режима активации редактирования" class="fa fa-lock js-active-pages-edit"></div></a>
+            <div class="book-nav__sub js-slide-child">
+              <div class="book-subnav">
+                <div class="book-subnav__item"><a href="" class="book-subnav__title js-redact-item"> Глава 1</a><a href="" class="book-subnav__part js-redact-item">Часть 1</a><a href="http://google.com" target="_blank" class="book-subnav__link js-redact-item">Страница 1</a><a href="" class="book-subnav__link js-redact-item">Страница 2</a><a href="" class="book-subnav__link js-redact-item">Страница 3</a><i class="fa fa-plus js-page-add"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-content="es" class="book-nav__languages-content languages-content">
+          <div data-content-title="es" class="languages-content__title">Title ES<i data-lang="es" class="fa fa-pencil edit-book__title"></i></div>
+          <div class="languages-content__content js-slide-parent"><a href="#" class="book-nav__link">Content ES
+              <div title="Включение/выключение режима активации редактирования" class="fa fa-lock js-active-pages-edit"></div></a>
+            <div class="book-nav__sub js-slide-child">
+              <div class="book-subnav">
+                <div class="book-subnav__item"><a href="" class="book-subnav__title js-redact-item"> Глава 1</a><a href="" class="book-subnav__part js-redact-item">Часть 1</a><a href="http://google.com" target="_blank" class="book-subnav__link js-redact-item">Страница 1</a><a href="" class="book-subnav__link js-redact-item">Страница 2</a><a href="" class="book-subnav__link js-redact-item">Страница 3</a><i class="fa fa-plus js-page-add"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-content="de" class="book-nav__languages-content languages-content">
+          <div data-content-title="de" class="languages-content__title">Title DE<i data-lang="de" class="fa fa-pencil edit-book__title"></i></div>
+          <div class="languages-content__content js-slide-parent"><a href="#" class="book-nav__link">Content DE
+              <div title="Включение/выключение режима активации редактирования" class="fa fa-lock js-active-pages-edit"></div></a>
+            <div class="book-nav__sub js-slide-child">
+              <div class="book-subnav">
+                <div class="book-subnav__item"><a href="" class="book-subnav__title js-redact-item"> Глава 1</a><a href="" class="book-subnav__part js-redact-item">Часть 1</a><a href="http://google.com" target="_blank" class="book-subnav__link js-redact-item">Страница 1</a><a href="" class="book-subnav__link js-redact-item">Страница 2</a><a href="" class="book-subnav__link js-redact-item">Страница 3</a><i class="fa fa-plus js-page-add"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="languages-nav">
+        <ul class="languages-nav__list">
+          <li class="book-nav__item js-slide-parent">
+            <form action="/" class="languages-form js-languages-list">
+              <div class="text-right">
+                <button type="submit">Apply</button>
+              </div>
+              <ol class="book-subnav-list"></ol><a href="" class="book-subnav-list__add js-add-lang">+</a>
+              <ul class="book-subnav-list-slide">
+                <li>
+                  <div class="select-wrap">
+                    <select name="">
+                      <option value="slides1">Slides 1</option>
+                      <option value="slides2">Slides 2</option>
+                      <option value="slides3">Slides 3</option>
+                    </select>
+                  </div><span title="Information" class="languages-info">?</span>
+                </li>
+                <li>
+                  <div class="select-wrap">
+                    <select name="">
+                      <option value="view1">View 1</option>
+                      <option value="view2">View 2</option>
+                      <option value="view3">View 3</option>
+                    </select>
+                  </div><span title="Information" class="languages-info">?</span>
+                </li>
+              </ul>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <div class="container container_book">
+        <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+        <div id="jp_container_1" role="application" aria-label="media player" class="jp-audio"></div>
+        <div class="book-page outside__book_blocks">
+			<div class="book__row_block">
+				<div class="td_cell">
+					<h2>The Boy Who Lived</h2>
+				</div>
+				<div class="td_cell">
+					<h2>El niño que vivió</h2>
+				</div>
+				<div class="td_cell">
+					<h2>Мальчик, который остался жив</h2>
+				</div>
+			</div>
+			<div class="book__row_block">
+				<div class="td_cell">
+					<span>Mr and Mrs Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much.</span>
+				</div>
+				<div class="td_cell">
+					<span>El señor y la señora Dursley, que vivían en el número
+4 de Privet Drive, estaban orgullosos de decir que eran muy normales, afortunadamente.</span>
+				</div>
+				<div class="td_cell">
+					<span>Мистер и миссис Дурслей, обитатели дома № 4 по Бирючиновой аллее, очень гордились тем, что могут в любое время заявить – у нас всё, слава Богу, совершенно нормально.</span>
+				</div>
+			</div>
+			
+			
+			<div class="book__row_block">
+				<div class="td_cell">
+					<span>They were the last people you’d expect to be involved in anything strange or mysterious, because they just didn’t hold with such nonsense.</span>
+				</div>
+				<div class="td_cell">
+					<span>Eran las últimas personas que se esperaría encontrar
+relacionadas con algo extraño o misterioso, porque no estaban para tales tonterías.</span>
+				</div>
+				<div class="td_cell">
+					<span>Невозможно было представить, что такие люди окажутся замешаны в чем-то необычном, а уж тем более загадочном – они терпеть не могли всяких глупостей.</span>
+				</div>
+			</div>
+			
+			<div class="book__row_block">
+				<div class="td_cell">
+					<span>Mr Dursley was the director of a firm called Grunnings, which made drills.</span>
+				</div>
+				<div class="td_cell">
+					<span>El señor Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros.</span>
+				</div>
+				<div class="td_cell">
+					<span>Мистер Дурслей работал директором фирмы под названием «Груннингс», которая производила сверла.</span>
+				</div>
+			</div>
+			
+			<div class="book__row_block">
+				<div class="td_cell">
+					<span>He was a big, beefy man with hardly any neck, although he did have a very large moustache.</span>
+				</div>
+				<div class="td_cell">
+					<span>Era un hombre corpulento y rollizo, casi sin cuello, aunque con un bigote inmenso.</span>
+				</div>
+				<div class="td_cell">
+					<span>У мистера Дурслея, крупного мясистого мужчины, практически полностью отсутствовала шея, зато под носом росли очень длинные усы.</span>
+				</div>
+			</div>
+			
+			<div class="book__row_block">
+				<div class="td_cell">
+					<span>Mrs Dursley was thin and blonde and had nearly twice the usual amount of neck, which came in very useful as she spent so much of her time craning over garden fences, spying on the neighbours.</span>
+				</div>
+				<div class="td_cell">
+					<span>La señora Dursley era delgada, rubia y tenía un
+cuello casi el doble de largo de lo habitual, lo que le
+resultaba muy útil, ya que pasaba la mayor parte del
+tiempo estirándolo por encima de la valla de los
+jardines para espiar a sus vecinos.</span>
+				</div>
+				<div class="td_cell">
+					<span>Миссис Дурслей, худая блондинка, обладала шеей
+двойной длины, что было как нельзя кстати, ибо эта леди
+обожала заглядывать за чужие заборы и шпионить за
+соседями.</span>
+				</div>
+			</div>
+			
+			<div class="book__row_block">
+				<div class="td_cell">
+					<span>The Dursleys had a small son called Dudley and in
+their opinion there was no finer boy anywhere.</span>
+				</div>
+				<div class="td_cell">
+					<span>Los Dursley tenían un hijo pequeño llamado
+Dudley, y para ellos no había un niño mejor que él.</span>
+				</div>
+				<div class="td_cell">
+					<span>У Дурслеев был маленький сын по имени Дудли – по
+мнению родителей, на свет еще не рождался ребенок
+прекраснее.</span>
+				</div>
+			</div>
+			
+			<div class="book__row_block">
+				<div class="td_cell">
+					<span>The Dursleys had everything they wanted, but they
+also had a secret, and their greatest fear was that
+somebody would discover it. They didn’t think they
+could bear it if anyone found out about the Potters.</span>
+				</div>
+				<div class="td_cell">
+					<span>Los Dursley tenían todo lo que querían, pero también
+tenían un secreto, y su mayor temor era que lo
+descubriesen: no habrían soportado que se supiera
+lo de los Potter.</span>
+				</div>
+				<div class="td_cell">
+					<span>У Дурслеев было все, чего они только могли пожелать,
+но, кроме того, у них имелась страшная тайна, и больше
+всего на свете супруги боялись, что кто-нибудь эту тайну
+раскроет. Они бы попросту не вынесли, если бы кто-то
+узнал про Поттеров.</span>
+				</div>
+			</div>
+			
+			<div class="book__row_block">
+				<div class="td_cell">
+					<span>Mrs Potter was Mrs Dursley’s sister, but they hadn’t
+met for several years; in fact, Mrs Dursley pretended
+she didn’t have a sister, because her sister and her
+good-for-nothing husband were as unDursleyish as it
+was possible to be.</span>
+				</div>
+				<div class="td_cell">
+					 <span>La señora Potter era hermana de la señora
+Dursley, pero no se veían desde hacíaaños; tanto era
+así que la señora Dursley fingía que no tenía
+hermana, porque suhermana y su marido, un
+completo inútil, eran lo más opuesto a los Dursley
+que sepudiera imaginar.</span>
+				</div>
+				<div class="td_cell">
+					<span>Миссис Поттер доводилась сестрой миссис Дурслей, но
+они не встречались уже много лет, и, сказать по правде,
+миссис Дурслей вообще делала вид, что у нее нет
+никакой сестры, а всё из-за того, что эта самая сестричка
+и её бестолковый муженёк были настолько не-
+Дурслеями, насколько это возможно.</span>
+				</div>
+			</div>
+			
+			<div class="book__row_block">
+				<div class="td_cell">
+					<span>The Dursleys shuddered to think what the neighbours
+would say if the Potters arrived in the street.</span>
+				</div>
+				<div class="td_cell">
+					 <span>Los Dursley se estremecían al pensar qué dirían
+losvecinos si los Potter apareciesen por la acera.</span>
+				</div>
+				<div class="td_cell">
+					<span>Чету Дурслеев пробирала дрожь при одной мысли о том,
+что сказали бы соседи, появись Поттеры у них на улице.</span>
+				</div>
+			</div>
+			
+			<div class="book__row_block">
+				<div class="td_cell">
+					 <span>The Dursleys knew that the Potters had a small son,
+too, but they had never even seen him.</span>
+				</div>
+				<div class="td_cell">
+					 <span>Sabían que los Potter también tenían un hijo
+pequeño,pero nunca lo habían visto.</span>
+				</div>
+				<div class="td_cell">
+					<span>Чете Дурслеев было известно, что у Поттеров тоже есть
+маленький сын, но они его никогда не видели.</span>
+				</div>
+			</div>
+		
+        </div>
+        <div class="header__navigation phone-hidden text-center">
+          <div class="page-nav-wrap"><a href="" class="nav-next"></a>
+            <input type="text" value="111"><span>1800</span><a href="" class="nav-prev"></a>
+          </div>
+        </div>
+      </div>
+      <div class="translations js-translations"><a class="fa fa-close js-translations-close"></a><a class="fa fa-arrow-left js-translation-left"></a><a class="fa fa-arrow-right js-translation-right"></a><a class="fa fa-play js-translation-slideshow"></a><a class="fa fa-volume-up js-translation-play"></a><a class="fa fa-gear js-settings"></a>
+        <div class="settings js-settings-child">
+          <div class="settings__title">
+            <div class="select-wrap">
+              <select class="js-repeat-count">
+                <option>&nbsp;0&nbsp;</option>
+                <option selected>&nbsp;1&nbsp;</option>
+                <option>&nbsp;2&nbsp;</option>
+              </select>
+            </div>Повторений озвучки до паузы
+          </div>
+          <div class="settings__title">
+            <div class="select-wrap select-wrap_special">
+              <select name="" class="js-pause-time">
+                <option value="0" selected>&nbsp;0&nbsp;</option>
+                <option value="0.5">0.5</option>
+                <option value="1">&nbsp;1&nbsp;</option>
+                <option value="2">&nbsp;2&nbsp;</option>
+              </select>
+            </div>Длительность паузы
+          </div>
+          <div class="settings__title">
+            <div class="select-wrap">
+              <select class="js-repeat-after-count">
+                <option selected>&nbsp;0&nbsp;</option>
+                <option>&nbsp;1&nbsp;</option>
+                <option>&nbsp;2&nbsp;</option>
+              </select>
+            </div>Повторений озвучки после паузы
+          </div>
+          <div class="settings__title">
+            <input id="settings-checkbox" type="checkbox" name="settings-checkbox">
+            <label for="settings-checkbox">Демонстрировать основной перевод в слайд-шоу</label>
+          </div>
+          <div class="settings__save text-right">
+            <button type="submit">Save</button>
+          </div>
+        </div>
+        <div class="translations__overflow-wrap">
+          <div class="translations__overflow-inner">
+            <div class="translations__text-wrap">
+              <div class="translations__text-parent">
+                <div class="translations__text">
+                  <div class="translations__item">asdahsdkjashkd</div>
+                  <div class="translations__item">asdahsdkjashkd</div>
+                  <div class="translations__item">asdahsdkjashkd</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="json_languages" style="display:none">{"languages":{"317":"RU (\u0420\u0443\u0441\u0441\u043a\u0438\u0439)","318":"EN (English)","319":"ES (Espa\u00f1ol)","421":"FR (Fran\u00e7ais)","422":"DE (Deutsch)","423":"PT (Portugu\u00eas)","424":"IT (Italiano)","425":"PL (Polski)","426":"TR (T\u00fcrk\u00e7e)","427":"AR (\u0627\u0644\u0639\u0631\u0628\u064a\u0629)","428":"ZH (\u4e2d\u6587, \u6c49\u8bed)"},"primary":318,"secondary":{"319":319}}</div>
+      <div id="json_new" style="display:none">{"language_id":"318","content":{"11":{"translations":{"317":"\u0413\u0430\u0440\u0440\u0438 \u041f\u043e\u0442\u0442\u0435\u0440 \u0438 \u0432\u043e\u043b\u0448\u0435\u0431\u043d\u044b\u0439 \u043a\u0430\u043c\u0435\u043d\u044c","318":"Harry Potter and the philosopher\u2019s stone","319":"Harry Potter y la piedra filosofal"},"path":"\/upload\/iblock\/75f\/75f648ba24d1a11ea8d1598a306856b6.mp3"},"101":{"translations":{"317":"\u041c\u0430\u043b\u044c\u0447\u0438\u043a, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043e\u0441\u0442\u0430\u043b\u0441\u044f \u0436\u0438\u0432","318":"The boy who lived","319":"El ni\u00f1o que vivi\u00f3"},"path":null},"10001":{"translations":{"317":"\u041c\u0438\u0441\u0442\u0435\u0440 \u0438 \u043c\u0438\u0441\u0441\u0438\u0441 \u0414\u0443\u0440\u0441\u043b\u0435\u0439, \u043e\u0431\u0438\u0442\u0430\u0442\u0435\u043b\u0438 \u0434\u043e\u043c\u0430 \u2116 4 \u043f\u043e \u0411\u0438\u0440\u044e\u0447\u0438\u043d\u043e\u0432\u043e\u0439 \u0430\u043b\u043b\u0435\u0435, \u043e\u0447\u0435\u043d\u044c \u0433\u043e\u0440\u0434\u0438\u043b\u0438\u0441\u044c \u0442\u0435\u043c, \u0447\u0442\u043e \u043c\u043e\u0433\u0443\u0442 \u0432 \u043b\u044e\u0431\u043e\u0435 \u0432\u0440\u0435\u043c\u044f \u0437\u0430\u044f\u0432\u0438\u0442\u044c \u2013 \u0443 \u043d\u0430\u0441 \u0432\u0441\u0451, \u0441\u043b\u0430\u0432\u0430 \u0411\u043e\u0433\u0443, \u0441\u043e\u0432\u0435\u0440\u0448\u0435\u043d\u043d\u043e \u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u043e.","318":"Mr and Mrs Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much.","319":"El se\u00f1or y la se\u00f1ora Dursley, que viv\u00edan en el n\u00famero 4 de Privet Drive, estaban orgullosos de decir que eran muy normales, afortunadamente."},"path":"\/upload\/iblock\/93c\/93cfc7890cbd5e7b1351f78600d4de7e.mp3"},"10002":{"translations":{"317":"\u041d\u0435\u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u0431\u044b\u043b\u043e \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u044c, \u0447\u0442\u043e \u0442\u0430\u043a\u0438\u0435 \u043b\u044e\u0434\u0438 \u043e\u043a\u0430\u0436\u0443\u0442\u0441\u044f \u0437\u0430\u043c\u0435\u0448\u0430\u043d\u044b \u0432 \u0447\u0435\u043c-\u0442\u043e \u043d\u0435\u043e\u0431\u044b\u0447\u043d\u043e\u043c, \u0430 \u0443\u0436 \u0442\u0435\u043c \u0431\u043e\u043b\u0435\u0435 \u0437\u0430\u0433\u0430\u0434\u043e\u0447\u043d\u043e\u043c \u2013 \u043e\u043d\u0438 \u0442\u0435\u0440\u043f\u0435\u0442\u044c \u043d\u0435 \u043c\u043e\u0433\u043b\u0438 \u0432\u0441\u044f\u043a\u0438\u0445 \u0433\u043b\u0443\u043f\u043e\u0441\u0442\u0435\u0439.","318":"They were the last people you\u2019d expect to be involved in anything strange or mysterious, because they just didn\u2019t hold with such nonsense.","319":"Eran las \u00faltimas personas que se esperar\u00eda encontrar relacionadas con algo extra\u00f1o o misterioso, porque no estaban para tales tonter\u00edas."},"path":"\/upload\/iblock\/772\/772eda4bb65c1028f9fc339ff31bfc67.mp3"},"10003":{"translations":{"317":"\u041c\u0438\u0441\u0442\u0435\u0440 \u0414\u0443\u0440\u0441\u043b\u0435\u0439 \u0440\u0430\u0431\u043e\u0442\u0430\u043b \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u043e\u043c \u0444\u0438\u0440\u043c\u044b \u043f\u043e\u0434 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u0435\u043c \u0413\u0440\u0443\u043d\u043d\u0438\u043d\u0433\u0441, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u043b\u0430 \u0441\u0432\u0435\u0440\u043b\u0430.","318":"Mr Dursley was the director of a firm called Grunnings, which made drills.","319":"El se\u00f1or Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros. "},"path":"\/upload\/iblock\/52e\/52ef710e1a36161e2d1b70a4309e0171.mp3"},"10004":{"translations":{"317":"\u0423 \u043c\u0438\u0441\u0442\u0435\u0440\u0430 \u0414\u0443\u0440\u0441\u043b\u0435\u044f, \u043a\u0440\u0443\u043f\u043d\u043e\u0433\u043e \u043c\u044f\u0441\u0438\u0441\u0442\u043e\u0433\u043e \u043c\u0443\u0436\u0447\u0438\u043d\u044b, \u043f\u0440\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u043e\u0432\u0430\u043b\u0430 \u0448\u0435\u044f, \u0437\u0430\u0442\u043e \u043f\u043e\u0434 \u043d\u043e\u0441\u043e\u043c \u0440\u043e\u0441\u043b\u0438 \u043e\u0447\u0435\u043d\u044c \u0434\u043b\u0438\u043d\u043d\u044b\u0435 \u0443\u0441\u044b.","318":"He was a big, beefy man with hardly any neck, although he did have a very large moustache.","319":"Era un hombre corpulento y rollizo, casi sin cuello, aunque con un bigote inmenso."},"path":"\/upload\/iblock\/ed5\/ed5436f57da984c3bcfacd770a3a37e0.mp3"},"10005":{"translations":{"317":"\u041c\u0438\u0441\u0441\u0438\u0441 \u0414\u0443\u0440\u0441\u043b\u0435\u0439, \u0445\u0443\u0434\u0430\u044f \u0431\u043b\u043e\u043d\u0434\u0438\u043d\u043a\u0430, \u043e\u0431\u043b\u0430\u0434\u0430\u043b\u0430 \u0448\u0435\u0435\u0439 \u0434\u0432\u043e\u0439\u043d\u043e\u0439 \u0434\u043b\u0438\u043d\u044b, \u0447\u0442\u043e \u0431\u044b\u043b\u043e \u043a\u0430\u043a \u043d\u0435\u043b\u044c\u0437\u044f \u043a\u0441\u0442\u0430\u0442\u0438, \u0438\u0431\u043e \u044d\u0442\u0430 \u043b\u0435\u0434\u0438 \u043e\u0431\u043e\u0436\u0430\u043b\u0430 \u0437\u0430\u0433\u043b\u044f\u0434\u044b\u0432\u0430\u0442\u044c \u0437\u0430 \u0447\u0443\u0436\u0438\u0435 \u0437\u0430\u0431\u043e\u0440\u044b \u0438 \u0448\u043f\u0438\u043e\u043d\u0438\u0442\u044c \u0437\u0430 \u0441\u043e\u0441\u0435\u0434\u044f\u043c\u0438.","318":"Mrs Dursley was thin and blonde and had nearly twice the usual amount of neck, which came in very useful as she spent so much of her time craning over garden fences, spying on the neighbours.","319":"La se\u00f1ora Dursley era delgada, rubia y ten\u00eda un cuello casi el doble de largo de lo habitual, lo que le resultaba muy \u00fatil, ya que pasaba la mayor parte del tiempo estir\u00e1ndolo por encima de la valla de los jardines para espiar a sus vecinos."},"path":"\/upload\/iblock\/29d\/29d5b784a34e8719f22f65cc130e6769.mp3"},"10006":{"translations":{"317":"\u0423 \u0414\u0443\u0440\u0441\u043b\u0435\u0435\u0432 \u0431\u044b\u043b \u043c\u0430\u043b\u0435\u043d\u044c\u043a\u0438\u0439 \u0441\u044b\u043d \u043f\u043e \u0438\u043c\u0435\u043d\u0438 \u0414\u0443\u0434\u043b\u0438 \u2013 \u043f\u043e \u043c\u043d\u0435\u043d\u0438\u044e \u0440\u043e\u0434\u0438\u0442\u0435\u043b\u0435\u0439, \u043d\u0430 \u0441\u0432\u0435\u0442 \u0435\u0449\u0435 \u043d\u0435 \u0440\u043e\u0436\u0434\u0430\u043b\u0441\u044f \u0440\u0435\u0431\u0435\u043d\u043e\u043a \u043f\u0440\u0435\u043a\u0440\u0430\u0441\u043d\u0435\u0435.","318":"The Dursleys had a small son called Dudley and in their opinion there was no finer boy anywhere.","319":"Los Dursley ten\u00edan un hijo peque\u00f1o llamado Dudley, y para ellos no hab\u00eda un ni\u00f1o mejor que \u00e9l."},"path":"\/upload\/iblock\/456\/45676f1908e338fd24faa0e4b97e27a6.mp3"},"10007":{"translations":{"317":"\u0423 \u0414\u0443\u0440\u0441\u043b\u0435\u0435\u0432 \u0431\u044b\u043b\u043e \u0432\u0441\u0435, \u0447\u0435\u0433\u043e \u043e\u043d\u0438 \u0442\u043e\u043b\u044c\u043a\u043e \u043c\u043e\u0433\u043b\u0438 \u043f\u043e\u0436\u0435\u043b\u0430\u0442\u044c, \u043d\u043e, \u043a\u0440\u043e\u043c\u0435 \u0442\u043e\u0433\u043e, \u0443 \u043d\u0438\u0445 \u0438\u043c\u0435\u043b\u0430\u0441\u044c \u0441\u0442\u0440\u0430\u0448\u043d\u0430\u044f \u0442\u0430\u0439\u043d\u0430, \u0438 \u0431\u043e\u043b\u044c\u0448\u0435 \u0432\u0441\u0435\u0433\u043e \u043d\u0430 \u0441\u0432\u0435\u0442\u0435 \u0441\u0443\u043f\u0440\u0443\u0433\u0438 \u0431\u043e\u044f\u043b\u0438\u0441\u044c, \u0447\u0442\u043e \u043a\u0442\u043e-\u043d\u0438\u0431\u0443\u0434\u044c \u044d\u0442\u0443 \u0442\u0430\u0439\u043d\u0443 \u0440\u0430\u0441\u043a\u0440\u043e\u0435\u0442. \u041e\u043d\u0438 \u0431\u044b \u043f\u043e\u043f\u0440\u043e\u0441\u0442\u0443 \u043d\u0435 \u0432\u044b\u043d\u0435\u0441\u043b\u0438, \u0435\u0441\u043b\u0438 \u0431\u044b \u043a\u0442\u043e-\u0442\u043e \u0443\u0437\u043d\u0430\u043b \u043f\u0440\u043e \u041f\u043e\u0442\u0442\u0435\u0440\u043e\u0432.","318":"The Dursleys had everything they wanted, but they also had a secret, and their greatest fear was that somebody would discover it. They didn\u2019t think they could bear it if anyone found out about the Potters. ","319":"Los Dursley ten\u00edan todo lo que quer\u00edan, pero tambi\u00e9n ten\u00edan un secreto, y su mayor temor era que lo descubriesen: no habr\u00edan soportado que se supiera lo de los Potter."},"path":"\/upload\/iblock\/9e5\/9e58f26a1193ffea55abf6009d32be6d.mp3"},"10008":{"translations":{"317":"\u041c\u0438\u0441\u0441\u0438\u0441 \u041f\u043e\u0442\u0442\u0435\u0440 \u0434\u043e\u0432\u043e\u0434\u0438\u043b\u0430\u0441\u044c \u0441\u0435\u0441\u0442\u0440\u043e\u0439 \u043c\u0438\u0441\u0441\u0438\u0441 \u0414\u0443\u0440\u0441\u043b\u0435\u0439, \u043d\u043e \u043e\u043d\u0438 \u043d\u0435 \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u043b\u0438\u0441\u044c \u0443\u0436\u0435 \u043c\u043d\u043e\u0433\u043e \u043b\u0435\u0442, \u0438, \u0441\u043a\u0430\u0437\u0430\u0442\u044c \u043f\u043e \u043f\u0440\u0430\u0432\u0434\u0435, \u043c\u0438\u0441\u0441\u0438\u0441 \u0414\u0443\u0440\u0441\u043b\u0435\u0439 \u0432\u043e\u043e\u0431\u0449\u0435 \u0434\u0435\u043b\u0430\u043b\u0430 \u0432\u0438\u0434, \u0447\u0442\u043e \u0443 \u043d\u0435\u0435 \u043d\u0435\u0442 \u043d\u0438\u043a\u0430\u043a\u043e\u0439 \u0441\u0435\u0441\u0442\u0440\u044b, \u0430 \u0432\u0441\u0451 \u0438\u0437-\u0437\u0430 \u0442\u043e\u0433\u043e, \u0447\u0442\u043e \u044d\u0442\u0430 \u0441\u0430\u043c\u0430\u044f \u0441\u0435\u0441\u0442\u0440\u0438\u0447\u043a\u0430 \u0438 \u0435\u0451 \u0431\u0435\u0441\u0442\u043e\u043b\u043a\u043e\u0432\u044b\u0439 \u043c\u0443\u0436\u0435\u043d\u0451\u043a \u0431\u044b\u043b\u0438 \u043d\u0430\u0441\u0442\u043e\u043b\u044c\u043a\u043e \u043d","318":"Mrs Potter was Mrs Dursley\u2019s sister, but they hadn\u2019t met for several years; in fact, Mrs Dursley pretended she didn\u2019t have a sister, because her sister and her good-for-nothing husband were as unDursleyish as it was possible to be. ","319":"La se\u00f1ora Potter era hermana de la se\u00f1ora Dursley, pero no se ve\u00edan desde hac\u00eda a\u00f1os; tanto era as\u00ed que la se\u00f1ora Dursley fing\u00eda que no ten\u00eda hermana, porque su hermana y su marido, un completo in\u00fatil, eran lo m\u00e1s opuesto a los Dursley que se pudiera imag"},"path":"\/upload\/iblock\/0a4\/0a41aab6c9bbdc205ec6d96f7bf2c52e.mp3"},"10009":{"translations":{"317":"\u0427\u0435\u0442\u0443 \u0414\u0443\u0440\u0441\u043b\u0435\u0435\u0432 \u043f\u0440\u043e\u0431\u0438\u0440\u0430\u043b\u0430 \u0434\u0440\u043e\u0436\u044c \u043f\u0440\u0438 \u043e\u0434\u043d\u043e\u0439 \u043c\u044b\u0441\u043b\u0438 \u043e \u0442\u043e\u043c, \u0447\u0442\u043e \u0441\u043a\u0430\u0437\u0430\u043b\u0438 \u0431\u044b \u0441\u043e\u0441\u0435\u0434\u0438, \u043f\u043e\u044f\u0432\u0438\u0441\u044c \u041f\u043e\u0442\u0442\u0435\u0440\u044b \u0443 \u043d\u0438\u0445 \u043d\u0430 \u0443\u043b\u0438\u0446\u0435.","318":"The Dursleys shuddered to think what the neighbours would say if the Potters arrived in the street. ","319":"Los Dursley se estremec\u00edan al pensar qu\u00e9 dir\u00edan los vecinos si los Potter apareciesen por la acera. "},"path":"\/upload\/iblock\/0b7\/0b7e5e35058ee3c59a9da1f81ee40cd8.mp3"},"10010":{"translations":{"317":"\u0427\u0435\u0442\u0435 \u0414\u0443\u0440\u0441\u043b\u0435\u0435\u0432 \u0431\u044b\u043b\u043e \u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e, \u0447\u0442\u043e \u0443 \u041f\u043e\u0442\u0442\u0435\u0440\u043e\u0432 \u0442\u043e\u0436\u0435 \u0435\u0441\u0442\u044c \u043c\u0430\u043b\u0435\u043d\u044c\u043a\u0438\u0439 \u0441\u044b\u043d, \u043d\u043e \u043e\u043d\u0438 \u0435\u0433\u043e \u043d\u0438\u043a\u043e\u0433\u0434\u0430 \u043d\u0435 \u0432\u0438\u0434\u0435\u043b\u0438.","318":"The Dursleys knew that the Potters had a small son, too, but they had never even seen him.","319":"Sab\u00edan que los Potter tambi\u00e9n ten\u00edan un hijo peque\u00f1o, pero nunca lo hab\u00edan visto."},"path":"\/upload\/iblock\/f91\/f91b43b44dba298248099ce413deaf7a.mp3"},"10011":{"translations":{"317":"\u0421\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u043e, \u043d\u0430\u043b\u0438\u0447\u0438\u0435 \u0441\u044b\u043d\u0430 \u0437\u0430\u0441\u0442\u0430\u0432\u043b\u044f\u043b\u043e \u0434\u0435\u0440\u0436\u0430\u0442\u044c\u0441\u044f \u043e\u0442 \u041f\u043e\u0442\u0442\u0435\u0440\u043e\u0432 \u0435\u0449\u0435 \u0434\u0430\u043b\u044c\u0448\u0435 \u2013 \u043d\u0435 \u0445\u0432\u0430\u0442\u0430\u043b\u043e, \u0447\u0442\u043e\u0431\u044b \u0414\u0443\u0434\u043b\u0438 \u0432\u043e\u0434\u0438\u043b\u0441\u044f \u0441\u043e \u0432\u0441\u044f\u043a\u0438\u043c\u0438 \u0445\u0443\u043b\u0438\u0433\u0430\u043d\u0430\u043c\u0438.","318":"This boy was another good reason for keeping the Potters away; they didn\u2019t want Dudley mixing with a child like that.","319":"El ni\u00f1o era otra buena raz\u00f3n para mantener alejados a los Potter: no quer\u00edan que Dudley se juntara con un ni\u00f1o como aqu\u00e9l."},"path":"\/upload\/iblock\/bbe\/bbea4d149c6f345d89b007f4d69cfe5c.mp3"}}}    </div>
+    </div>
+  </body>
+  <script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
+  <script src="assets/js/plugins/masonry.pkgd.min.js"></script>
+  <script src="assets/js/plugins/jquery.tooltipster.min.js"></script>
+  <script src="assets/js/plugins/audio/jquery.jplayer.min.js"></script>
+  <script src="assets/js/plugins/audio/jplayer.playlist.min.js"></script>
+  <script src="assets/js/plugins/jquery.fancybox.pack.js"></script>
+  <script src="assets/js/audio.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script src="assets/js/languageSelect.js"></script>
+  <script src="assets/js/pagesEdit.js"></script>
+  <script src="assets/js/comments.js"></script>
+  <script src="assets/js/main.js"></script>
+</html>

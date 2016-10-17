@@ -6069,3 +6069,87 @@ img.book-img-biggest {
   overflow-x: scroll;
   height: 20px;
   width: 100%; }
+
+
+
+.outside__book_blocks {
+  border: 3px solid #cccccc;
+  padding-top: 0;
+  margin-top: 65px;
+  display: table;
+}
+.outside__book_blocks h2 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+}
+.outside__book_blocks .book__row_block {
+  overflow: hidden;
+
+  display: table-row;
+}
+.outside__book_blocks .book__row_block span {
+  display: block;
+  padding: 5px 10px;
+  line-height: 17px;
+}
+.outside__book_blocks .book__row_block .td_cell {
+  display: table-cell;
+  border-bottom: 3px solid #cccccc;
+  width: 33.33%;
+  border-right: 3px solid #cccccc;
+}
+.outside__book_blocks .book__row_block .td_cell:last-child {
+  border-right: none;
+}
+.outside__book_blocks .book__row_block:last-child .td_cell {
+  border-bottom: none;
+}
+.section__item h1 {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  color: #1f0000;
+}
+.section__item h2 {
+  font-size: 19px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 4px;
+  color: #666666;
+}
+.section__item.head__it span {
+  display: block;
+  text-align: center;
+  color: #999999;
+  font-size: 12px;
+}
+.section__item {
+  border-bottom: 2px solid #cccccc;
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999999;
+  line-height: 12px;
+}
+.section__item .sec__title {
+  display: block;
+  font-size: 15px;
+  color: #000000;
+  padding-bottom: 3px;
+  line-height: 17px;
+}
+.section__item p {
+  font-size: 14px;
+  line-height: 1;
+  margin: 0 0 3px;
+  color: #666666;
+}
+.section__item span {
+  font-size: 12px;
+  line-height: 9px;
+  color: #999999;
+}
