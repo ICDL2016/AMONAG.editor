@@ -3150,7 +3150,7 @@ p {
         margin-right: 0; }
   .header__navigation {
     position: relative;
-    margin: 50px 0; }
+    margin: 30px 0; }
     @media (max-width: 768px) {
       .header__navigation {
         top: 60px; } }
@@ -6095,6 +6095,10 @@ img.book-img-biggest {
   padding: 5px 10px;
   line-height: 17px;
   min-width: 300px;
+  font-size: 17px;
+}
+.td_cell h2 {
+  padding: 8px 0 6px;
 }
 .outside__book_blocks .book__row_block span a {
   color: #000;
@@ -6139,18 +6143,18 @@ img.book-img-biggest {
   font-size: 12px;
 }
 .section__item {
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 3px solid #cccccc;
   padding: 5px 0;
-  font-size: 12px;
+  font-size: 16px;
   color: #999999;
-  line-height: 12px;
+  line-height: 18px;
 }
 .section__item .sec__title a {
   display: block;
-  font-size: 15px;
+  font-size: 20px;
   color: #000000;
   padding-bottom: 3px;
-  line-height: 17px;
+  line-height: 22px;
   text-decoration: none;
 }
 .section__item .sec__title a:hover {
@@ -6158,8 +6162,8 @@ img.book-img-biggest {
   color: #800000;
 }
 .section__item p {
-  font-size: 14px;
-  line-height: 1;
+  font-size: 18px;
+  line-height: 20px;
   margin: 0 0 3px;
   color: #666666;
 }
