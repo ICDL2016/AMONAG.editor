@@ -6172,3 +6172,6 @@ img.book-img-biggest {
   line-height: 9px;
   color: #999999;
 }
+.icon-globe {
+  cursor: pointer;
+}
