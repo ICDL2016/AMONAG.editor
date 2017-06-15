@@ -62,11 +62,11 @@ $(document).ready(function () {
         $('.nav').removeClass('active');
       }
     }
-    if (!$(event.target).closest('.book-nav').length) {
-      if ($('.book-nav').is(":visible")) {
-        $('.book-nav').removeClass('active');
-      }
-    }
+    // if (!$(event.target).closest('.book-nav').length) {
+      // if ($('.book-nav').is(":visible")) {
+        // $('.book-nav').removeClass('active');
+      // }
+    // }
     if (!$(event.target).closest('.settings').length) {
       $('.settings').fadeOut();
     }
