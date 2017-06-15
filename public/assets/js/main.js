@@ -96,8 +96,7 @@ $(document).ready(function () {
     $('.click-nav').toggleClass('click-active');
     e.stopPropagation();
   });
-
-
+  
   $(document).click(function () {
     if ($('.click-nav .js ul').is(':visible')) {
       $('.click-nav .js ul', this).slideUp();
