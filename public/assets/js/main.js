@@ -44,9 +44,15 @@ $(document).ready(function () {
       $('body').removeClass('open-sidebar');
     }
     else {
-      $('body').addClass('open-sidebar');
+      $('body').addClass('open-sidebar');	  
     }
 
+  });
+  
+  $('.st__btn').on('click tap', function (e) {
+	  // $('.languages-nav').toggleClass('active');
+	  $('.settings-nav').toggleClass('visible');
+	  $('.settings-div').toggleClass('hidden');	  
   });
 
   //отлавливаем клики и скрываем менюшки
@@ -159,7 +165,7 @@ $(document).ready(function () {
     });
   }
 
-  $(document).on('click', '.js-add-language', function() {
+  $(document).on('click', '.js-add-langjs-add-language', function() {
     $('.add-book-form__add-language').append('<div class="add-next-language"><div class="book-language add-book-form__select"><select id="book-language"> <option value="en">EN</option><option value="ru">RU</option><option value="fr">FR</option></select></div></div><div class="add-book-form__title"><input type="text" placeholder="Title"></div>');
     $('.book-language').each(function(i){
       $(this).find('select').attr('id', 'book-language_'+i );
