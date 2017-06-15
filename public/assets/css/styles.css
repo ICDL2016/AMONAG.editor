@@ -3292,7 +3292,7 @@ p {
     max-width: 50px;
     height: auto; }
   .book-nav__languages-list {
-	padding-left: 20px;
+	padding-left: 30px;
     margin-top: 10px; }
   .book-nav__languages-content {
     display: none; }
@@ -5437,7 +5437,7 @@ img.book-img-biggest {
 
 .languages-content {
   margin-top: 10px;
-  padding-left: 20px;
+  padding-left: 30px;
   color: #212121;
   font-size: 16px; }
   .languages-content .fa {
@@ -6227,12 +6227,13 @@ img.book-img-biggest {
 
 .settings-nav {
 	padding-top: 10px;
+	padding-left: 10px;
 	display: none;
 	background: #989898;	
 }
 
 .settings-div {	
-	padding-left: 20px;
+	padding-left: 30px;
 }
 
 .settings-div:hover {
@@ -6256,8 +6257,6 @@ img.book-img-biggest {
 	margin-top: 0;	
 }
 
-.settings-nav .languages-form .book-subnav-list__add {
-	position: relative;
-	float: right;
-	margin-right: 10px;
+.settings-nav .languages-form .book-subnav-list__add {	
+	margin-top: 10px;
 }
