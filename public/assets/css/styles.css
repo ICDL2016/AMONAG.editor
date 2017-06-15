@@ -5665,7 +5665,7 @@ img.book-img-biggest {
         text-align: right;
         color: #fff; }
       .languages-nav .languages-form .book-subnav-list__add,
-	  .settings-nav .languages-form .book-subnav-list__add {
+	  .settings-nav .languages-form .book-subnav-list__add {		
         color: #fff;
         position: absolute;
         left: 10px;
@@ -6254,4 +6254,10 @@ img.book-img-biggest {
 
 .settings-nav .languages-form button {
 	margin-top: 0;	
+}
+
+.settings-nav .languages-form .book-subnav-list__add {
+	position: relative;
+	float: right;
+	margin-right: 10px;
 }
