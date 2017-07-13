@@ -5665,7 +5665,7 @@ img.book-img-biggest {
         text-align: right;
         color: #fff; }
       .languages-nav .languages-form .book-subnav-list__add,
-	  .settings-nav .languages-form .book-subnav-list__add {		
+	  .settings-nav .languages-form .book-subnav-list__add {
         color: #fff;
         position: absolute;
         left: 10px;
@@ -6179,6 +6179,8 @@ img.book-img-biggest {
   color: #800000;
 }
 .section__item p {
+  padding: 2px 0;
+  border-top: 2px dotted #cccccc;
   font-size: 18px;
   line-height: 20px;
   margin: 0 0 3px;
@@ -6186,8 +6188,12 @@ img.book-img-biggest {
 }
 .section__item span {
   font-size: 12px;
-  line-height: 9px;
+  line-height: 21px;
   color: #999999;
+}
+.section__item .last__span {
+  display: inline-block;
+  border-top: 2px dotted #cccccc;
 }
 .icon-globe {
   cursor: pointer;
@@ -6202,7 +6208,7 @@ img.book-img-biggest {
 
 .settings__span {
     display: inline-block;
-    padding: 10px 0 10px 0;    
+    padding: 10px 0 10px 0;
     box-sizing: border-box;
     z-index: 9;
     color: #c0c0c0;
@@ -6229,10 +6235,10 @@ img.book-img-biggest {
 	padding-top: 10px;
 	padding-left: 10px;
 	display: none;
-	background: #989898;	
+	background: #989898;
 }
 
-.settings-div {	
+.settings-div {
 	padding-left: 30px;
 }
 
@@ -6242,11 +6248,11 @@ img.book-img-biggest {
 
 .settings-div .languages-info {
 	margin-left: 5px;
-    color: #fff;    
+    color: #fff;
 }
 
 .languages-info {
-	cursor: pointer; 
+	cursor: pointer;
 }
 
 .languages-nav__list {
@@ -6254,9 +6260,9 @@ img.book-img-biggest {
 }
 
 .settings-nav .languages-form button {
-	margin-top: 0;	
+	margin-top: 0;
 }
 
-.settings-nav .languages-form .book-subnav-list__add {	
+.settings-nav .languages-form .book-subnav-list__add {
 	margin-top: 5px;
 }
