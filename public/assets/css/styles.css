@@ -6194,7 +6194,7 @@ img.book-img-biggest {
 .section__item .last__span {
   width: 100%;
   display: inline-block;
-  border-bottom: 2px dashed #cccccc;
+  border-bottom: 2px dotted #cccccc;
 }
 .section__item .last__span:last-child {
   border-bottom: none;
