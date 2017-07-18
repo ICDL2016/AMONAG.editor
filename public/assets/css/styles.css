@@ -6180,7 +6180,6 @@ img.book-img-biggest {
 }
 .section__item p {
   padding: 2px 0;
-  border-top: 2px dotted #cccccc;
   font-size: 18px;
   line-height: 20px;
   margin: 0 0 3px;
@@ -6192,8 +6191,12 @@ img.book-img-biggest {
   color: #999999;
 }
 .section__item .last__span {
+  width: 100%;
   display: inline-block;
-  border-top: 2px dotted #cccccc;
+  border-bottom: 2px dashed #cccccc;
+}
+.section__item .last__span:last-child {
+  border-bottom: none;
 }
 .icon-globe {
   cursor: pointer;
