@@ -6186,6 +6186,7 @@ img.book-img-biggest {
   color: #666666;
 }
 .section__item span {
+  padding: 2px 0;
   font-size: 12px;
   line-height: 21px;
   color: #999999;
