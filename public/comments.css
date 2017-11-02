@@ -51,6 +51,11 @@ table {
 	float: right;
 }
 
+.fa:hover {
+	transform: scale(1);
+	cursor: pointer;
+}
+
 .comments__overflow {
 	background-color: #E0E0E0;
 	padding: 20px;
@@ -70,22 +75,76 @@ table {
 	margin-bottom: 5px;
 }
 
-.number-of-comments {
-	color: #fff;
+.dropdown-comments-menu {
+	display: inline-block;
+	width: 150px;
+	background-color: #fff;
+	padding: 5px 10px;
 }
 
-.number-of-comments:after {
+.dropdown-comments-menu:hover {
+	cursor: pointer;
+}
+
+.dropdown-comments-toggle {
+	float: right;
+}
+
+.dropdown-comments-toggle.down:before {
+	content: "\f0d7";
+}
+
+.dropdown-comments-toggle.up:before {
+	content: "\f0d8";
+}
+
+.comments-number {
+	display: inline-block;
+	position: relative;
+}
+
+.number-of-comments {
+	color: #fff;
+	font-size: 14px;
+	display: inline-block;
+	position: absolute;
+	left: 20px;
+	top: -13px;
+	z-index: 5;
+}
+
+.comments-icon {
+	position: absolute;
+	left: 10px;
+	top: -20px;
+	z-index: 2;
+}
+
+.comments-icon:before {
 	content: "\f075";
 	font-size: 28px;
 	color: #A2A2A2;
 }
 
-.top-choose > input {
-	display: inline-block;
+.new-comment-form {
+	width: 100%;
 }
 
-#new-comment {
-	width: 95%;
+.new-comment-form > input {
+	display: inline-block;
+	width: calc(100% - 50px);
+}
+
+.new-comment-form.reply-input {
+	padding-top: 10px;
+}
+
+.new-comment-form.reply-input > input {
+	background-color: #E0E0E0;
+}
+
+.new-comment {
+	width: calculate(100%-20px);
 	padding: 5px 5px 4px;
 }
 
@@ -93,6 +152,10 @@ table {
 	color: #333333;
 	font-size: 20px;
 	margin: 0 10px;
+}
+
+.comment-block {
+	margin-bottom: 5px;
 }
 
 .main-comment, .additional-comment {
@@ -159,6 +222,22 @@ table {
 .dislike-comment:before {
 	content: "\f165";
 	color: #616161;
+}
+
+.assesment-comment {
+	margin-right: 5px;
+}
+
+.top-comment.assesment-comment-toolbox {
+	display: none;
+	width: 250px;
+	position: relative;
+	top: -30px;
+	left: 30px;
+	z-index: 10px;
+	background-color: #fff;
+	padding: 7px 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .reply-comment:before {

@@ -18,17 +18,20 @@
 		<div class="top-choose">
 			<div>
 				<span>Comments</span>
-				<select name="top-choose-comments" id="">
-					<option value="All" selected>All</option>
-					<option value="First">First</option>
-					<option value="Second">Second</option>
-					<option value="None">None</option>
-				</select>
-				<span id="number-of-all-comments" class="fa number-of-comments">7</span>
+				<div class="dropdown-comments-menu">
+					<span class="dropdown-comments-top">All</span>
+					<span class="dropdown-comments-toggle down fa"></span>
+				</div>
+				<div class="comments-number">
+					<span class="comments-icon fa"></span>
+					<span class="number-of-comments">7</span>
+				</div>
 			</div>
 			<div>
-				<input id="new-comment" type="text" placeholder="Your comment/question">
-				<span class="new-comment-send"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+				<form class="new-comment-form" action="">
+					<input class="new-comment" type="text" placeholder="Your comment/question">
+					<span class="new-comment-send"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+				</form>
 			</div>
 		</div>
 		<div class="comment-block">
@@ -43,17 +46,26 @@
 				</div>
 				<div class="bottom-comment">
 					<span class="dislike-comment fa"></span>
+					<div class="top-comment assesment-comment-toolbox">
+						<span class="assesment-comment">Rejected</span>
+						<time>01/11/2017</time>
+						<span class="author-comment">Редактор</span>
+					</div>
 					<div class="tools-comment">
 						<span class="reply-comment fa"></span>
 						<span class="edit-comment fa"></span>
 						<span class="delete-comment fa"></span>
 					</div>
 				</div>
+				<form class="new-comment-form reply-input hide" action="">
+					<input class="new-comment" type="text" placeholder="Your comment/question">
+					<span class="new-comment-send"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+				</form>
 			</div>
 			<div class="additional-comment">
 				<div class="top-comment">
 					<time>01/11/2017</time>
-					<span class="author-comment">Редактор1</span>
+					<span class="author-comment">Редактор</span>
 					<span class="expand-comment fa js-comment hide"></span>
 				</div>
 				<div class="middle-comment">
@@ -100,17 +112,26 @@
 				</div>
 				<div class="bottom-comment">
 					<span class="like-comment fa"></span>
+					<div class="top-comment assesment-comment-toolbox">
+						<span class="assesment-comment">Corrected</span>
+						<time>01/11/2017</time>
+						<span class="author-comment">Редактор</span>
+					</div>
 					<div class="tools-comment">
 						<span class="reply-comment fa"></span>
 						<span class="edit-comment fa"></span>
 						<span class="delete-comment fa"></span>
 					</div>
 				</div>
+				<form class="new-comment-form reply-input hide" action="">
+					<input class="new-comment" type="text" placeholder="Your comment/question">
+					<span class="new-comment-send"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+				</form>
 			</div>
 			<div class="additional-comment">
 				<div class="top-comment">
 					<time>01/11/2017</time>
-					<span class="author-comment">Редактор1</span>
+					<span class="author-comment">Редактор</span>
 					<span class="expand-comment fa js-comment hide"></span>
 				</div>
 				<div class="middle-comment">
@@ -130,9 +151,12 @@
 			<div class="main-comment">
 				<div class="top-comment">
 					<time>01/11/2017</time>
-					<span class="author-comment">Студент1</span>
+					<span class="author-comment">Студент2</span>
 					<span class="collapse-comment js-comment fa"></span>
-					<span class="fa number-of-comments right">2</span>
+					<div class="comments-number">
+						<span class="comments-icon fa"></span>
+						<span class="number-of-comments">7</span>
+					</div>
 				</div>
 				<div class="middle-comment">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam praesentium ea sunt repellat natus ipsa.</p>
@@ -145,11 +169,15 @@
 						<span class="delete-comment fa"></span>
 					</div>
 				</div>
+				<form class="new-comment-form reply-input hide" action="">
+					<input class="new-comment" type="text" placeholder="Your comment/question">
+					<span class="new-comment-send"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+				</form>
 			</div>
 			<div class="additional-comment hide">
 				<div class="top-comment">
 					<time>01/11/2017</time>
-					<span class="author-comment">Редактор1</span>
+					<span class="author-comment">Редактор</span>
 					<span class="expand-comment fa js-comment hide"></span>
 				</div>
 				<div class="middle-comment">
@@ -168,7 +196,7 @@
 			<div class="additional-comment hide">
 				<div class="top-comment">
 					<time>01/11/2017</time>
-					<span class="author-comment">Студент1</span>
+					<span class="author-comment">Студент2</span>
 					<span class="expand-comment fa js-comment hide"></span>
 				</div>
 				<div class="middle-comment">
@@ -189,8 +217,21 @@
 	<script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
 	<script>
 		$('.js-comment').click(function(event) {
-			$('.js-comment').toggleClass('expand-comment').toggleClass('collapse-comment');
+			$(this).toggleClass('expand-comment').toggleClass('collapse-comment');
 			$(this).parent().parent().parent().children('.additional-comment').toggleClass('hide');
+		});
+		$('.reply-comment').click(function(event) {
+			$(this).parent().parent().parent().find('.new-comment-form').toggleClass('hide');
+		});
+		$('.dislike-comment').hover(function(event) {
+			$(this).parent().find(".assesment-comment-toolbox").show();
+		}, function(event) {
+			$(this).parent().find(".assesment-comment-toolbox").hide();
+		});
+		$('.like-comment').hover(function(event) {
+			$(this).parent().find(".assesment-comment-toolbox").show();
+		}, function(event) {
+			$(this).parent().find(".assesment-comment-toolbox").hide();
 		});
 	</script>
 </body>
