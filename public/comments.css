@@ -59,12 +59,13 @@ table {
 .comments__overflow {
 	background-color: #E0E0E0;
 	padding: 20px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .top-text {
 	color: #333333;
-	font-size: 13px;
-	margin-bottom: 5px;
+	font-size: 12px;
+	margin-bottom: 10px;
 }
 
 .top-choose > div > span {
@@ -124,6 +125,17 @@ table {
 	content: "\f075";
 	font-size: 28px;
 	color: #A2A2A2;
+}
+
+.comments-icon.fa:hover {
+	cursor: auto;
+}
+
+.comments-number.local {
+	float: right;
+	position: relative;
+	right: 40px;
+	top: 10px;
 }
 
 .new-comment-form {
