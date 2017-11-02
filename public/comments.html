@@ -45,12 +45,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam praesentium ea sunt repellat natus ipsa.</p>
 				</div>
 				<div class="bottom-comment">
-					<span class="dislike-comment fa"></span>
-					<div class="top-comment assesment-comment-toolbox">
-						<span class="assesment-comment">Rejected</span>
-						<time>01/11/2017</time>
-						<span class="author-comment">Редактор</span>
-					</div>
+					<span class="dislike-comment fa" title="Rejected 01/11/2017  Редактор"></span>
 					<div class="tools-comment">
 						<span class="reply-comment fa"></span>
 						<span class="edit-comment fa"></span>
@@ -111,12 +106,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores earum nihil aspernatur veniam quis incidunt maxime assumenda fugiat a, impedit?</p>
 				</div>
 				<div class="bottom-comment">
-					<span class="like-comment fa"></span>
-					<div class="top-comment assesment-comment-toolbox">
-						<span class="assesment-comment">Corrected</span>
-						<time>01/11/2017</time>
-						<span class="author-comment">Редактор</span>
-					</div>
+					<span class="like-comment fa" title="Corrected 01/11/2017  Редактор"></span>
 					<div class="tools-comment">
 						<span class="reply-comment fa"></span>
 						<span class="edit-comment fa"></span>
@@ -222,16 +212,6 @@
 		});
 		$('.reply-comment').click(function(event) {
 			$(this).parent().parent().parent().find('.new-comment-form').toggleClass('hide');
-		});
-		$('.dislike-comment').hover(function(event) {
-			$(this).parent().find(".assesment-comment-toolbox").show();
-		}, function(event) {
-			$(this).parent().find(".assesment-comment-toolbox").hide();
-		});
-		$('.like-comment').hover(function(event) {
-			$(this).parent().find(".assesment-comment-toolbox").show();
-		}, function(event) {
-			$(this).parent().find(".assesment-comment-toolbox").hide();
 		});
 	</script>
 </body>
