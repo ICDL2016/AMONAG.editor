@@ -60,6 +60,7 @@ table {
 	background-color: #E0E0E0;
 	padding: 20px;
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
 }
 
 .top-text {
@@ -241,6 +242,14 @@ table {
 
 .bottom-comment {
 	height: 20px;
+}
+
+.additional-comment > .bottom-comment {
+	border-bottom: 3px solid #cccccc;
+}
+
+.additional-comment:lastChild > .bottom-comment {
+	border-bottom: none;
 }
 
 .tools-comment {
