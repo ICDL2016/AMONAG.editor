@@ -246,6 +246,7 @@ table {
 
 .additional-comment > .bottom-comment {
 	border-bottom: 3px solid #cccccc;
+	height: 25px;
 }
 
 .additional-comment:last-child .bottom-comment {
