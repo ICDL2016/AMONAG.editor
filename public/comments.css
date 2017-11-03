@@ -248,7 +248,7 @@ table {
 	border-bottom: 3px solid #cccccc;
 }
 
-.additional-comment:lastChild > .bottom-comment {
+.additional-comment:last-child .bottom-comment {
 	border-bottom: none;
 }
 
