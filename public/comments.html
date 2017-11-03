@@ -21,16 +21,21 @@
 				<div class="dropdown-comments-menu">
 					<span class="dropdown-comments-top">All</span>
 					<span class="dropdown-comments-toggle down fa"></span>
+					<ul class="dropdown-comments-list hide">
+						<li class="dropdown-comments-item">All</li>
+						<li class="dropdown-comments-item">Type 1</li>
+						<li class="dropdown-comments-item">Type 2</li>
+						<li class="dropdown-comments-item">Type 3</li>
+					</ul>
 				</div>
 				<div class="comments-number">
-					<span class="comments-icon fa"></span>
-					<span class="number-of-comments">7</span>
+					<span class="comments-icon fa"><span class="number-of-comments">837</span></span>
 				</div>
 			</div>
 			<div>
 				<form class="new-comment-form" action="">
-					<input class="new-comment" type="text" placeholder="Your comment/question">
-					<span class="new-comment-send"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+					<input class="new-comment" type="text" name="new-comment1" placeholder="Your comment/question">
+					<button class="new-comment-send" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
 				</form>
 			</div>
 		</div>
@@ -53,8 +58,8 @@
 					</div>
 				</div>
 				<form class="new-comment-form reply-input hide" action="">
-					<input class="new-comment" type="text" placeholder="Your comment/question">
-					<span class="new-comment-send"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+					<input class="new-comment" type="text" name="new-comment2" placeholder="Your comment/question">
+					<button class="new-comment-send" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
 				</form>
 			</div>
 			<div class="additional-comment">
@@ -114,8 +119,8 @@
 					</div>
 				</div>
 				<form class="new-comment-form reply-input hide" action="">
-					<input class="new-comment" type="text" placeholder="Your comment/question">
-					<span class="new-comment-send"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+					<input class="new-comment" type="text" name="new-comment3" placeholder="Your comment/question">
+					<button class="new-comment-send" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
 				</form>
 			</div>
 			<div class="additional-comment">
@@ -144,8 +149,7 @@
 					<span class="author-comment">Студент2</span>
 					<span class="collapse-comment js-comment fa"></span>
 					<div class="comments-number local">
-						<span class="comments-icon fa"></span>
-						<span class="number-of-comments">2</span>
+						<span class="comments-icon fa"><span class="number-of-comments">2</span></span>
 					</div>
 				</div>
 				<div class="middle-comment">
@@ -161,7 +165,7 @@
 				</div>
 				<form class="new-comment-form reply-input hide" action="">
 					<input class="new-comment" type="text" placeholder="Your comment/question">
-					<span class="new-comment-send"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+					<button class="new-comment-send" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
 				</form>
 			</div>
 			<div class="additional-comment hide">
@@ -212,6 +216,9 @@
 		});
 		$('.reply-comment').click(function(event) {
 			$(this).parent().parent().parent().find('.new-comment-form').toggleClass('hide');
+		});
+		$('.dropdown-comments-menu').click(function(event) {
+			$(this).find('.dropdown-comments-list').toggleClass('hide');
 		});
 	</script>
 </body>
