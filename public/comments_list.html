@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Comments List</title>
+	<link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="comments.css">
+</head>
+<body>
+	<div class="comments__overflow">
+		<div class="top-choose">
+			<div class="dropdown-comments-block">
+				<div class="dropdown-comments-title">Comments</div>
+				<div class="dropdown-comments-menu">
+					<span class="dropdown-comments-top">All</span>
+					<span class="dropdown-comments-toggle down fa"></span>
+					<ul class="dropdown-comments-list hide">
+						<li class="dropdown-comments-item">All</li>
+						<li class="dropdown-comments-item">RU</li>
+						<li class="dropdown-comments-item">EN</li>
+						<li class="dropdown-comments-item">ES</li>
+					</ul>
+				</div>
+			</div>
+			<div class="dropdown-comments-block">
+				<div class="dropdown-comments-title">Comments</div>
+				<div class="dropdown-comments-menu">
+					<span class="dropdown-comments-top">All</span>
+					<span class="dropdown-comments-toggle down fa"></span>
+					<ul class="dropdown-comments-list hide">
+						<li class="dropdown-comments-item">All</li>
+						<li class="dropdown-comments-item">RU</li>
+						<li class="dropdown-comments-item">EN</li>
+						<li class="dropdown-comments-item">ES</li>
+					</ul>
+				</div>
+			</div>
+			<div class="dropdown-comments-block">
+				<div class="dropdown-comments-title">Comments</div>
+				<div class="dropdown-comments-menu">
+					<span class="dropdown-comments-top">All</span>
+					<span class="dropdown-comments-toggle down fa"></span>
+					<ul class="dropdown-comments-list hide">
+						<li class="dropdown-comments-item">All</li>
+						<li class="dropdown-comments-item">RU</li>
+						<li class="dropdown-comments-item">EN</li>
+						<li class="dropdown-comments-item">ES</li>
+					</ul>
+				</div>
+			</div>
+			<div class="dropdown-comments-block">
+				<div class="dropdown-comments-title">Comments</div>
+				<div class="dropdown-comments-menu">
+					<span class="dropdown-comments-top">All</span>
+					<span class="dropdown-comments-toggle down fa"></span>
+					<ul class="dropdown-comments-list hide">
+						<li class="dropdown-comments-item">All</li>
+						<li class="dropdown-comments-item">RU</li>
+						<li class="dropdown-comments-item">EN</li>
+						<li class="dropdown-comments-item">ES</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
+	<script>
+		$('.dropdown-comments-menu').click(function(event) {
+			$(this).find('.dropdown-comments-list').toggleClass('hide');
+		});
+	</script>
+</body>
+</html>

@@ -77,6 +77,35 @@ table {
 	margin-bottom: 5px;
 }
 
+.dropdown-comments-block {
+	display: inline-block;
+}
+
+.dropdown-comments-block:nth-child(1) {
+	width: 14%;
+}
+
+.dropdown-comments-block:nth-child(2) {
+	width: 45%;
+}
+
+.dropdown-comments-block:nth-child(3) {
+	width: 20%;
+}
+
+.dropdown-comments-block:nth-child(4) {
+	width: 20%;
+}
+
+.dropdown-comments-block .dropdown-comments-menu {
+	width: 80%;
+}
+
+.dropdown-comments-block .dropdown-comments-list,
+.dropdown-comments-block .dropdown-comments-item {
+	width: 100%;
+}
+
 .dropdown-comments-menu {
 	display: inline-block;
 	width: 150px;
