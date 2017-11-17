@@ -362,12 +362,18 @@ table {
 .comments-main-th {
 	font-size: 16px;
 	text-align: left;
-	/*border-right: 1px solid grey;*/
+	padding-bottom: 20px;
+}
+
+.comments-main-td {
+	padding: 20px 0;
+	border-top: 1px solid grey;
 }
 
 .comments-main-th:nth-child(1),
 .comments-main-td:nth-child(1) {
 	width: 5%;
+	padding-left: 10px;
 }
 
 .comments-main-th:nth-child(2),
@@ -398,4 +404,9 @@ table {
 .comments-main-th:nth-child(7),
 .comments-main-td:nth-child(7) {
 	width: 15%;
+}
+
+.comments-main-tdcomment {
+	background-color: #fff;
+	padding: 10px 5px;
 }
