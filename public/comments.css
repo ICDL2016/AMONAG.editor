@@ -351,6 +351,10 @@ table {
 	margin-top: 5px;
 }
 
+.comments_list__overflow {
+	background-color: #F4F4F4;
+}
+
 .comments-main {
 	margin: 100px 0;
 }
@@ -363,10 +367,12 @@ table {
 	font-size: 16px;
 	text-align: left;
 	padding-bottom: 20px;
+	background-color: #F4F4F4;
 }
 
 .comments-main-td {
 	padding: 20px 0;
+	background-color: #DEDEDE;
 	border-top: 1px solid grey;
 }
 
@@ -407,6 +413,11 @@ table {
 }
 
 .comments-main-tdcomment {
-	background-color: #fff;
+	background-color: #DEDEDE;
 	padding: 10px 5px;
+}
+
+.comments-main-tdcomment p {
+	padding: 10px 5px;
+	background-color: #fff;
 }
