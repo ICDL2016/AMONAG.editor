@@ -82,7 +82,45 @@
 					<td class="comments-main-td"><a href="">Foundations of IT Service Management based on ITL</a></td>
 					<td class="comments-main-td">142</td>
 					<td class="comments-main-td">Иванов Иван, мл. редактор</td>
-					<td class="comments-main-td">New</td>
+					<td class="comments-main-td comment-status">
+						<span class="comment-status-current">New</span>
+						<div class="dropdown-comments-menu hide">
+							<span class="dropdown-comments-top"></span>
+							<span class="dropdown-comments-toggle down fa"></span>
+							<ul class="dropdown-comments-list hide">
+								<li class="dropdown-comments-item">In progress</li>
+								<li class="dropdown-comments-item">Corrected</li>
+								<li class="dropdown-comments-item">Rejected</li>
+							</ul>
+						</div>
+					</td>
+					<td class="comments-main-td comment-corrector">
+						<span>Алеся Быконя</span>
+					</td>
+				</tr>
+				<tr class="comments-main-trtd">
+					<td class="comments-main-tdcomment" colspan="7">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae natus id, dicta incidunt quidem sint assumenda perspiciatis suscipit necessitatibus deserunt, ad voluptas temporibus ipsum pariatur, cum distinctio esse tempore voluptate maiores magni odio! Minus sit nulla, officia natus optio et qui, id tempore doloribus maxime aut laudantium? Provident, quia, iste.</p>
+					</td>
+				</tr>
+				<tr class="comments-main-trtd">
+					<td class="comments-main-td">17.11.2017</td>
+					<td class="comments-main-td">Michel Salgado, student</td>
+					<td class="comments-main-td"><a href="">Foundations of IT Service Management based on ITL</a></td>
+					<td class="comments-main-td">142</td>
+					<td class="comments-main-td">Иванов Иван, мл. редактор</td>
+					<td class="comments-main-td comment-status">
+						<span class="comment-status-current">New</span>
+						<div class="dropdown-comments-menu hide">
+							<span class="dropdown-comments-top"></span>
+							<span class="dropdown-comments-toggle down fa"></span>
+							<ul class="dropdown-comments-list hide">
+								<li class="dropdown-comments-item">In progress</li>
+								<li class="dropdown-comments-item">Corrected</li>
+								<li class="dropdown-comments-item">Rejected</li>
+							</ul>
+						</div>
+					</td>
 					<td class="comments-main-td">Алеся Быконя</td>
 				</tr>
 				<tr class="comments-main-trtd">
@@ -96,21 +134,18 @@
 					<td class="comments-main-td"><a href="">Foundations of IT Service Management based on ITL</a></td>
 					<td class="comments-main-td">142</td>
 					<td class="comments-main-td">Иванов Иван, мл. редактор</td>
-					<td class="comments-main-td">New</td>
-					<td class="comments-main-td">Алеся Быконя</td>
-				</tr>
-				<tr class="comments-main-trtd">
-					<td class="comments-main-tdcomment" colspan="7">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae natus id, dicta incidunt quidem sint assumenda perspiciatis suscipit necessitatibus deserunt, ad voluptas temporibus ipsum pariatur, cum distinctio esse tempore voluptate maiores magni odio! Minus sit nulla, officia natus optio et qui, id tempore doloribus maxime aut laudantium? Provident, quia, iste.</p>
+					<td class="comments-main-td comment-status">
+						<span class="comment-status-current">New</span>
+						<div class="dropdown-comments-menu hide">
+							<span class="dropdown-comments-top"></span>
+							<span class="dropdown-comments-toggle down fa"></span>
+							<ul class="dropdown-comments-list hide">
+								<li class="dropdown-comments-item">In progress</li>
+								<li class="dropdown-comments-item">Corrected</li>
+								<li class="dropdown-comments-item">Rejected</li>
+							</ul>
+						</div>
 					</td>
-				</tr>
-				<tr class="comments-main-trtd">
-					<td class="comments-main-td">17.11.2017</td>
-					<td class="comments-main-td">Michel Salgado, student</td>
-					<td class="comments-main-td"><a href="">Foundations of IT Service Management based on ITL</a></td>
-					<td class="comments-main-td">142</td>
-					<td class="comments-main-td">Иванов Иван, мл. редактор</td>
-					<td class="comments-main-td">New</td>
 					<td class="comments-main-td">Алеся Быконя</td>
 				</tr>
 				<tr class="comments-main-trtd">
@@ -128,6 +163,18 @@
 	<script>
 		$('.dropdown-comments-menu').click(function(event) {
 			$(this).find('.dropdown-comments-list').toggleClass('hide');
+		});
+		$('.comment-status-current').click(function(event) {
+			$(this).hide();
+			$(this).siblings(0).removeClass('hide');
+		});
+		$('.dropdown-comments-menu .dropdown-comments-item').click(function(event) {
+			var date = new Date();
+			var curDate = " " + date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
+			var curChoice = $(this).text();
+			$(this).parent().parent().addClass('hide');
+			$(this).parent().parent().parent().find('.comment-status-current').show().text(curChoice + curDate);
+
 		});
 	</script>
 </body>
