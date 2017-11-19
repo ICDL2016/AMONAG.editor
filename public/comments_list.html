@@ -59,7 +59,7 @@
 						<li class="dropdown-comments-item">All</li>
 						<li class="dropdown-comments-item">Шамиль</li>
 						<li class="dropdown-comments-item">Алексей</li>
-						<li class="dropdown-comments-item">Алеся</li>
+						<li class="dropdown-comments-item">Алеся Быконя</li>
 					</ul>
 				</div>
 			</div>
@@ -109,6 +109,7 @@
 				</tr>
 				<tr class="comments-main-trtd">
 					<td class="comments-main-tdcomment" colspan="7">
+						<span class="expand-comment fa js-comment-list" title="Hide"></span>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae natus id, dicta incidunt quidem sint assumenda perspiciatis suscipit necessitatibus deserunt, ad voluptas temporibus ipsum pariatur, cum distinctio esse tempore voluptate maiores magni odio! Minus sit nulla, officia natus optio et qui, id tempore doloribus maxime aut laudantium? Provident, quia, iste.</p>
 					</td>
 				</tr>
@@ -145,7 +146,8 @@
 				</tr>
 				<tr class="comments-main-trtd">
 					<td class="comments-main-tdcomment" colspan="7">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae natus id, dicta incidunt quidem sint assumenda perspiciatis suscipit necessitatibus deserunt, ad voluptas temporibus ipsum pariatur, cum distinctio esse tempore voluptate maiores magni odio! Minus sit nulla, officia natus optio et qui, id tempore doloribus maxime aut laudantium? Provident, quia, iste.</p>
+						<span class="expand-comment fa js-comment-list" title="Hide"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id commodi maxime, debitis ut maiores, laborum alias. Blanditiis, dolores quis. Impedit, aliquid possimus aut quos inventore sunt iste nam optio, rerum velit quo dolores minus voluptates expedita asperiores? Repudiandae voluptate animi hic explicabo porro, sequi iusto nostrum fugit cupiditate saepe quam libero, ut odit eveniet. Voluptatem nostrum molestias, officiis perspiciatis deserunt, rerum dicta in at atque. Ullam error libero molestiae eaque at itaque officiis magnam eligendi quidem, perferendis dicta id voluptas voluptatem asperiores voluptate sapiente repudiandae. Sunt magnam tenetur optio natus.</p>
 					</td>
 				</tr>
 				<tr class="comments-main-trtd">
@@ -181,7 +183,8 @@
 				</tr>
 				<tr class="comments-main-trtd">
 					<td class="comments-main-tdcomment" colspan="7">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae natus id, dicta incidunt quidem sint assumenda perspiciatis suscipit necessitatibus deserunt, ad voluptas temporibus ipsum pariatur, cum distinctio esse tempore voluptate maiores magni odio! Minus sit nulla, officia natus optio et qui, id tempore doloribus maxime aut laudantium? Provident, quia, iste.</p>
+						<span class="expand-comment fa js-comment-list hide" title="Hide"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis possimus beatae doloribus eaque sunt eius maxime, ex similique architecto illum minus deleniti, provident tempora asperiores.</p>
 					</td>
 				</tr>
 
@@ -204,7 +207,7 @@
 		$('.comment-status-current').click(function(event) {
 			$(this).hide();
 			$(this).siblings(0).removeClass('hide');
-			$(this).siblings(0).find('.dropdown-comments-top').text($(this).text());
+			// $(this).siblings(0).find('.dropdown-comments-top').text($(this).text());
 		});
 		$('.dropdown-comments-menu .status-item').click(function(event) {
 			var curChoice = $(this).text();
@@ -222,7 +225,21 @@
 			$(this).parent().parent().addClass('hide');
 			var correctorName = $(this).parent().parent().parent().find('.comment-corrector-current')
 			correctorName.show().text(curChoice);
-			correctorName.parent().parent().find('.comment-status-current').text('Forwarded'  + currentDate());
+			var ifStatusIsActiveNow = correctorName.parent().parent().find('.comment-status-current');
+			if (!ifStatusIsActiveNow.parent().find('.dropdown-comments-menu').hasClass('hide')) {
+				ifStatusIsActiveNow.parent().find('.dropdown-comments-menu').addClass('hide');
+				ifStatusIsActiveNow.show();
+			};
+			ifStatusIsActiveNow.text('Forwarded'  + currentDate());
+		});
+
+		$('.js-comment-list').click(function(event) {
+			$(this).toggleClass('expand-comment').toggleClass('collapse-comment');
+			if ($(this).hasClass('expand-comment')) {
+				$(this).attr({title: 'Hide'});
+			} else {
+				$(this).attr({title: 'Show'});
+			};
 		});
 
 	</script>

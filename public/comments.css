@@ -433,3 +433,15 @@ table {
 .comment-corrector-current {
 	cursor: pointer;
 }
+
+.dropdown-comments-menu.status-menu {
+	margin: 0;
+	top: 7px;
+}
+
+.expand-comment.fa.js-comment-list,
+.collapse-comment.fa.js-comment-list {
+	margin-top: 3px;
+	margin-right: 10px;
+	font-size: 26px;
+}
