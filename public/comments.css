@@ -410,13 +410,13 @@ table {
 .comments-main-th:nth-child(6),
 .comments-main-td:nth-child(6) {
 	width: 10%;
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 
 .comments-main-th:nth-child(7),
 .comments-main-td:nth-child(7) {
 	width: 15%;
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 
 .comments-main-tdcomment {
@@ -427,4 +427,9 @@ table {
 .comments-main-tdcomment p {
 	padding: 10px 5px;
 	background-color: #fff;
+}
+
+.comment-status-current,
+.comment-corrector-current {
+	cursor: pointer;
 }

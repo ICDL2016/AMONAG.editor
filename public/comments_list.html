@@ -84,18 +84,27 @@
 					<td class="comments-main-td">Иванов Иван, мл. редактор</td>
 					<td class="comments-main-td comment-status">
 						<span class="comment-status-current">New</span>
-						<div class="dropdown-comments-menu hide">
+						<div class="dropdown-comments-menu status-menu hide">
 							<span class="dropdown-comments-top"></span>
 							<span class="dropdown-comments-toggle down fa"></span>
 							<ul class="dropdown-comments-list hide">
-								<li class="dropdown-comments-item">In progress</li>
-								<li class="dropdown-comments-item">Corrected</li>
-								<li class="dropdown-comments-item">Rejected</li>
+								<li class="dropdown-comments-item status-item">In progress</li>
+								<li class="dropdown-comments-item status-item">Corrected</li>
+								<li class="dropdown-comments-item status-item">Rejected</li>
 							</ul>
 						</div>
 					</td>
-					<td class="comments-main-td comment-corrector">
-						<span>Алеся Быконя</span>
+					<td class="comments-main-td">
+						<span class="comment-corrector-current">Алеся Быконя</span>
+						<div class="dropdown-comments-menu corrector-menu hide">
+							<span class="dropdown-comments-top"></span>
+							<span class="dropdown-comments-toggle down fa"></span>
+							<ul class="dropdown-comments-list hide">
+								<li class="dropdown-comments-item corrector-item">Алеся Быконя</li>
+								<li class="dropdown-comments-item corrector-item">Шамиль</li>
+								<li class="dropdown-comments-item corrector-item">Алексей</li>
+							</ul>
+						</div>
 					</td>
 				</tr>
 				<tr class="comments-main-trtd">
@@ -111,17 +120,28 @@
 					<td class="comments-main-td">Иванов Иван, мл. редактор</td>
 					<td class="comments-main-td comment-status">
 						<span class="comment-status-current">New</span>
-						<div class="dropdown-comments-menu hide">
+						<div class="dropdown-comments-menu status-menu hide">
 							<span class="dropdown-comments-top"></span>
 							<span class="dropdown-comments-toggle down fa"></span>
 							<ul class="dropdown-comments-list hide">
-								<li class="dropdown-comments-item">In progress</li>
-								<li class="dropdown-comments-item">Corrected</li>
-								<li class="dropdown-comments-item">Rejected</li>
+								<li class="dropdown-comments-item status-item">In progress</li>
+								<li class="dropdown-comments-item status-item">Corrected</li>
+								<li class="dropdown-comments-item status-item">Rejected</li>
 							</ul>
 						</div>
 					</td>
-					<td class="comments-main-td">Алеся Быконя</td>
+					<td class="comments-main-td">
+						<span class="comment-corrector-current">Алеся Быконя</span>
+						<div class="dropdown-comments-menu corrector-menu hide">
+							<span class="dropdown-comments-top"></span>
+							<span class="dropdown-comments-toggle down fa"></span>
+							<ul class="dropdown-comments-list hide">
+								<li class="dropdown-comments-item corrector-item">Алеся Быконя</li>
+								<li class="dropdown-comments-item corrector-item">Шамиль</li>
+								<li class="dropdown-comments-item corrector-item">Алексей</li>
+							</ul>
+						</div>
+					</td>
 				</tr>
 				<tr class="comments-main-trtd">
 					<td class="comments-main-tdcomment" colspan="7">
@@ -136,17 +156,28 @@
 					<td class="comments-main-td">Иванов Иван, мл. редактор</td>
 					<td class="comments-main-td comment-status">
 						<span class="comment-status-current">New</span>
-						<div class="dropdown-comments-menu hide">
+						<div class="dropdown-comments-menu status-menu hide">
 							<span class="dropdown-comments-top"></span>
 							<span class="dropdown-comments-toggle down fa"></span>
 							<ul class="dropdown-comments-list hide">
-								<li class="dropdown-comments-item">In progress</li>
-								<li class="dropdown-comments-item">Corrected</li>
-								<li class="dropdown-comments-item">Rejected</li>
+								<li class="dropdown-comments-item status-item">In progress</li>
+								<li class="dropdown-comments-item status-item">Corrected</li>
+								<li class="dropdown-comments-item status-item">Rejected</li>
 							</ul>
 						</div>
 					</td>
-					<td class="comments-main-td">Алеся Быконя</td>
+					<td class="comments-main-td">
+						<span class="comment-corrector-current">Алеся Быконя</span>
+						<div class="dropdown-comments-menu corrector-menu hide">
+							<span class="dropdown-comments-top"></span>
+							<span class="dropdown-comments-toggle down fa"></span>
+							<ul class="dropdown-comments-list hide">
+								<li class="dropdown-comments-item corrector-item">Алеся Быконя</li>
+								<li class="dropdown-comments-item corrector-item">Шамиль</li>
+								<li class="dropdown-comments-item corrector-item">Алексей</li>
+							</ul>
+						</div>
+					</td>
 				</tr>
 				<tr class="comments-main-trtd">
 					<td class="comments-main-tdcomment" colspan="7">
@@ -161,21 +192,39 @@
 
 	<script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
 	<script>
+		function currentDate () {
+			var date = new Date();
+			var curDate = " (" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + ")";
+			return curDate;
+		};
+
 		$('.dropdown-comments-menu').click(function(event) {
 			$(this).find('.dropdown-comments-list').toggleClass('hide');
 		});
 		$('.comment-status-current').click(function(event) {
 			$(this).hide();
 			$(this).siblings(0).removeClass('hide');
+			$(this).siblings(0).find('.dropdown-comments-top').text($(this).text());
 		});
-		$('.dropdown-comments-menu .dropdown-comments-item').click(function(event) {
-			var date = new Date();
-			var curDate = " " + date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
+		$('.dropdown-comments-menu .status-item').click(function(event) {
 			var curChoice = $(this).text();
 			$(this).parent().parent().addClass('hide');
-			$(this).parent().parent().parent().find('.comment-status-current').show().text(curChoice + curDate);
+			$(this).parent().parent().parent().find('.comment-status-current').show().text(curChoice + currentDate());
 
 		});
+		$('.comment-corrector-current').click(function(event) {
+			$(this).hide();
+			$(this).siblings(0).removeClass('hide');
+			$(this).siblings(0).find('.dropdown-comments-top').text($(this).text());
+		});
+		$('.dropdown-comments-menu .corrector-item').click(function(event) {
+			var curChoice = $(this).text();
+			$(this).parent().parent().addClass('hide');
+			var correctorName = $(this).parent().parent().parent().find('.comment-corrector-current')
+			correctorName.show().text(curChoice);
+			correctorName.parent().parent().find('.comment-status-current').text('Forwarded'  + currentDate());
+		});
+
 	</script>
 </body>
 </html>
