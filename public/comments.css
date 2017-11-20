@@ -436,7 +436,8 @@ table {
 
 .dropdown-comments-menu.status-menu {
 	margin: 0;
-	top: 7px;
+	position: relative;
+	top: 3px;
 }
 
 .expand-comment.fa.js-comment-list,
@@ -444,4 +445,9 @@ table {
 	margin-top: 3px;
 	margin-right: 10px;
 	font-size: 26px;
+}
+
+.dropdown-comments-menu.status-menu,
+.dropdown-comments-menu.corrector-menu {
+	padding: 0 10px;
 }
