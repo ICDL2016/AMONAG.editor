@@ -376,9 +376,9 @@ table {
 }
 
 .comments-main-td {
-	padding: 20px 0;
+	padding: 15px 5px 10px;
 	background-color: #DEDEDE;
-	border-top: 1px solid grey;
+	border-top: 2px solid #cccccc;
 }
 
 .comments-main-th:nth-child(1),
