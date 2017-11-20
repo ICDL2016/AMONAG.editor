@@ -102,8 +102,8 @@
 				</tr>
 				<tr class="comments-main-trtd">
 					<td class="comments-main-tdcomment" colspan="7">
-						<span class="expand-comment fa js-comment-list" title="Hide"></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae natus id, dicta incidunt quidem sint assumenda perspiciatis suscipit necessitatibus deserunt, ad voluptas temporibus ipsum pariatur, cum distinctio esse tempore voluptate maiores magni odio! Minus sit nulla, officia natus optio et qui, id tempore doloribus maxime aut laudantium? Provident, quia, iste.</p>
+						<span class="collapse-comment fa js-comment-list" title="Hide"></span>
+						<p></p>
 					</td>
 				</tr>
 				<tr class="comments-main-trtd">
@@ -131,8 +131,8 @@
 				</tr>
 				<tr class="comments-main-trtd">
 					<td class="comments-main-tdcomment" colspan="7">
-						<span class="expand-comment fa js-comment-list" title="Hide"></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id commodi maxime, debitis ut maiores, laborum alias. Blanditiis, dolores quis. Impedit, aliquid possimus aut quos inventore sunt iste nam optio, rerum velit quo dolores minus voluptates expedita asperiores? Repudiandae voluptate animi hic explicabo porro, sequi iusto nostrum fugit cupiditate saepe quam libero, ut odit eveniet. Voluptatem nostrum molestias, officiis perspiciatis deserunt, rerum dicta in at atque. Ullam error libero molestiae eaque at itaque officiis magnam eligendi quidem, perferendis dicta id voluptas voluptatem asperiores voluptate sapiente repudiandae. Sunt magnam tenetur optio natus.</p>
+						<span class="collapse-comment fa js-comment-list" title="Hide"></span>
+						<p></p>
 					</td>
 				</tr>
 				<tr class="comments-main-trtd">
@@ -160,8 +160,8 @@
 				</tr>
 				<tr class="comments-main-trtd">
 					<td class="comments-main-tdcomment" colspan="7">
-						<span class="expand-comment fa js-comment-list hide" title="Hide"></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis possimus beatae doloribus eaque sunt eius maxime, ex similique architecto illum minus deleniti, provident tempora asperiores.</p>
+						<span class="collapse-comment fa js-comment-list" title="Show"></span>
+						<p></p>
 					</td>
 				</tr>
 
@@ -172,27 +172,31 @@
 
 	<script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
 	<script>
+		// Просто текущая дата
 		function currentDate () {
 			var date = new Date();
 			var curDate = " (" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + ")";
 			return curDate;
 		};
 
-		// $(document).ready(function($) {
-		// 	var commentsArray = [
-		// 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae natus id, dicta incidunt quidem sint assumenda perspiciatis suscipit necessitatibus deserunt, ad voluptas temporibus ipsum pariatur, cum distinctio esse tempore voluptate maiores magni odio! Minus sit nulla, officia natus optio et qui, id tempore doloribus maxime aut laudantium? Provident, quia, iste.',
-		// 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id commodi maxime, debitis ut maiores, laborum alias. Blanditiis, dolores quis. Impedit, aliquid possimus aut quos inventore sunt iste nam optio, rerum velit quo dolores minus voluptates expedita asperiores? Repudiandae voluptate animi hic explicabo porro, sequi iusto nostrum fugit cupiditate saepe quam libero, ut odit eveniet. Voluptatem nostrum molestias, officiis perspiciatis deserunt, rerum dicta in at atque. Ullam error libero molestiae eaque at itaque officiis magnam eligendi quidem, perferendis dicta id voluptas voluptatem asperiores voluptate sapiente repudiandae. Sunt magnam tenetur optio natus.',
-		// 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis possimus beatae doloribus eaque sunt eius maxime, ex similique architecto illum minus deleniti, provident tempora asperiores.'
-		// 	];
-		// 	var tagsArray = $('.comments-main-tdcomment p').toArray();
-		// 	var textNode = tagsArray.map(function(){
-  //   			return this;
-		// 	}).get();
-		// 	for (var i = 0; i < 3; i++) {
-		// 		var textComment = commentsArray[i];
-		// 		console.log(tagsArray[i].text());
-		// 	}
-		// });
+		// Заполняем комментарии из базы
+		var commentsArray = [
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae natus id, dicta incidunt quidem sint assumenda perspiciatis suscipit necessitatibus deserunt, ad voluptas temporibus ipsum pariatur, cum distinctio esse tempore voluptate maiores magni odio! Minus sit nulla, officia natus optio et qui, id tempore doloribus maxime aut laudantium? Provident, quia, iste.',
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id commodi maxime, debitis ut maiores, laborum alias. Blanditiis, dolores quis. Impedit, aliquid possimus aut quos inventore sunt iste nam optio, rerum velit quo dolores minus voluptates expedita asperiores? Repudiandae voluptate animi hic explicabo porro, sequi iusto nostrum fugit cupiditate saepe quam libero, ut odit eveniet. Voluptatem nostrum molestias, officiis perspiciatis deserunt, rerum dicta in at atque. Ullam error libero molestiae eaque at itaque officiis magnam eligendi quidem, perferendis dicta id voluptas voluptatem asperiores voluptate sapiente repudiandae. Sunt magnam tenetur optio natus.',
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis possimus beatae doloribus eaque sunt eius maxime, ex similique architecto illum minus deleniti, provident tempora asperiores.'
+			]; // Массив значений комментариев (в теории - из базы данных)
+		var tagsArray = $('.comments-main-tdcomment p'); // Массив ячеек комментариев
+
+		$(document).ready(function($) {
+			for (var i = 0; i < commentsArray.length; i++) {
+				if (commentsArray[i].length < 280) { // Длина несвернутой ячейки
+					tagsArray.eq(i).text(commentsArray[i]);
+					tagsArray.eq(i).parent().find('span').hide();
+				} else {
+					tagsArray.eq(i).text(commentsArray[i].slice(0, 280)+'...');
+				};
+			};
+		});
 
 		// Выбор верхнего фильтра
 		$('.dropdown-comments-menu.comments-filter').click(function(event) {
@@ -234,13 +238,16 @@
 			currentStatus.text('Forwarded'  + currentDate());
 		});
 
-		// Сворачиваем длинные коменты
+		// Сворачиваем-разворачиваем длинные комменты
 		$('.js-comment-list').click(function(event) {
+			var numberOfComment = $(this).parent().parent().index() / 2; // Индекс строки таблицы для определения номера комментария в массиве
 			$(this).toggleClass('expand-comment').toggleClass('collapse-comment');
 			if ($(this).hasClass('expand-comment')) {
 				$(this).attr({title: 'Hide'});
+				$(this).parent().find('p').text(commentsArray[numberOfComment - 1]);
 			} else {
 				$(this).attr({title: 'Show'});
+				$(this).parent().find('p').text(commentsArray[numberOfComment - 1].slice(0,280)+'...');
 			};
 		});
 
