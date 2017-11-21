@@ -172,84 +172,117 @@
 
 	<script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
 	<script>
-		// Просто текущая дата
-		function currentDate () {
-			var date = new Date();
-			var curDate = " (" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + ")";
-			return curDate;
-		};
 
-		// Заполняем комментарии из базы
-		var commentsArray = [
-				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae natus id, dicta incidunt quidem sint assumenda perspiciatis suscipit necessitatibus deserunt, ad voluptas temporibus ipsum pariatur, cum distinctio esse tempore voluptate maiores magni odio! Minus sit nulla, officia natus optio et qui, id tempore doloribus maxime aut laudantium? Provident, quia, iste.',
-				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id commodi maxime, debitis ut maiores, laborum alias. Blanditiis, dolores quis. Impedit, aliquid possimus aut quos inventore sunt iste nam optio, rerum velit quo dolores minus voluptates expedita asperiores? Repudiandae voluptate animi hic explicabo porro, sequi iusto nostrum fugit cupiditate saepe quam libero, ut odit eveniet. Voluptatem nostrum molestias, officiis perspiciatis deserunt, rerum dicta in at atque. Ullam error libero molestiae eaque at itaque officiis magnam eligendi quidem, perferendis dicta id voluptas voluptatem asperiores voluptate sapiente repudiandae. Sunt magnam tenetur optio natus.',
-				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis possimus beatae doloribus eaque sunt eius maxime, ex similique architecto illum minus deleniti, provident tempora asperiores.'
-			]; // Массив значений комментариев (в теории - из базы данных)
-		var tagsArray = $('.comments-main-tdcomment p'); // Массив ячеек комментариев
+		var main = function() {
 
-		$(document).ready(function($) {
-			for (var i = 0; i < commentsArray.length; i++) {
-				if (commentsArray[i].length < 280) { // Длина несвернутой ячейки
-					tagsArray.eq(i).text(commentsArray[i]);
-					tagsArray.eq(i).parent().find('span').hide();
-				} else {
-					tagsArray.eq(i).text(commentsArray[i].slice(0, 280)+'...');
+			// Массивы комментариев и полей в таблице для них
+			var commentsArray = [
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae natus id, dicta incidunt quidem sint assumenda perspiciatis suscipit necessitatibus deserunt, ad voluptas temporibus ipsum pariatur, cum distinctio esse tempore voluptate maiores magni odio! Minus sit nulla, officia natus optio et qui, id tempore doloribus maxime aut laudantium? Provident, quia, iste.',
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id commodi maxime, debitis ut maiores, laborum alias. Blanditiis, dolores quis. Impedit, aliquid possimus aut quos inventore sunt iste nam optio, rerum velit quo dolores minus voluptates expedita asperiores? Repudiandae voluptate animi hic explicabo porro, sequi iusto nostrum fugit cupiditate saepe quam libero, ut odit eveniet. Voluptatem nostrum molestias, officiis perspiciatis deserunt, rerum dicta in at atque. Ullam error libero molestiae eaque at itaque officiis magnam eligendi quidem, perferendis dicta id voluptas voluptatem asperiores voluptate sapiente repudiandae. Sunt magnam tenetur optio natus.',
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis possimus beatae doloribus eaque sunt eius maxime, ex similique architecto illum minus deleniti, provident tempora asperiores.'
+				]; // Массив значений комментариев (в теории - из базы данных)
+			var tagsArray = $('.comments-main-tdcomment p'); // Массив ячеек комментариев
+			var commentLength = 280; // Full HD длина комментария
+
+			// Просто текущая дата
+			function currentDate () {
+				var date = new Date();
+				var curDate = " (" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + ")";
+				return curDate;
+			};
+
+			function commentsFill (commentLength) {
+				for (var i = 0; i < commentsArray.length; i++) {
+					if (commentsArray[i].length < commentLength) { // Длина несвернутой ячейки
+						tagsArray.eq(i).text(commentsArray[i]);
+						tagsArray.eq(i).parent().find('span').hide();
+					} else {
+						tagsArray.eq(i).text(commentsArray[i].slice(0, commentLength)+'...');
+					};
 				};
 			};
-		});
 
-		// Выбор верхнего фильтра
-		$('.dropdown-comments-menu.comments-filter').click(function(event) {
-			$(this).find('.dropdown-comments-list').toggleClass('hide');
-		});
-		$('.dropdown-comments-menu.comments-filter .dropdown-comments-item').click(function(event) {
-			$(this).parent().find('.dropdown-comments-list').toggleClass('hide');
-			$(this).parent().parent().find('.dropdown-comments-top').text($(this).text());
-		});
-
-		// Выбор статуса
-		$('.comment-status-current').click(function(event) {
-			$(this).siblings(0).removeClass('hide');
-			$(this).siblings(0).find('.dropdown-comments-list').toggleClass('hide');
-		});
-		$('.dropdown-comments-list .status-item').click(function(event) {
-			var curChoice = $(this).text();
-			$(this).parent().addClass('hide');
-			$(this).parent().parent().find('.comment-status-current').show().text(curChoice + currentDate());
-		});
-
-		// Выбор корректора
-		$('.comment-corrector-current').click(function(event) {
-			$(this).siblings(0).removeClass('hide');
-			$(this).siblings(0).find('.dropdown-comments-list').toggleClass('hide');
-			$(this).siblings(0).find('.dropdown-comments-top').text($(this).text());
-		});
-		$('.dropdown-comments-list .corrector-item').click(function(event) {
-			var curChoice = $(this).text();
-			$(this).parent().addClass('hide');
-			var correctorName = $(this).parent().parent().find('.comment-corrector-current');
-			correctorName.text(curChoice);
-			// Проверка, открыто ли меню выбора статуса
-			var ifStatusIsActiveNow = correctorName.parent().parent().find('.dropdown-comments-list');
-			var currentStatus = correctorName.parent().parent().find('.comment-status-current');
-			if (ifStatusIsActiveNow.hasClass('hide')) {
-				ifStatusIsActiveNow.addClass('hide');
+			// Определяем длину комментария
+			function windowSize(){
+			    if ($(window).width() > 1900){
+			        commentLength = 280;
+			    } else if ($(window).width() >= 1750) {
+			       	commentLength = 250;
+			    } else if ($(window).width() >= 1550) {
+			        commentLength = 230;
+			    } else if ($(window).width() >= 1400) {
+			        commentLength = 210;
+			    } else if ($(window).width() >= 1320) {
+			        commentLength = 180;
+			    } else if ($(window).width() >= 1240) {
+			        commentLength = 160;
+			    } else if ($(window).width() >= 1010) {
+			        commentLength = 140;
+			    } else {
+			    	commentLength = 120;
+			    };
+			    commentsFill(commentLength);
 			};
-			currentStatus.text('Forwarded'  + currentDate());
-		});
 
-		// Сворачиваем-разворачиваем длинные комменты
-		$('.js-comment-list').click(function(event) {
-			var numberOfComment = $(this).parent().parent().index() / 2; // Индекс строки таблицы для определения номера комментария в массиве
-			$(this).toggleClass('expand-comment').toggleClass('collapse-comment');
-			if ($(this).hasClass('expand-comment')) {
-				$(this).attr({title: 'Hide'});
-				$(this).parent().find('p').text(commentsArray[numberOfComment - 1]);
-			} else {
-				$(this).attr({title: 'Show'});
-				$(this).parent().find('p').text(commentsArray[numberOfComment - 1].slice(0,280)+'...');
-			};
-		});
+			$(window).load(windowSize); // при загрузке
+			$(window).resize(windowSize); // при изменении размеров
+
+			// Выбор верхнего фильтра
+			$('.dropdown-comments-menu.comments-filter').click(function(event) {
+				$(this).find('.dropdown-comments-list').toggleClass('hide');
+			});
+			$('.dropdown-comments-menu.comments-filter .dropdown-comments-item').click(function(event) {
+				$(this).parent().find('.dropdown-comments-list').toggleClass('hide');
+				$(this).parent().parent().find('.dropdown-comments-top').text($(this).text());
+			});
+
+			// Выбор статуса
+			$('.comment-status-current').click(function(event) {
+				$(this).siblings(0).removeClass('hide');
+				$(this).siblings(0).find('.dropdown-comments-list').toggleClass('hide');
+			});
+			$('.dropdown-comments-list .status-item').click(function(event) {
+				var curChoice = $(this).text();
+				$(this).parent().addClass('hide');
+				$(this).parent().parent().find('.comment-status-current').show().text(curChoice + currentDate());
+			});
+
+			// Выбор корректора
+			$('.comment-corrector-current').click(function(event) {
+				$(this).siblings(0).removeClass('hide');
+				$(this).siblings(0).find('.dropdown-comments-list').toggleClass('hide');
+				$(this).siblings(0).find('.dropdown-comments-top').text($(this).text());
+			});
+			$('.dropdown-comments-list .corrector-item').click(function(event) {
+				var curChoice = $(this).text();
+				$(this).parent().addClass('hide');
+				var correctorName = $(this).parent().parent().find('.comment-corrector-current');
+				correctorName.text(curChoice);
+				// Проверка, открыто ли меню выбора статуса
+				var ifStatusIsActiveNow = correctorName.parent().parent().find('.dropdown-comments-list');
+				var currentStatus = correctorName.parent().parent().find('.comment-status-current');
+				if (ifStatusIsActiveNow.hasClass('hide')) {
+					ifStatusIsActiveNow.addClass('hide');
+				};
+				currentStatus.text('Forwarded'  + currentDate());
+			});
+
+			// Сворачиваем-разворачиваем длинные комменты
+			$('.js-comment-list').click(function(event) {
+				var numberOfComment = $(this).parent().parent().index() / 2; // Индекс строки таблицы для определения номера комментария в массиве
+				$(this).toggleClass('expand-comment').toggleClass('collapse-comment');
+				if ($(this).hasClass('expand-comment')) {
+					$(this).attr({title: 'Hide'});
+					$(this).parent().find('p').text(commentsArray[numberOfComment - 1]);
+				} else {
+					$(this).attr({title: 'Show'});
+					$(this).parent().find('p').text(commentsArray[numberOfComment - 1].slice(0,commentLength)+'...');
+				};
+			});
+
+		}; //end main
+
+		$(document).ready(main);
 
 	</script>
 </body>
