@@ -182,7 +182,7 @@
 					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis possimus beatae doloribus eaque sunt eius maxime, ex similique architecto illum minus deleniti, provident tempora asperiores.'
 				]; // Массив значений комментариев (в теории - из базы данных)
 			var tagsArray = $('.comments-main-tdcomment p'); // Массив ячеек комментариев
-			var commentLength = 280; // Full HD длина комментария
+			var commentLength = 290; // Full HD длина комментария
 
 			// Просто текущая дата
 			function currentDate () {
@@ -204,24 +204,47 @@
 
 			// Определяем длину комментария
 			function windowSize(){
-			    if ($(window).width() > 1900){
+			    if ($(window).width() > 1850) {
+			        commentLength = 290;
+			    } else if ($(window).width() >= 1800) {
 			        commentLength = 280;
 			    } else if ($(window).width() >= 1750) {
-			       	commentLength = 250;
+			        commentLength = 270;
+			    } else if ($(window).width() >= 1700) {
+			        commentLength = 260;
+			    } else if ($(window).width() >= 1650) {
+			        commentLength = 250;
+			    } else if ($(window).width() >= 1600) {
+			       	commentLength = 240;
 			    } else if ($(window).width() >= 1550) {
 			        commentLength = 230;
+			    } else if ($(window).width() >= 1500) {
+			        commentLength = 225;
+			    } else if ($(window).width() >= 1450) {
+			        commentLength = 220;
 			    } else if ($(window).width() >= 1400) {
 			        commentLength = 210;
-			    } else if ($(window).width() >= 1320) {
-			        commentLength = 180;
-			    } else if ($(window).width() >= 1240) {
+			    } else if ($(window).width() >= 1350) {
+			        commentLength = 200;
+			    } else if ($(window).width() >= 1300) {
+			        commentLength = 190;
+			    } else if ($(window).width() >= 1250) {
+			        commentLength = 185;
+			    } else if ($(window).width() >= 1200) {
+			        commentLength = 175;
+			    } else if ($(window).width() >= 1150) {
+			        commentLength = 170;
+			    } else if ($(window).width() >= 1100) {
 			        commentLength = 160;
-			    } else if ($(window).width() >= 1010) {
-			        commentLength = 140;
+			    } else if ($(window).width() >= 1050) {
+			        commentLength = 150;
+			    } else if ($(window).width() >= 1000) {
+			        commentLength = 145;
 			    } else {
-			    	commentLength = 120;
+			    	commentLength = 140;
 			    };
 			    commentsFill(commentLength);
+			    console.log(commentLength + ' - ' + $(window).width());
 			};
 
 			$(window).load(windowSize); // при загрузке
