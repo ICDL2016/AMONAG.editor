@@ -9,26 +9,70 @@
 </head>
 <body>
 	<div class="tasks__overflow">
+
 		<ul class="tabs-caption">
     		<li class="active">Создать</li>
 			<li>Текущие</li>
 			<li>На проверке</li>
 			<li>Выполненные</li>
   		</ul>
-		<div id="tab-create-content" class="tabs-content active">1</div>
+
+  		<!-- Создать -->
+		<div id="tab-create-content" class="tabs-content active">
+			<div>
+				<div class="dropdown-comments-menu tab-create-list">
+					<span class="dropdown-comments-top">Создать книгу</span>
+					<span class="dropdown-comments-toggle down fa"></span>
+					<ul class="dropdown-comments-list hide">
+						<li class="dropdown-comments-item">Создать книгу</li>
+						<li class="dropdown-comments-item">Добавить перевод</li>
+						<li class="dropdown-comments-item">Проверка</li>
+						<li class="dropdown-comments-item">Другое</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<a href="" class="booklink">
+					<i class="fa fa-link" aria-hidden="true"></i>
+					Канбан
+				</a>
+			</div>
+			<input id="task-description" type="text" class="task-description" placeholder="Описание задачи (Название и тип создаваемой книги, языки и т.д.">
+			<div>
+				<a href="" class="choose-editor">
+					<i class="fa fa-user-plus" aria-hidden="true"></i>
+					Иванов Иван
+				</a>
+			</div>
+			<button class="btn-create-task">Создать задание</button>
+		</div>
+
+		<!-- Текущие -->
 		<div id="tab-current-content" class="tabs-content">2</div>
+
+		<!-- На проверке -->
 		<div id="tab-check-content" class="tabs-content">3</div>
+
+		<!-- Выполненные -->
 		<div id="tab-done-content" class="tabs-content">4</div>
-	</div>
+
+	</div> <!--End tasks__overflow -->
 
 	<script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
 	<script>
-		$('.dropdown-comments-menu').click(function(event) {
-			$(this).find('.dropdown-comments-list').toggleClass('hide');
-		});
+		// Переключение между вкладками
 
 		$('ul.tabs-caption').on('click', 'li:not(.active)', function() {
 		    $(this).addClass('active').siblings().removeClass('active').closest('div.tasks__overflow').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
+		});
+
+		// Выбор в списке вкладки Создать
+		$('.dropdown-comments-menu.tab-create-list').click(function(event) {
+			$(this).find('.dropdown-comments-list').toggleClass('hide');
+		});
+		$('.dropdown-comments-menu.tab-create-list .dropdown-comments-item').click(function(event) {
+			$(this).parent().find('.dropdown-comments-list').toggleClass('hide');
+			$(this).parent().parent().find('.dropdown-comments-top').text($(this).text());
 		});
 	</script>
 </body>

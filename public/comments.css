@@ -461,7 +461,7 @@ table {
 	cursor: pointer;
 }
 
-/*TASKS*/
+/* --- TASKS --- */
 
 .tasks__overflow {
 	font-family: sans-serif;
@@ -472,11 +472,15 @@ table {
 	display: inline-block;
 	cursor: pointer;
 	text-align: center;
-	background-color: #6F751F;
+	background-color: #626062;
 	color: #fff;
 	width: 200px;
 	padding: 10px 20px;
 	margin: 0 10px 0 0;
+}
+
+.tabs-caption li.active {
+	background-color: #6F751F;
 }
 
 .tabs-content {
@@ -486,4 +490,17 @@ table {
 
 .tabs-content.active {
 	display: block;
+}
+
+/*Создать*/
+
+.tab-create-content > div {
+	text-align: center;
+}
+
+.tab-create-list {
+	display: inline-block;
+	margin: 30px auto;
+	text-align: center;
+	width: 300px;
 }
