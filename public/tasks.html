@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tasks</title>
+	<link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="comments.css">
+</head>
+<body>
+	<div class="tasks__overflow">
+		<ul class="tabs-caption">
+    		<li class="active">Создать</li>
+			<li>Текущие</li>
+			<li>На проверке</li>
+			<li>Выполненные</li>
+  		</ul>
+		<div id="tab-create-content" class="tabs-content active">1</div>
+		<div id="tab-current-content" class="tabs-content">2</div>
+		<div id="tab-check-content" class="tabs-content">3</div>
+		<div id="tab-done-content" class="tabs-content">4</div>
+	</div>
+
+	<script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
+	<script>
+		$('.dropdown-comments-menu').click(function(event) {
+			$(this).find('.dropdown-comments-list').toggleClass('hide');
+		});
+
+		$('ul.tabs-caption').on('click', 'li:not(.active)', function() {
+		    $(this).addClass('active').siblings().removeClass('active').closest('div.tasks__overflow').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
+		});
+	</script>
+</body>
+</html>

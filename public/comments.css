@@ -460,3 +460,30 @@ table {
 .comments-main-td.corrector .dropdown-comments-list li {
 	cursor: pointer;
 }
+
+/*TASKS*/
+
+.tasks__overflow {
+	font-family: sans-serif;
+	padding: 70px 50px 0;
+}
+
+.tabs-caption li {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	background-color: #6F751F;
+	color: #fff;
+	width: 200px;
+	padding: 10px 20px;
+	margin: 0 10px 0 0;
+}
+
+.tabs-content {
+	display: none;
+	padding: 10px;
+}
+
+.tabs-content.active {
+	display: block;
+}
