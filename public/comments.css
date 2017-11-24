@@ -474,9 +474,9 @@ table {
 	text-align: center;
 	background-color: #626062;
 	color: #fff;
-	width: 200px;
-	padding: 10px 20px;
-	margin: 0 10px 0 0;
+	width: 150px;
+	padding: 10px;
+	margin: 0 5px 0 0;
 }
 
 .tabs-caption li.active {
@@ -485,7 +485,7 @@ table {
 
 .tabs-content {
 	display: none;
-	padding: 10px;
+	padding: 10px 0;
 }
 
 .tabs-content.active {
@@ -494,13 +494,52 @@ table {
 
 /*Создать*/
 
-.tab-create-content > div {
+#tab-create-content div {
 	text-align: center;
 }
 
 .tab-create-list {
 	display: inline-block;
-	margin: 30px auto;
+	margin: 30px auto 0;
 	text-align: center;
 	width: 300px;
+}
+
+#tab-create-content a,
+#tab-create-content input {
+	display: inline-block;
+}
+
+#tab-create-content a {
+	margin: 30px auto;
+	text-decoration: none;
+	color: #626062;
+	font-size: 18px;
+}
+
+#tab-create-content a.disabled {
+	color: #aaa;
+}
+
+#tab-create-content a i {
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+#tab-create-content input {
+	width: 100%;
+}
+
+.btn-create-task {
+	display: block;
+	margin: 20px auto;
+	padding: 15px 30px;
+	background-color: #626062;
+	color: #fff;
+	border: none;
+	font-size: 18px;
+}
+
+.btn-create-task:hover {
+	background-color: #6F751F;
 }

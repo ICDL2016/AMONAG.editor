@@ -32,19 +32,17 @@
 				</div>
 			</div>
 			<div>
-				<a href="" class="booklink">
+				<a href="" id="booklink" class="disabled">
 					<i class="fa fa-link" aria-hidden="true"></i>
-					Канбан
+					"Канбан"
 				</a>
-			</div>
-			<input id="task-description" type="text" class="task-description" placeholder="Описание задачи (Название и тип создаваемой книги, языки и т.д.">
-			<div>
-				<a href="" class="choose-editor">
+				<input id="task-description" type="text" class="task-description" placeholder="Описание задачи (Название и тип создаваемой книги, языки и т.д.">
+				<a href="" id="choose-editor">
 					<i class="fa fa-user-plus" aria-hidden="true"></i>
 					Иванов Иван
 				</a>
+				<button class="btn-create-task">Создать задание</button>
 			</div>
-			<button class="btn-create-task">Создать задание</button>
 		</div>
 
 		<!-- Текущие -->
@@ -61,7 +59,6 @@
 	<script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
 	<script>
 		// Переключение между вкладками
-
 		$('ul.tabs-caption').on('click', 'li:not(.active)', function() {
 		    $(this).addClass('active').siblings().removeClass('active').closest('div.tasks__overflow').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
 		});
@@ -73,6 +70,17 @@
 		$('.dropdown-comments-menu.tab-create-list .dropdown-comments-item').click(function(event) {
 			$(this).parent().find('.dropdown-comments-list').toggleClass('hide');
 			$(this).parent().parent().find('.dropdown-comments-top').text($(this).text());
+			if($(this).text() == "Создать книгу") {
+				$('#booklink').addClass('disabled');
+			} else {
+				$('#booklink').removeClass('disabled');
+			};
+		});
+
+		$('#booklink').on('click', function(e){
+			if($(this).hasClass('disabled')) {
+				e.preventDefault();
+			};
 		});
 	</script>
 </body>
