@@ -16,20 +16,19 @@
 			<li>На проверке</li>
 			<li>Выполненные</li>
   		</ul>
-  		<ul class="right-filters-list list-create">
-  			<li class="right-filters-item"></li>
-  			<li class="right-filters-item"></li>
-  			<li class="right-filters-item"></li>
+  		<ul class="right-filters-list list-create show-me-this">
+  			<li class="right-filters-item task-new">Новые <span class="filter-close"></span></li>
+  			<li class="right-filters-item task-check">Ждут подтверждения <span class="filter-close"></span></li>
+  			<li class="right-filters-item task-current">В работе <span class="filter-close"></span></li>
   		</ul>
   		<ul class="right-filters-list list-current">
-			<li class="right-filters-item"></li>
-  			<li class="right-filters-item"></li>
-  			<li class="right-filters-item"></li>
+			<li class="right-filters-item task-new">Отправлены на проверку <span class="filter-close"></span></li>
+  			<li class="right-filters-item task-check">Приняты на проверку <span class="filter-close"></span></li>
+  			<li class="right-filters-item task-current">Есть замечания <span class="filter-close"></span></li>
   		</ul>
   		<ul class="right-filters-list list-done">
-			<li class="right-filters-item"></li>
-  			<li class="right-filters-item"></li>
-  			<li class="right-filters-item"></li>
+  			<li class="right-filters-item task-check">Ожидают оплаты <span class="filter-close"></span></li>
+  			<li class="right-filters-item task-current">Оплачены <span class="filter-close"></span></li>
   		</ul>
 
   		<!-- Создать -->
@@ -203,10 +202,16 @@
 			};
 		});
 
+		// Деактивация привязки книги при создании новой
 		$('#booklink').on('click', function(e){
 			if($(this).hasClass('disabled')) {
 				e.preventDefault();
 			};
+		});
+
+		// Применение правых фильтров в таблицах
+		$('.right-filters-item').on('click', function() {
+			$(this).find('span').toggleClass('filter-close').toggleClass('filter-plus');
 		});
 	</script>
 </body>

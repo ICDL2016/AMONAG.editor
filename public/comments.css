@@ -503,6 +503,35 @@ table {
 	display: none;
 	width: 40%;
 	float: right;
+	text-align: right;
+}
+
+.right-filters-item {
+	display: inline-block;
+	padding: 10px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+.right-filters-item:last-child {
+	margin-right: 0;
+}
+
+.right-filters-item span {
+	display: inline-block;
+	width: 11px;
+}
+
+.show-me-this {
+	display: inline-block;
+}
+
+.filter-close::after {
+	content: 'X';
+}
+
+.filter-plus::after {
+	content: '+';
 }
 
 /*Создать*/
