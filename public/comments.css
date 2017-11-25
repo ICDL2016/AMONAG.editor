@@ -466,6 +466,8 @@ table {
 .tasks__overflow {
 	font-family: sans-serif;
 	padding: 70px 50px 0;
+	background-color: #F4F4F4;
+    min-height: 960px;
 }
 
 .tabs-caption li {
@@ -543,4 +545,41 @@ table {
 
 .btn-create-task:hover {
 	background-color: #6F751F;
+}
+
+/*Текущие*/
+
+.tasks-main-table {
+	margin-top: 50px;
+	width: 100%;
+	text-align: left;
+}
+
+.tasks-main-table th {
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+
+.tasks-main-table td {
+	border-top: 2px solid #cccccc;
+}
+
+.tasks-main-table th:nth-child(1) {
+	padding-left: 10px;
+}
+
+.tasks-main-table td:nth-child(1) {
+	width: 10%;
+}
+
+.tasks-main-table td:nth-child(2) {
+	width: 15%;
+}
+
+.tasks-main-table td:nth-child(3) {
+	width: 50%;
+}
+
+.tasks-main-table td:nth-child(4) {
+	width: 25%;
 }
