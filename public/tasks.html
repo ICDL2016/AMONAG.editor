@@ -16,6 +16,21 @@
 			<li>На проверке</li>
 			<li>Выполненные</li>
   		</ul>
+  		<ul class="right-filters-list list-create">
+  			<li class="right-filters-item"></li>
+  			<li class="right-filters-item"></li>
+  			<li class="right-filters-item"></li>
+  		</ul>
+  		<ul class="right-filters-list list-current">
+			<li class="right-filters-item"></li>
+  			<li class="right-filters-item"></li>
+  			<li class="right-filters-item"></li>
+  		</ul>
+  		<ul class="right-filters-list list-done">
+			<li class="right-filters-item"></li>
+  			<li class="right-filters-item"></li>
+  			<li class="right-filters-item"></li>
+  		</ul>
 
   		<!-- Создать -->
 		<div id="tab-create-content" class="tabs-content active">
@@ -54,32 +69,116 @@
 					<th class="tasks-main-th">ОПИСАНИЕ</th>
 					<th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
 				</tr>
-				<tr class="tasks-main-trtd">
-					<td class="tasks-main-td"></td>
-					<td class="tasks-main-td"></td>
-					<td class="tasks-main-td"></td>
-					<td class="tasks-main-td"></td>
+				<tr class="tasks-main-trtd task-new">
+					<td class="tasks-main-td">25.11.2017</td>
+					<td class="tasks-main-td">Создать книгу</td>
+					<td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
+					<td class="tasks-main-td">Иванов Иван, мл. редактор</td>
 				</tr>
-				<!-- <tr class="tasks-main-trtd">
-					<td class="tasks-main-td"></td>
-					<td class="tasks-main-td"></td>
-					<td class="tasks-main-td"></td>
-					<td class="tasks-main-td"></td>
+				<tr class="tasks-main-trtd task-check">
+					<td class="tasks-main-td">22.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Управление проектами" (добавить ES)</td>
+					<td class="tasks-main-td">Michel Salgado, student</td>
 				</tr>
-				<tr class="tasks-main-trtd">
-					<td class="tasks-main-td"></td>
-					<td class="tasks-main-td"></td>
-					<td class="tasks-main-td"></td>
-					<td class="tasks-main-td"></td>
-				</tr> -->
+				<tr class="tasks-main-trtd task-check">
+					<td class="tasks-main-td">22.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Бережливый стартап" (добавить DE)</td>
+					<td class="tasks-main-td">Franz Ferdinand, student</td>
+				</tr>
+				<tr class="tasks-main-trtd task-current">
+					<td class="tasks-main-td">21.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
+					<td class="tasks-main-td">Петров Петр, студент</td>
+				</tr>
+				<tr class="tasks-main-trtd task-current">
+					<td class="tasks-main-td">21.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
+					<td class="tasks-main-td">Сидоров Сидор, студент</td>
+				</tr>
+				<tr class="tasks-main-trtd task-current">
+					<td class="tasks-main-td">20.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
+					<td class="tasks-main-td">Ованес Оганесян, редактор</td>
+				</tr>
 			</table>
 		</div>
 
 		<!-- На проверке -->
-		<div id="tab-check-content" class="tabs-content">3</div>
+		<div id="tab-check-content" class="tabs-content">
+			<table class="tasks-main-table">
+				<tr class="tasks-main-trth">
+					<th class="tasks-main-th">ДАТА</th>
+					<th class="tasks-main-th">ЗАДАНИЕ</th>
+					<th class="tasks-main-th">ОПИСАНИЕ</th>
+					<th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
+				</tr>
+				<tr class="tasks-main-trtd task-new">
+					<td class="tasks-main-td">25.11.2017</td>
+					<td class="tasks-main-td">Создать книгу</td>
+					<td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
+					<td class="tasks-main-td">Иванов Иван, мл. редактор</td>
+				</tr>
+				<tr class="tasks-main-trtd task-check">
+					<td class="tasks-main-td">22.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Управление проектами" (добавить ES)</td>
+					<td class="tasks-main-td">Michel Salgado, student</td>
+				</tr>
+				<tr class="tasks-main-trtd task-current">
+					<td class="tasks-main-td">22.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Бережливый стартап" (добавить DE)</td>
+					<td class="tasks-main-td">Franz Ferdinand, student</td>
+				</tr>
+			</table>
+		</div>
 
 		<!-- Выполненные -->
-		<div id="tab-done-content" class="tabs-content">4</div>
+		<div id="tab-done-content" class="tabs-content">
+			<table class="tasks-main-table">
+				<tr class="tasks-main-trth">
+					<th class="tasks-main-th">ДАТА</th>
+					<th class="tasks-main-th">ЗАДАНИЕ</th>
+					<th class="tasks-main-th">ОПИСАНИЕ</th>
+					<th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
+				</tr>
+				<tr class="tasks-main-trtd task-new">
+					<td class="tasks-main-td">25.11.2017</td>
+					<td class="tasks-main-td">Создать книгу</td>
+					<td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
+					<td class="tasks-main-td">Иванов Иван, мл. редактор</td>
+				</tr>
+				<tr class="tasks-main-trtd task-check">
+					<td class="tasks-main-td">23.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
+					<td class="tasks-main-td">Не выбран</td>
+				</tr>
+				<tr class="tasks-main-trtd task-check">
+					<td class="tasks-main-td">22.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Управление проектами" (добавить ES)</td>
+					<td class="tasks-main-td">Michel Salgado, student</td>
+				</tr>
+				<tr class="tasks-main-trtd task-current">
+					<td class="tasks-main-td">22.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Бережливый стартап" (добавить DE)</td>
+					<td class="tasks-main-td">Franz Ferdinand, student</td>
+				</tr>
+				<tr class="tasks-main-trtd task-current">
+					<td class="tasks-main-td">21.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
+					<td class="tasks-main-td">Петров Петр, студент</td>
+				</tr>
+			</table>
+		</div>
 
 	</div> <!--End tasks__overflow -->
 

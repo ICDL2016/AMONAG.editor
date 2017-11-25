@@ -470,6 +470,11 @@ table {
     min-height: 960px;
 }
 
+.tabs-caption {
+	width: 60%;
+	display: inline-block;
+}
+
 .tabs-caption li {
 	display: inline-block;
 	cursor: pointer;
@@ -492,6 +497,12 @@ table {
 
 .tabs-content.active {
 	display: block;
+}
+
+.right-filters-list {
+	display: none;
+	width: 40%;
+	float: right;
 }
 
 /*Создать*/
@@ -555,6 +566,10 @@ table {
 	text-align: left;
 }
 
+.tasks-main-trtd:last-child {
+	border-bottom: 2px solid #cccccc;
+}
+
 .tasks-main-table th {
 	font-size: 18px;
 	padding-bottom: 10px;
@@ -562,6 +577,7 @@ table {
 
 .tasks-main-table td {
 	border-top: 2px solid #cccccc;
+	padding: 10px;
 }
 
 .tasks-main-table th:nth-child(1) {
@@ -582,4 +598,17 @@ table {
 
 .tasks-main-table td:nth-child(4) {
 	width: 25%;
+	cursor: pointer;
+}
+
+.task-new {
+	background-color: #F0F0F0;
+}
+
+.task-check {
+	background-color: #E4E4E4;
+}
+
+.task-current {
+	background-color: #D4D4D4;
 }
