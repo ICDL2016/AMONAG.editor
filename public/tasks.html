@@ -16,7 +16,7 @@
 			<li>На проверке</li>
 			<li>Выполненные</li>
   		</ul>
-  		<ul class="right-filters-list list-create show-me-this">
+  		<ul class="right-filters-list list-create">
   			<li class="right-filters-item task-new">Новые <span class="filter-close"></span></li>
   			<li class="right-filters-item task-check">Ждут подтверждения <span class="filter-close"></span></li>
   			<li class="right-filters-item task-current">В работе <span class="filter-close"></span></li>
@@ -186,6 +186,16 @@
 		// Переключение между вкладками
 		$('ul.tabs-caption').on('click', 'li:not(.active)', function() {
 		    $(this).addClass('active').siblings().removeClass('active').closest('div.tasks__overflow').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
+		    $('.right-filters-list').removeClass('show-me');
+		    if ($(this).text() == "Текущие") {
+		    	if (!$('.list-create').hasClass('show-me'))  $('.list-create').addClass('show-me');
+		    } else if ($(this).text() == "На проверке") {
+		    	if (!$('.list-current').hasClass('show-me'))  $('.list-current').addClass('show-me');
+		    } else if ($(this).text() == "Выполненные") {
+		    	if (!$('.list-done').hasClass('show-me'))  $('.list-done').addClass('show-me');
+		    } else {
+
+		    };
 		});
 
 		// Выбор в списке вкладки Создать
