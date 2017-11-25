@@ -519,6 +519,7 @@ table {
 
 #tab-create-content a.disabled {
 	color: #aaa;
+	cursor: default;
 }
 
 #tab-create-content a i {
