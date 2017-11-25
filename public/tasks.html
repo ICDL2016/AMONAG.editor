@@ -16,12 +16,12 @@
 			<li>На проверке</li>
 			<li>Выполненные</li>
   		</ul>
-  		<ul class="right-filters-list list-create">
+  		<ul class="right-filters-list list-current">
   			<li class="right-filters-item task-new">Новые <span class="filter-close"></span></li>
   			<li class="right-filters-item task-check">Ждут подтверждения <span class="filter-close"></span></li>
   			<li class="right-filters-item task-current">В работе <span class="filter-close"></span></li>
   		</ul>
-  		<ul class="right-filters-list list-current">
+  		<ul class="right-filters-list list-check">
 			<li class="right-filters-item task-new">Отправлены на проверку <span class="filter-close"></span></li>
   			<li class="right-filters-item task-check">Приняты на проверку <span class="filter-close"></span></li>
   			<li class="right-filters-item task-current">Есть замечания <span class="filter-close"></span></li>
@@ -73,6 +73,12 @@
 					<td class="tasks-main-td">Создать книгу</td>
 					<td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
 					<td class="tasks-main-td">Иванов Иван, мл. редактор</td>
+				</tr>
+				<tr class="tasks-main-trtd task-new">
+					<td class="tasks-main-td">24.11.2017</td>
+					<td class="tasks-main-td">Добавить перевод</td>
+					<td class="tasks-main-td">"Управление проектами" (добавить AR)</td>
+					<td class="tasks-main-td">Ованес Оганесян, редактор</td>
 				</tr>
 				<tr class="tasks-main-trtd task-check">
 					<td class="tasks-main-td">22.11.2017</td>
@@ -146,7 +152,7 @@
 					<th class="tasks-main-th">ОПИСАНИЕ</th>
 					<th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
 				</tr>
-				<tr class="tasks-main-trtd task-new">
+				<tr class="tasks-main-trtd task-current">
 					<td class="tasks-main-td">25.11.2017</td>
 					<td class="tasks-main-td">Создать книгу</td>
 					<td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
@@ -156,7 +162,7 @@
 					<td class="tasks-main-td">23.11.2017</td>
 					<td class="tasks-main-td">Добавить перевод</td>
 					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
-					<td class="tasks-main-td">Не выбран</td>
+					<td class="tasks-main-td">Сидор Сидоров, студент</td>
 				</tr>
 				<tr class="tasks-main-trtd task-check">
 					<td class="tasks-main-td">22.11.2017</td>
@@ -188,9 +194,9 @@
 		    $(this).addClass('active').siblings().removeClass('active').closest('div.tasks__overflow').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
 		    $('.right-filters-list').removeClass('show-me');
 		    if ($(this).text() == "Текущие") {
-		    	if (!$('.list-create').hasClass('show-me'))  $('.list-create').addClass('show-me');
-		    } else if ($(this).text() == "На проверке") {
 		    	if (!$('.list-current').hasClass('show-me'))  $('.list-current').addClass('show-me');
+		    } else if ($(this).text() == "На проверке") {
+		    	if (!$('.list-check').hasClass('show-me'))  $('.list-check').addClass('show-me');
 		    } else if ($(this).text() == "Выполненные") {
 		    	if (!$('.list-done').hasClass('show-me'))  $('.list-done').addClass('show-me');
 		    } else {
@@ -221,7 +227,40 @@
 
 		// Применение правых фильтров в таблицах
 		$('.right-filters-item').on('click', function() {
-			$(this).find('span').toggleClass('filter-close').toggleClass('filter-plus');
+
+			// Переключаем кнопки Close и Plus в фильтрах
+			var thisFilter = $(this).find('span');
+			thisFilter.toggleClass('filter-close').toggleClass('filter-plus');
+
+			// Создаем массив строк таблицы
+			var arrayRow = [];
+			if (thisFilter.parent().parent().hasClass('list-current')) {
+				arrayRow = $('#tab-current-content .tasks-main-table tr');
+			} else if (thisFilter.parent().parent().hasClass('list-check')) {
+				arrayRow = $('#tab-check-content .tasks-main-table tr');
+			} else {
+				arrayRow = $('#tab-done-content .tasks-main-table tr');
+			};
+
+			// Скрываем-отображаем строки в таблице
+			for (var i = 1; i < arrayRow.length; i++) {
+				if ( (thisFilter.hasClass('filter-plus')) && (thisFilter.parent().hasClass('task-new')) && (arrayRow.eq(i).hasClass('task-new'))) {
+					arrayRow.eq(i).hide();
+				} else if ( (thisFilter.hasClass('filter-close')) && (thisFilter.parent().hasClass('task-new')) && (arrayRow.eq(i).hasClass('task-new'))) {
+					arrayRow.eq(i).show();
+				};
+				if ( (thisFilter.hasClass('filter-plus')) && (thisFilter.parent().hasClass('task-check')) && (arrayRow.eq(i).hasClass('task-check'))) {
+					arrayRow.eq(i).hide();
+				} else if ( (thisFilter.hasClass('filter-close')) && (thisFilter.parent().hasClass('task-check')) && (arrayRow.eq(i).hasClass('task-check'))) {
+					arrayRow.eq(i).show();
+				};
+				if ( (thisFilter.hasClass('filter-plus')) && (thisFilter.parent().hasClass('task-current')) && (arrayRow.eq(i).hasClass('task-current'))) {
+					arrayRow.eq(i).hide();
+				} else if ( (thisFilter.hasClass('filter-close')) && (thisFilter.parent().hasClass('task-current')) && (arrayRow.eq(i).hasClass('task-current'))) {
+					arrayRow.eq(i).show();
+				};
+			};
+
 		});
 	</script>
 </body>
