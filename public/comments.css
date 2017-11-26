@@ -666,46 +666,92 @@ table {
 /*Модальное окно*/
 
 .modal-window {
-  position: fixed;
-  background-color: rgba(105, 105, 105, 0.5);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+	position: fixed;
+	background-color: rgba(105, 105, 105, 0.5);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .modal-window:target {
-  opacity: 1;
-  pointer-events: auto;
+  	opacity: 1;
+  	pointer-events: auto;
 }
 
 .modal-window > div {
-  width: 80%;
-  position: relative;
-  margin: 5% auto;
-  padding: 20px;
-  background: #fff;
-  color: #444;
+  	width: 80%;
+  	position: relative;
+  	margin: 5% auto;
+  	padding: 20px;
+  	background: #F4F4F4;
+  	color: #444;
 }
 
 .modal-close {
-  color: #aaa;
-  line-height: 50px;
-  font-size: 80%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 70px;
-  text-decoration: none;
+  	color: #aaa;
+  	line-height: 50px;
+  	font-size: 80%;
+  	position: absolute;
+  	right: 0;
+  	text-align: center;
+  	top: 0;
+  	width: 70px;
+  	text-decoration: none;
 }
 
 .modal-close:hover {
-  color: #000;
+  	color: #000;
+}
+
+.modal-body {
+	background: #F4F4F4;
+}
+
+.modal-lists-block {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	margin: 0 0 20px 0;
+}
+
+.modal-lists-block ul {
+	display: inline-block;
+}
+
+.modal-lists-block ul {
+	width: 20%;
+}
+
+.modal-lists-block ul:nth-child(2) {
+	width: 40%;
+}
+
+.modal-lists-block ul li {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 5px 10px 0;
+}
+
+.modal-table {
+	margin: 10px 0;
+	width: 100%;
+}
+
+.modal-table th {
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-align: left;
+}
+
+.modal-table td {
+	border-top: 2px solid #cccccc;
+	padding: 10px 10px 10px 0;
 }
