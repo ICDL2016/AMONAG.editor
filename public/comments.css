@@ -659,7 +659,8 @@ table {
 	color: #000;
 }
 
-.open-modal:visited {
+.open-modal:visited,
+.notices:visited {
 	color: #000;
 }
 
@@ -690,8 +691,9 @@ table {
   	position: relative;
   	margin: 5% auto;
   	padding: 20px;
-  	background: #F4F4F4;
+  	background: #E2E2E2;
   	color: #444;
+  	border: 2px solid #cccccc;
 }
 
 .modal-close {
@@ -711,7 +713,8 @@ table {
 }
 
 .modal-body {
-	background: #F4F4F4;
+	color: #444;
+	background: #E2E2E2;
 }
 
 .modal-lists-block {
@@ -740,7 +743,7 @@ table {
 }
 
 .modal-table {
-	margin: 10px 0;
+	margin: 10px 0 20px;
 	width: 100%;
 }
 
@@ -754,4 +757,37 @@ table {
 .modal-table td {
 	border-top: 2px solid #cccccc;
 	padding: 10px 10px 10px 0;
+}
+
+.modal-table td:nth-child(1) {
+	width: 90px;
+}
+
+.modal-table td:nth-child(2) {
+	width: calc( 100% - 90px );
+}
+
+.modal-table tr:last-child {
+	border-bottom: 2px solid #cccccc;
+}
+
+.modal-button {
+	color: #fff;
+	background-color: #626062;
+	padding: 10px;
+	width: 200px;
+	margin-right: 10px;
+	border: none;
+}
+
+.modal-button:hover {
+	background-color: #6F751F;
+}
+
+.notices {
+	color: #000;
+}
+
+.notices:hover {
+	color: #6F751F;
 }
