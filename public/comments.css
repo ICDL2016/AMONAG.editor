@@ -799,10 +799,14 @@ table {
 	background-color: #6F751F;
 }
 
-.notices {
-	color: #000;
+.collapse-comment.fa.js-notice,
+.expand-comment.fa.js-notice {
+	float: none;
+	margin-top: -5px;
 }
 
-.notices:hover {
-	color: #6F751F;
+.modal-table-notice {
+	margin: 5px 0 0 5px;
+	padding: 10px;
+	background-color: #eee;
 }

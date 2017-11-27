@@ -234,7 +234,10 @@
 		    			</tr>
 		    			<tr>
 		    				<td>01.10.1027</td>
-		    				<td>Есть замечания (<a href="" class="notices">посмотреть</a>)</td>
+		    				<td>
+		    					Есть замечания <span class="collapse-comment fa js-notice" title="Hide"></span>
+		    					<p class="modal-table-notice hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, magnam tempora error saepe perspiciatis corporis.</p>
+		    				</td>
 		    			</tr>
 		    			<tr>
 		    				<td>02.10.1027</td>
@@ -333,6 +336,17 @@
 					};
 				};
 
+			});
+
+			$('.js-notice').on('click', function() {
+				$(this).toggleClass('expand-comment').toggleClass('collapse-comment');
+				if ($(this).hasClass('expand-comment')) {
+					$(this).attr({title: 'Hide'});
+					$(this).parent().find('p').removeClass('hide');
+				} else {
+					$(this).attr({title: 'Show'});
+					$(this).parent().find('p').addClass('hide');
+				};
 			});
 
 		}; // End main
