@@ -701,7 +701,7 @@ table {
 .modal-close {
   	color: #aaa;
   	line-height: 50px;
-  	font-size: 80%;
+  	font-size: 1.5em;
   	position: absolute;
   	right: 0;
   	text-align: center;
