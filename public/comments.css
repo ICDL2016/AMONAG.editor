@@ -515,6 +515,11 @@ table {
 	cursor: pointer;
 }
 
+.right-filters-item:hover {
+	color: #fff;
+	background-color: #6F751F;
+}
+
 .right-filters-item:last-child {
 	margin-right: 0;
 }
