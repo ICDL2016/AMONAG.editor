@@ -482,7 +482,7 @@ table {
 	text-align: center;
 	background-color: #626062;
 	color: #fff;
-	width: 130px;
+	width: 120px;
 	padding: 10px;
 	margin: 0 5px 0 0;
 }
@@ -649,15 +649,15 @@ table {
 }
 
 .task-new {
-	background-color: #F0F0F0;
+	background-color: #e0e0e0;
 }
 
 .task-check {
-	background-color: #E2E2E2;
+	background-color: #cecece;
 }
 
 .task-current {
-	background-color: #D4D4D4;
+	background-color: #bdbdbd;
 }
 
 .open-modal {
