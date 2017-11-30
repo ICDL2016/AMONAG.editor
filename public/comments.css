@@ -492,6 +492,10 @@ table {
 	background-color: #6F751F;
 }
 
+.tabs-caption br {
+	display: none;
+}
+
 .tabs-content {
 	display: none;
 	padding: 10px 0;
@@ -821,4 +825,39 @@ table {
 	margin: 5px 0 0 5px;
 	padding: 10px;
 	background-color: #eee;
+}
+
+/*Responsive for modal*/
+
+@media (max-width: 1024px) {
+
+	.tabs-caption li {
+	    margin-bottom: 5px;
+	}
+
+	.tabs-caption br {
+	    display: inline;
+	}
+
+	.right-filters-item {
+		float: right;
+		width: 60%;
+    	display: block;
+    	margin: 0;
+    	margin-left: 10px;
+    	margin-bottom: 5px;
+	}
+
+	.right-filters-item:last-child {
+		margin-bottom: 10px;
+	}
+
+	.tasks-main-table th {
+    	font-size: 16px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
 }
