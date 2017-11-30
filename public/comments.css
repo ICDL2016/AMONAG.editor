@@ -841,6 +841,7 @@ table {
 
 	.right-filters-item {
 		float: right;
+		text-align: center;
 		width: 60%;
     	display: block;
     	margin: 0;
