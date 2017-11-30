@@ -485,15 +485,12 @@ table {
 	width: 120px;
 	padding: 10px;
 	margin: 0 5px 0 0;
+	float: left;
 }
 
 .tabs-caption li.active,
 .tabs-caption li:hover {
 	background-color: #6F751F;
-}
-
-.tabs-caption br {
-	display: none;
 }
 
 .tabs-content {
@@ -835,8 +832,8 @@ table {
 	    margin-bottom: 5px;
 	}
 
-	.tabs-caption br {
-	    display: inline;
+	.tabs-caption li:nth-child(3) {
+	    clear: both;
 	}
 
 	.right-filters-item {
