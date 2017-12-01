@@ -559,6 +559,28 @@ table {
 	text-align: left;
 }
 
+.tasks-choose-language {
+	display: block;
+	margin: 20px auto;
+}
+
+.tasks-choose-language li {
+	display: inline-block;
+	margin-right: 5px;
+	padding: 10px;
+	color: #fff;
+	background-color: #626062;
+}
+
+.tasks-choose-language li.active {
+	background-color: #6F751F;
+}
+
+.tasks-choose-language li:hover {
+	cursor: pointer;
+	background-color: #6F751F;
+}
+
 #tab-create-content a,
 #tab-create-content input {
 	display: inline-block;
@@ -767,6 +789,10 @@ table {
 .change-book:hover,
 .change-editor:hover {
 	color: #6F751F;
+}
+
+.change-editor {
+	margin-left: 5px;
 }
 
 .modal-table {

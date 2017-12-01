@@ -45,6 +45,20 @@
 					</ul>
 				</div>
 			</div>
+			<div class="tasks-choose-language">
+				<ul class="tasks-language-list">
+					<li class="tasks-language-item active">RU</li>
+					<li class="tasks-language-item">EN</li>
+					<li class="tasks-language-item">ES</li>
+					<li class="tasks-language-item">DE</li>
+					<li class="tasks-language-item">FR</li>
+					<li class="tasks-language-item">IT</li>
+					<li class="tasks-language-item">PT</li>
+					<li class="tasks-language-item">PO</li>
+					<li class="tasks-language-item">AR</li>
+					<li class="tasks-language-item">CH</li>
+				</ul>
+			</div>
 			<div>
 				<a href="" id="booklink" class="disabled">
 					<i class="fa fa-link" aria-hidden="true"></i>
@@ -199,7 +213,7 @@
 			    		<ul class="modal-list-attr">
 			    			<li>Создать книгу</li>
 			    			<li><a href="" class="change-book">"Бережливый стартап" (EN / RU), Textbooks - IT</a></li>
-			    			<li>Иванов Иван, мл. редактор (<a href="" class="change-editor">сменить исполнителя</a>)</li>
+			    			<li>Иванов Иван, мл. редактор <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Edit"></span></a></li>
 			    		</ul>
 			    		<ul class="modal-list-names">
 			    			<li>ТЕКУЩИЙ СТАТУС</li>
@@ -291,6 +305,11 @@
 				} else {
 					$('#booklink').removeClass('disabled');
 				};
+			});
+
+			// Выбор языка книги или перевода
+			$('.tasks-choose-language').on('click', 'li:not(.active)', function() {
+			    $(this).addClass('active').siblings().removeClass('active');
 			});
 
 			// Деактивация привязки книги при создании новой
