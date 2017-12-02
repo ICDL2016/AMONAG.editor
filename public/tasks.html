@@ -1,385 +1,408 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tasks</title>
-	<link type="text/css" rel="stylesheet" href="assets/css/styles.css">
-	<link rel="stylesheet" href="comments.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tasks</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="comments.css">
 </head>
+
 <body>
-	<div class="tasks__overflow">
+    <div class="tasks__overflow">
 
-		<ul class="tabs-caption">
-    		<li class="active">Создать</li>
-			<li>Текущие</li>
-			<li>На проверке</li>
-			<li>Выполненные</li>
-  		</ul>
-  		<ul class="right-filters-list list-current">
-  			<li class="right-filters-item task-new">Новые <span class="filter-close"></span></li>
-  			<li class="right-filters-item task-check">Ждут подтверждения <span class="filter-close"></span></li>
-  			<li class="right-filters-item task-current">В работе <span class="filter-close"></span></li>
-  		</ul>
-  		<ul class="right-filters-list list-check">
-			<li class="right-filters-item task-new">Отправлены на проверку <span class="filter-close"></span></li>
-  			<li class="right-filters-item task-check">Приняты на проверку <span class="filter-close"></span></li>
-  			<li class="right-filters-item task-current">Есть замечания <span class="filter-close"></span></li>
-  		</ul>
-  		<ul class="right-filters-list list-done">
-  			<li class="right-filters-item task-check">Ожидают оплаты <span class="filter-close"></span></li>
-  			<li class="right-filters-item task-current">Оплачены <span class="filter-close"></span></li>
-  		</ul>
+        <ul class="tabs-caption">
+            <li class="active">Создать</li>
+            <li>Текущие</li>
+            <li>На проверке</li>
+            <li>Выполненные</li>
+        </ul>
+        <ul class="right-filters-list list-current">
+            <li class="right-filters-item task-new">Новые <span class="filter-close"></span></li>
+            <li class="right-filters-item task-check">Ждут подтверждения <span class="filter-close"></span></li>
+            <li class="right-filters-item task-current">В работе <span class="filter-close"></span></li>
+        </ul>
+        <ul class="right-filters-list list-check">
+            <li class="right-filters-item task-new">Отправлены на проверку <span class="filter-close"></span></li>
+            <li class="right-filters-item task-check">Приняты на проверку <span class="filter-close"></span></li>
+            <li class="right-filters-item task-current">Есть замечания <span class="filter-close"></span></li>
+        </ul>
+        <ul class="right-filters-list list-done">
+            <li class="right-filters-item task-check">Ожидают оплаты <span class="filter-close"></span></li>
+            <li class="right-filters-item task-current">Оплачены <span class="filter-close"></span></li>
+        </ul>
 
-  		<!-- Создать -->
-		<div id="tab-create-content" class="tabs-content active">
-			<div>
-				<div class="dropdown-comments-menu tab-create-list">
-					<span class="dropdown-comments-top">Создать книгу</span>
-					<span class="dropdown-comments-toggle down fa"></span>
-					<ul class="dropdown-comments-list hide">
-						<li class="dropdown-comments-item">Создать книгу</li>
-						<li class="dropdown-comments-item">Добавить перевод</li>
-						<li class="dropdown-comments-item">Проверка</li>
-						<li class="dropdown-comments-item">Другое</li>
-					</ul>
-				</div>
-			</div>
-			<div class="tasks-choose-language">
-				<ul class="tasks-language-list">
-					<li class="tasks-language-item active">RU</li>
-					<li class="tasks-language-item">EN</li>
-					<li class="tasks-language-item">ES</li>
-					<li class="tasks-language-item">DE</li>
-					<li class="tasks-language-item">FR</li>
-					<li class="tasks-language-item">IT</li>
-					<li class="tasks-language-item">PT</li>
-					<li class="tasks-language-item">PO</li>
-					<li class="tasks-language-item">AR</li>
-					<li class="tasks-language-item">CH</li>
-				</ul>
-			</div>
-			<div>
-				<a href="" id="booklink" class="disabled">
+        <!-- Создать -->
+        <div id="tab-create-content" class="tabs-content active">
+            <div>
+                <div class="dropdown-comments-menu tab-create-list">
+                    <span class="dropdown-comments-top">Создать книгу</span>
+                    <span class="dropdown-comments-toggle down fa"></span>
+                    <ul class="dropdown-comments-list hide">
+                        <li class="dropdown-comments-item">Создать книгу</li>
+                        <li class="dropdown-comments-item">Добавить перевод</li>
+                        <li class="dropdown-comments-item">Проверка</li>
+                        <li class="dropdown-comments-item">Другое</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tasks-choose-language">
+                <ul class="tasks-language-list">
+                    <li class="tasks-language-item active">RU</li>
+                    <li class="tasks-language-item">EN</li>
+                    <li class="tasks-language-item">ES</li>
+                    <li class="tasks-language-item">DE</li>
+                    <li class="tasks-language-item">FR</li>
+                    <li class="tasks-language-item">IT</li>
+                    <li class="tasks-language-item">PT</li>
+                    <li class="tasks-language-item">PO</li>
+                    <li class="tasks-language-item">AR</li>
+                    <li class="tasks-language-item">CH</li>
+                </ul>
+            </div>
+            <div class="create-task-symbols">
+                <span>Количество знаков (предварительное)</span>
+                <input type="text">
+            </div>
+            <div class="create-task-difficulty">
+                <div class="dropdown-comments-menu task-difficulty-list">
+                    <span class="dropdown-comments-top">1</span>
+                    <span class="dropdown-comments-toggle down fa"></span>
+                    <ul class="dropdown-comments-list hide">
+                        <li class="dropdown-comments-item">1</li>
+                        <li class="dropdown-comments-item">1.25</li>
+                        <li class="dropdown-comments-item">1.5</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <a href="" id="booklink" class="disabled">
 					<i class="fa fa-link" aria-hidden="true"></i>
 					Выбрать книгу
 				</a>
-				<input id="task-description" type="text" class="task-description" placeholder="Описание задачи (Название и тип создаваемой книги, языки и т.д.">
-				<a href="" id="choose-editor">
+                <input id="task-description" type="text" class="task-description" placeholder="Описание задачи (Название и тип создаваемой книги, языки и т.д.">
+                <a href="" id="choose-editor">
 					<i class="fa fa-user-plus" aria-hidden="true"></i>
 					Выбрать редактора
 				</a>
-				<button class="btn-create-task">Создать задание</button>
-			</div>
-		</div>
+                <button class="btn-create-task">Создать задание</button>
+            </div>
+        </div>
 
-		<!-- Текущие -->
-		<div id="tab-current-content" class="tabs-content">
-			<table class="tasks-main-table">
-				<tr class="tasks-main-trth">
-					<th class="tasks-main-th">ДАТА</th>
-					<th class="tasks-main-th">ЗАДАНИЕ</th>
-					<th class="tasks-main-th">ОПИСАНИЕ</th>
-					<th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
-				</tr>
-				<tr class="tasks-main-trtd task-new">
-					<td class="tasks-main-td">25.11.2017</td>
-					<td class="tasks-main-td">Создать книгу</td>
-					<td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
-					<td class="tasks-main-td">Иванов Иван, мл. редактор</td>
-				</tr>
-				<tr class="tasks-main-trtd task-new">
-					<td class="tasks-main-td">24.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Управление проектами" (добавить AR)</td>
-					<td class="tasks-main-td">Ованес Оганесян, редактор</td>
-				</tr>
-				<tr class="tasks-main-trtd task-check">
-					<td class="tasks-main-td">22.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Управление проектами" (добавить ES)</td>
-					<td class="tasks-main-td">Michel Salgado, student</td>
-				</tr>
-				<tr class="tasks-main-trtd task-check">
-					<td class="tasks-main-td">22.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Бережливый стартап" (добавить DE)</td>
-					<td class="tasks-main-td">Franz Ferdinand, student</td>
-				</tr>
-				<tr class="tasks-main-trtd task-current">
-					<td class="tasks-main-td">21.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
-					<td class="tasks-main-td">Петров Петр, студент</td>
-				</tr>
-				<tr class="tasks-main-trtd task-current">
-					<td class="tasks-main-td">21.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
-					<td class="tasks-main-td">Сидоров Сидор, студент</td>
-				</tr>
-				<tr class="tasks-main-trtd task-current">
-					<td class="tasks-main-td">20.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
-					<td class="tasks-main-td">Ованес Оганесян, редактор</td>
-				</tr>
-			</table>
-		</div>
+        <!-- Текущие -->
+        <div id="tab-current-content" class="tabs-content">
+            <table class="tasks-main-table">
+                <tr class="tasks-main-trth">
+                    <th class="tasks-main-th">ДАТА</th>
+                    <th class="tasks-main-th">ЗАДАНИЕ</th>
+                    <th class="tasks-main-th">ОПИСАНИЕ</th>
+                    <th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
+                </tr>
+                <tr class="tasks-main-trtd task-new">
+                    <td class="tasks-main-td">25.11.2017</td>
+                    <td class="tasks-main-td">Создать книгу</td>
+                    <td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
+                    <td class="tasks-main-td">Иванов Иван, мл. редактор</td>
+                </tr>
+                <tr class="tasks-main-trtd task-new">
+                    <td class="tasks-main-td">24.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Управление проектами" (добавить AR)</td>
+                    <td class="tasks-main-td">Ованес Оганесян, редактор</td>
+                </tr>
+                <tr class="tasks-main-trtd task-check">
+                    <td class="tasks-main-td">22.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Управление проектами" (добавить ES)</td>
+                    <td class="tasks-main-td">Michel Salgado, student</td>
+                </tr>
+                <tr class="tasks-main-trtd task-check">
+                    <td class="tasks-main-td">22.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Бережливый стартап" (добавить DE)</td>
+                    <td class="tasks-main-td">Franz Ferdinand, student</td>
+                </tr>
+                <tr class="tasks-main-trtd task-current">
+                    <td class="tasks-main-td">21.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
+                    <td class="tasks-main-td">Петров Петр, студент</td>
+                </tr>
+                <tr class="tasks-main-trtd task-current">
+                    <td class="tasks-main-td">21.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
+                    <td class="tasks-main-td">Сидоров Сидор, студент</td>
+                </tr>
+                <tr class="tasks-main-trtd task-current">
+                    <td class="tasks-main-td">20.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
+                    <td class="tasks-main-td">Ованес Оганесян, редактор</td>
+                </tr>
+            </table>
+        </div>
 
-		<!-- На проверке -->
-		<div id="tab-check-content" class="tabs-content">
-			<table class="tasks-main-table">
-				<tr class="tasks-main-trth">
-					<th class="tasks-main-th">ДАТА</th>
-					<th class="tasks-main-th">ЗАДАНИЕ</th>
-					<th class="tasks-main-th">ОПИСАНИЕ</th>
-					<th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
-				</tr>
-				<tr class="tasks-main-trtd task-new">
-					<td class="tasks-main-td">25.11.2017</td>
-					<td class="tasks-main-td">Создать книгу</td>
-					<td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
-					<td class="tasks-main-td">Иванов Иван, мл. редактор</td>
-				</tr>
-				<tr class="tasks-main-trtd task-check">
-					<td class="tasks-main-td">22.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Управление проектами" (добавить ES)</td>
-					<td class="tasks-main-td">Michel Salgado, student</td>
-				</tr>
-				<tr class="tasks-main-trtd task-current">
-					<td class="tasks-main-td">22.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Бережливый стартап" (добавить DE)</td>
-					<td class="tasks-main-td">Franz Ferdinand, student</td>
-				</tr>
-			</table>
-		</div>
+        <!-- На проверке -->
+        <div id="tab-check-content" class="tabs-content">
+            <table class="tasks-main-table">
+                <tr class="tasks-main-trth">
+                    <th class="tasks-main-th">ДАТА</th>
+                    <th class="tasks-main-th">ЗАДАНИЕ</th>
+                    <th class="tasks-main-th">ОПИСАНИЕ</th>
+                    <th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
+                </tr>
+                <tr class="tasks-main-trtd task-new">
+                    <td class="tasks-main-td">25.11.2017</td>
+                    <td class="tasks-main-td">Создать книгу</td>
+                    <td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
+                    <td class="tasks-main-td">Иванов Иван, мл. редактор</td>
+                </tr>
+                <tr class="tasks-main-trtd task-check">
+                    <td class="tasks-main-td">22.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Управление проектами" (добавить ES)</td>
+                    <td class="tasks-main-td">Michel Salgado, student</td>
+                </tr>
+                <tr class="tasks-main-trtd task-current">
+                    <td class="tasks-main-td">22.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Бережливый стартап" (добавить DE)</td>
+                    <td class="tasks-main-td">Franz Ferdinand, student</td>
+                </tr>
+            </table>
+        </div>
 
-		<!-- Выполненные -->
-		<div id="tab-done-content" class="tabs-content">
-			<table class="tasks-main-table">
-				<tr class="tasks-main-trth">
-					<th class="tasks-main-th">ДАТА</th>
-					<th class="tasks-main-th">ЗАДАНИЕ</th>
-					<th class="tasks-main-th">ОПИСАНИЕ</th>
-					<th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
-				</tr>
-				<tr class="tasks-main-trtd task-current">
-					<td class="tasks-main-td">25.11.2017</td>
-					<td class="tasks-main-td">Создать книгу</td>
-					<td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
-					<td class="tasks-main-td">Иванов Иван, мл. редактор</td>
-				</tr>
-				<tr class="tasks-main-trtd task-check">
-					<td class="tasks-main-td">23.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
-					<td class="tasks-main-td">Сидор Сидоров, студент</td>
-				</tr>
-				<tr class="tasks-main-trtd task-check">
-					<td class="tasks-main-td">22.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Управление проектами" (добавить ES)</td>
-					<td class="tasks-main-td">Michel Salgado, student</td>
-				</tr>
-				<tr class="tasks-main-trtd task-current">
-					<td class="tasks-main-td">22.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Бережливый стартап" (добавить DE)</td>
-					<td class="tasks-main-td">Franz Ferdinand, student</td>
-				</tr>
-				<tr class="tasks-main-trtd task-current">
-					<td class="tasks-main-td">21.11.2017</td>
-					<td class="tasks-main-td">Добавить перевод</td>
-					<td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
-					<td class="tasks-main-td">Петров Петр, студент</td>
-				</tr>
-			</table>
-		</div>
+        <!-- Выполненные -->
+        <div id="tab-done-content" class="tabs-content">
+            <table class="tasks-main-table">
+                <tr class="tasks-main-trth">
+                    <th class="tasks-main-th">ДАТА</th>
+                    <th class="tasks-main-th">ЗАДАНИЕ</th>
+                    <th class="tasks-main-th">ОПИСАНИЕ</th>
+                    <th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
+                </tr>
+                <tr class="tasks-main-trtd task-current">
+                    <td class="tasks-main-td">25.11.2017</td>
+                    <td class="tasks-main-td">Создать книгу</td>
+                    <td class="tasks-main-td">"Бережливый стартап" (EN / RU), Textbooks - IT</td>
+                    <td class="tasks-main-td">Иванов Иван, мл. редактор</td>
+                </tr>
+                <tr class="tasks-main-trtd task-check">
+                    <td class="tasks-main-td">23.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
+                    <td class="tasks-main-td">Сидор Сидоров, студент</td>
+                </tr>
+                <tr class="tasks-main-trtd task-check">
+                    <td class="tasks-main-td">22.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Управление проектами" (добавить ES)</td>
+                    <td class="tasks-main-td">Michel Salgado, student</td>
+                </tr>
+                <tr class="tasks-main-trtd task-current">
+                    <td class="tasks-main-td">22.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Бережливый стартап" (добавить DE)</td>
+                    <td class="tasks-main-td">Franz Ferdinand, student</td>
+                </tr>
+                <tr class="tasks-main-trtd task-current">
+                    <td class="tasks-main-td">21.11.2017</td>
+                    <td class="tasks-main-td">Добавить перевод</td>
+                    <td class="tasks-main-td">"Управление проектами" (добавить RU)</td>
+                    <td class="tasks-main-td">Петров Петр, студент</td>
+                </tr>
+            </table>
+        </div>
 
-		<!-- Модальное окно -->
-		<div id="open-modal" class="modal-window">
-		  	<div>
-		    	<a href="#modal-close" title="Close" class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></a>
-		    	<div class="modal-body">
-		    		<div class="modal-lists-block">
-			    		<ul class="modal-list-names">
-			    			<li>ЗАДАНИЕ</li>
-			    			<li>ОПИСАНИЕ</li>
-			    			<li>ИСПОЛНИТЕЛЬ</li>
-			    		</ul>
-			    		<ul class="modal-list-attr">
-			    			<li>Создать книгу</li>
-			    			<li><a href="" class="change-book">"Бережливый стартап" (EN / RU), Textbooks - IT</a></li>
-			    			<li>Иванов Иван, мл. редактор <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Edit"></span></a></li>
-			    		</ul>
-			    		<ul class="modal-list-names">
-			    			<li>ТЕКУЩИЙ СТАТУС</li>
-			    			<li>&nbsp;</li>
-			    			<li>ТАРИФ</li>
-			    		</ul>
-			    		<ul class="modal-list-attr">
-			    			<li>Принято на проверку</li>
-			    			<li>&nbsp;</li>
-			    			<li>500 AMC</li>
-			    		</ul>
-			    	</div>
-		    		<table class="modal-table">
-		    			<tr>
-		    				<th colspan='2'>ИСТОРИЯ ИЗМЕНЕНИЙ</th>
-		    			</tr>
-		    			<tr>
-		    				<td>25.09.1027</td>
-		    				<td>Задание создано</td>
-		    			</tr>
-		    			<tr>
-		    				<td>26.09.1027</td>
-		    				<td>Задание принято в работу</td>
-		    			</tr>
-		    			<tr>
-		    				<td>30.09.1027</td>
-		    				<td>Отправлено на проверку</td>
-		    			</tr>
-		    			<tr>
-		    				<td>30.09.1027</td>
-		    				<td>Принято на проверку</td>
-		    			</tr>
-		    			<tr>
-		    				<td>01.10.1027</td>
-		    				<td>
-		    					Есть замечания <span class="collapse-comment fa js-notice" title="Hide"></span>
-		    					<p class="modal-table-notice hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, magnam tempora error saepe perspiciatis corporis.</p>
-		    				</td>
-		    			</tr>
-		    			<tr>
-		    				<td>02.10.1027</td>
-		    				<td>В последний раз редактировалось</td>
-		    			</tr>
-		    			<tr>
-		    				<td>02.10.1027</td>
-		    				<td>Отправлено на проверку</td>
-		    			</tr>
-		    			<tr>
-		    				<td>02.10.1027</td>
-		    				<td>Принято на проверку</td>
-		    			</tr>
-		    		</table>
-		    		<button class="modal-button">Есть замечания</button>
-		    		<button class="modal-button">Отправить на оплату</button>
-		    	</div>
-		  	</div>
-		</div>
+        <!-- Модальное окно -->
+        <div id="open-modal" class="modal-window">
+            <div>
+                <a href="#modal-close" title="Close" class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="modal-body">
+                    <div class="modal-lists-block">
+                        <ul class="modal-list-names">
+                            <li>ЗАДАНИЕ</li>
+                            <li>ОПИСАНИЕ</li>
+                            <li>ИСПОЛНИТЕЛЬ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Создать книгу</li>
+                            <li><a href="" class="change-book">"Бережливый стартап" (EN / RU), Textbooks - IT</a></li>
+                            <li>Иванов Иван, мл. редактор <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Edit"></span></a></li>
+                        </ul>
+                        <ul class="modal-list-names">
+                            <li>ТЕКУЩИЙ СТАТУС</li>
+                            <li>&nbsp;</li>
+                            <li>ТАРИФ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Принято на проверку</li>
+                            <li>&nbsp;</li>
+                            <li>500 AMC</li>
+                        </ul>
+                    </div>
+                    <table class="modal-table">
+                        <tr>
+                            <th colspan='2'>ИСТОРИЯ ИЗМЕНЕНИЙ</th>
+                        </tr>
+                        <tr>
+                            <td>25.09.1027</td>
+                            <td>Задание создано</td>
+                        </tr>
+                        <tr>
+                            <td>26.09.1027</td>
+                            <td>Задание принято в работу</td>
+                        </tr>
+                        <tr>
+                            <td>30.09.1027</td>
+                            <td>Отправлено на проверку</td>
+                        </tr>
+                        <tr>
+                            <td>30.09.1027</td>
+                            <td>Принято на проверку</td>
+                        </tr>
+                        <tr>
+                            <td>01.10.1027</td>
+                            <td>
+                                Есть замечания <span class="collapse-comment fa js-notice" title="Hide"></span>
+                                <p class="modal-table-notice hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, magnam tempora error saepe perspiciatis corporis.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>02.10.1027</td>
+                            <td>В последний раз редактировалось</td>
+                        </tr>
+                        <tr>
+                            <td>02.10.1027</td>
+                            <td>Отправлено на проверку</td>
+                        </tr>
+                        <tr>
+                            <td>02.10.1027</td>
+                            <td>Принято на проверку</td>
+                        </tr>
+                    </table>
+                    <button class="modal-button">Есть замечания</button>
+                    <button class="modal-button">Отправить на оплату</button>
+                </div>
+            </div>
+        </div>
 
-	</div> <!--End tasks__overflow -->
+    </div>
+    <!--End tasks__overflow -->
 
-	<script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
-	<script>
-		var main = function() {
+    <script src="assets/js/plugins/jquery-1.9.1.min.js"></script>
+    <script>
+        var main = function() {
 
-			// Переключение между вкладками
-			$('ul.tabs-caption').on('click', 'li:not(.active)', function() {
-			    $(this).addClass('active').siblings().removeClass('active').closest('div.tasks__overflow').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
-			    $('.right-filters-list').removeClass('show-me');
-			    if ($(this).text() == "Текущие") {
-			    	if (!$('.list-current').hasClass('show-me'))  $('.list-current').addClass('show-me');
-			    } else if ($(this).text() == "На проверке") {
-			    	if (!$('.list-check').hasClass('show-me'))  $('.list-check').addClass('show-me');
-			    } else if ($(this).text() == "Выполненные") {
-			    	if (!$('.list-done').hasClass('show-me'))  $('.list-done').addClass('show-me');
-			    } else {
+            // Переключение между вкладками
+            $('ul.tabs-caption').on('click', 'li:not(.active)', function() {
+                $(this).addClass('active').siblings().removeClass('active').closest('div.tasks__overflow').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
+                $('.right-filters-list').removeClass('show-me');
+                if ($(this).text() == "Текущие") {
+                    if (!$('.list-current').hasClass('show-me')) $('.list-current').addClass('show-me');
+                } else if ($(this).text() == "На проверке") {
+                    if (!$('.list-check').hasClass('show-me')) $('.list-check').addClass('show-me');
+                } else if ($(this).text() == "Выполненные") {
+                    if (!$('.list-done').hasClass('show-me')) $('.list-done').addClass('show-me');
+                } else {
 
-			    };
-			});
+                };
+            });
 
-			// Выбор в списке вкладки Создать
-			$('.dropdown-comments-menu.tab-create-list').click(function(event) {
-				$(this).find('.dropdown-comments-list').toggleClass('hide');
-			});
-			$('.dropdown-comments-menu.tab-create-list .dropdown-comments-item').click(function(event) {
-				$(this).parent().find('.dropdown-comments-list').toggleClass('hide');
-				$(this).parent().parent().find('.dropdown-comments-top').text($(this).text());
-				if($(this).text() == "Создать книгу") {
-					$('#booklink').addClass('disabled');
-				} else {
-					$('#booklink').removeClass('disabled');
-				};
-			});
+            // Выбор в списке вкладки Создать
+            $('.dropdown-comments-menu.tab-create-list').click(function(event) {
+                $(this).find('.dropdown-comments-list').toggleClass('hide');
+            });
+            $('.dropdown-comments-menu.tab-create-list .dropdown-comments-item').click(function(event) {
+                $(this).parent().find('.dropdown-comments-list').toggleClass('hide');
+                $(this).parent().parent().find('.dropdown-comments-top').text($(this).text());
+                if ($(this).text() == "Создать книгу") {
+                    $('#booklink').addClass('disabled');
+                } else {
+                    $('#booklink').removeClass('disabled');
+                };
+            });
 
-			// Выбор языка книги или перевода
-			$('.tasks-choose-language').on('click', 'li:not(.active)', function() {
-			    $(this).addClass('active').siblings().removeClass('active');
-			});
+            // Выбор языка книги или перевода
+            $('.tasks-choose-language').on('click', 'li:not(.active)', function() {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
 
-			// Деактивация привязки книги при создании новой
-			$('#booklink').on('click', function(e){
-				if($(this).hasClass('disabled')) {
-					e.preventDefault();
-				};
-			});
+            // Деактивация привязки книги при создании новой
+            $('#booklink').on('click', function(e) {
+                if ($(this).hasClass('disabled')) {
+                    e.preventDefault();
+                };
+            });
 
-			// Применение правых фильтров в таблицах
-			$('.right-filters-item').on('click', function() {
+            // Применение правых фильтров в таблицах
+            $('.right-filters-item').on('click', function() {
 
-				// Переключаем кнопки Close и Plus в фильтрах
-				var thisFilter = $(this).find('span');
-				thisFilter.toggleClass('filter-close').toggleClass('filter-plus');
+                // Переключаем кнопки Close и Plus в фильтрах
+                var thisFilter = $(this).find('span');
+                thisFilter.toggleClass('filter-close').toggleClass('filter-plus');
 
-				// Создаем массив строк таблицы
-				var arrayRow = [];
-				if (thisFilter.parent().parent().hasClass('list-current')) {
-					arrayRow = $('#tab-current-content .tasks-main-table tr');
-				} else if (thisFilter.parent().parent().hasClass('list-check')) {
-					arrayRow = $('#tab-check-content .tasks-main-table tr');
-				} else {
-					arrayRow = $('#tab-done-content .tasks-main-table tr');
-				};
+                // Создаем массив строк таблицы
+                var arrayRow = [];
+                if (thisFilter.parent().parent().hasClass('list-current')) {
+                    arrayRow = $('#tab-current-content .tasks-main-table tr');
+                } else if (thisFilter.parent().parent().hasClass('list-check')) {
+                    arrayRow = $('#tab-check-content .tasks-main-table tr');
+                } else {
+                    arrayRow = $('#tab-done-content .tasks-main-table tr');
+                };
 
-				// Скрываем-отображаем строки в таблице
-				for (var i = 1; i < arrayRow.length; i++) {
-					if ( (thisFilter.hasClass('filter-plus')) && (thisFilter.parent().hasClass('task-new')) && (arrayRow.eq(i).hasClass('task-new'))) {
-						arrayRow.eq(i).hide();
-					} else if ( (thisFilter.hasClass('filter-close')) && (thisFilter.parent().hasClass('task-new')) && (arrayRow.eq(i).hasClass('task-new'))) {
-						arrayRow.eq(i).show();
-					};
-					if ( (thisFilter.hasClass('filter-plus')) && (thisFilter.parent().hasClass('task-check')) && (arrayRow.eq(i).hasClass('task-check'))) {
-						arrayRow.eq(i).hide();
-					} else if ( (thisFilter.hasClass('filter-close')) && (thisFilter.parent().hasClass('task-check')) && (arrayRow.eq(i).hasClass('task-check'))) {
-						arrayRow.eq(i).show();
-					};
-					if ( (thisFilter.hasClass('filter-plus')) && (thisFilter.parent().hasClass('task-current')) && (arrayRow.eq(i).hasClass('task-current'))) {
-						arrayRow.eq(i).hide();
-					} else if ( (thisFilter.hasClass('filter-close')) && (thisFilter.parent().hasClass('task-current')) && (arrayRow.eq(i).hasClass('task-current'))) {
-						arrayRow.eq(i).show();
-					};
-				};
+                // Скрываем-отображаем строки в таблице
+                for (var i = 1; i < arrayRow.length; i++) {
+                    if ((thisFilter.hasClass('filter-plus')) && (thisFilter.parent().hasClass('task-new')) && (arrayRow.eq(i).hasClass('task-new'))) {
+                        arrayRow.eq(i).hide();
+                    } else if ((thisFilter.hasClass('filter-close')) && (thisFilter.parent().hasClass('task-new')) && (arrayRow.eq(i).hasClass('task-new'))) {
+                        arrayRow.eq(i).show();
+                    };
+                    if ((thisFilter.hasClass('filter-plus')) && (thisFilter.parent().hasClass('task-check')) && (arrayRow.eq(i).hasClass('task-check'))) {
+                        arrayRow.eq(i).hide();
+                    } else if ((thisFilter.hasClass('filter-close')) && (thisFilter.parent().hasClass('task-check')) && (arrayRow.eq(i).hasClass('task-check'))) {
+                        arrayRow.eq(i).show();
+                    };
+                    if ((thisFilter.hasClass('filter-plus')) && (thisFilter.parent().hasClass('task-current')) && (arrayRow.eq(i).hasClass('task-current'))) {
+                        arrayRow.eq(i).hide();
+                    } else if ((thisFilter.hasClass('filter-close')) && (thisFilter.parent().hasClass('task-current')) && (arrayRow.eq(i).hasClass('task-current'))) {
+                        arrayRow.eq(i).show();
+                    };
+                };
 
-			});
+            });
 
-			$('.tasks-main-table tr td').on('click', function() {
-				$('.modal-window').addClass('opened');
-			});
+            $('.tasks-main-table tr td').on('click', function() {
+                $('.modal-window').addClass('opened');
+            });
 
-			$('.modal-close').on('click', function() {
-				$('.modal-window').removeClass('opened');
-			});
+            $('.modal-close').on('click', function() {
+                $('.modal-window').removeClass('opened');
+            });
 
-			// Раскрытие заметок в модальном окне
-			$('.js-notice').on('click', function() {
-				$(this).toggleClass('expand-comment').toggleClass('collapse-comment');
-				if ($(this).hasClass('expand-comment')) {
-					$(this).attr({title: 'Hide'});
-					$(this).parent().find('p').removeClass('hide');
-				} else {
-					$(this).attr({title: 'Show'});
-					$(this).parent().find('p').addClass('hide');
-				};
-			});
+            // Раскрытие заметок в модальном окне
+            $('.js-notice').on('click', function() {
+                $(this).toggleClass('expand-comment').toggleClass('collapse-comment');
+                if ($(this).hasClass('expand-comment')) {
+                    $(this).attr({
+                        title: 'Hide'
+                    });
+                    $(this).parent().find('p').removeClass('hide');
+                } else {
+                    $(this).attr({
+                        title: 'Show'
+                    });
+                    $(this).parent().find('p').addClass('hide');
+                };
+            });
 
-		}; // End main
+        }; // End main
 
-		$(document).ready(main);
-	</script>
+        $(document).ready(main);
+    </script>
 </body>
+
 </html>
