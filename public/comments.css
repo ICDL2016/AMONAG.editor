@@ -584,6 +584,24 @@ table {
     background-color: #6F751F;
 }
 
+.create-task-symbols > span,
+.create-task-difficulty > span{
+    display: inline-block;
+    margin: 10px;    
+}
+
+.create-task-symbols input[type="text"] {
+    display: block;
+    margin: 10px auto;
+    width: 85px !important;
+    text-align: right;
+}
+
+.task-difficulty-list {
+    width: 80px;
+    text-align: center;
+}
+
 #tab-create-content a,
 #tab-create-content input {
     display: inline-block;
@@ -784,6 +802,10 @@ table {
     font-weight: bold;
 }
 
+.editor-item {
+    position: relative;
+}
+
 .change-book,
 .change-editor {
     color: #444;
@@ -796,6 +818,29 @@ table {
 
 .change-editor {
     margin-left: 5px;
+}
+
+.change-editor-list {
+    position: absolute;
+    top: 25px;
+    left: 0;    
+    width: 70% !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.change-editor-list.hide {
+    display: none;
+}
+
+.change-editor-list li {
+    background-color: #E0E0E0;
+    margin: 0 !important;
+    font-weight: normal !important;
+}
+
+.change-editor-list li:hover {
+    background-color: #6F751F;
+    color: #fff;
 }
 
 .modal-table {

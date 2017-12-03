@@ -66,6 +66,7 @@
                 <input type="text">
             </div>
             <div class="create-task-difficulty">
+                <span>Выбрать сложность</span>
                 <div class="dropdown-comments-menu task-difficulty-list">
                     <span class="dropdown-comments-top">1</span>
                     <span class="dropdown-comments-toggle down fa"></span>
@@ -230,7 +231,16 @@
                         <ul class="modal-list-attr">
                             <li>Создать книгу</li>
                             <li><a href="" class="change-book">"Бережливый стартап" (EN / RU), Textbooks - IT</a></li>
-                            <li>Иванов Иван, мл. редактор <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Edit"></span></a></li>
+                            <li class="editor-item">
+                                <span class="editor-item-name">Иванов Иван, мл. редактор</span>
+                                <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Choose editor"></span></a>
+                                <ul class="change-editor-list hide">
+                                    <li class="dropdown-comments-item">Иванов Иван, мл. ред.</li>
+                                    <li class="dropdown-comments-item">Петров Петр, студент</li>
+                                    <li class="dropdown-comments-item">Сидор Сидоров, студент</li>
+                                    <li class="dropdown-comments-item">Ованес Оганесян, редактор</li>
+                                </ul>                            
+                            </li>
                         </ul>
                         <ul class="modal-list-names">
                             <li>ТЕКУЩИЙ СТАТУС</li>
@@ -329,6 +339,15 @@
             $('.tasks-choose-language').on('click', 'li:not(.active)', function() {
                 $(this).addClass('active').siblings().removeClass('active');
             });
+            
+            // Выбор в списке сложности Создать
+            $('.dropdown-comments-menu.task-difficulty-list').click(function(event) {
+                $(this).find('.dropdown-comments-list').toggleClass('hide');
+            });
+            $('.dropdown-comments-menu.task-difficulty-list .dropdown-comments-item').click(function(event) {
+                $(this).parent().find('.dropdown-comments-list').toggleClass('hide');
+                $(this).parent().parent().find('.dropdown-comments-top').text($(this).text());                
+            });
 
             // Деактивация привязки книги при создании новой
             $('#booklink').on('click', function(e) {
@@ -381,6 +400,16 @@
 
             $('.modal-close').on('click', function() {
                 $('.modal-window').removeClass('opened');
+            });
+            
+            // Выбор редактора в модальном окне
+            $('.change-editor').click(function(event) {
+                event.preventDefault();
+                $(this).parent().find('.change-editor-list').toggleClass('hide');
+            });
+            $('.change-editor-list .dropdown-comments-item').click(function(event) {
+                $(this).parent().toggleClass('hide');
+                $(this).parent().parent().find('.editor-item-name').text($(this).text());                
             });
 
             // Раскрытие заметок в модальном окне
