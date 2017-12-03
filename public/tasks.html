@@ -116,13 +116,13 @@
                     <td class="tasks-main-td">22.11.2017</td>
                     <td class="tasks-main-td">Добавить перевод</td>
                     <td class="tasks-main-td">"Управление проектами" (добавить ES)</td>
-                    <td class="tasks-main-td">Michel Salgado, student</td>
+                    <td class="tasks-main-td">Michel Salgado, student + еще 1</td>
                 </tr>
                 <tr class="tasks-main-trtd task-check">
                     <td class="tasks-main-td">22.11.2017</td>
                     <td class="tasks-main-td">Добавить перевод</td>
                     <td class="tasks-main-td">"Бережливый стартап" (добавить DE)</td>
-                    <td class="tasks-main-td">Franz Ferdinand, student</td>
+                    <td class="tasks-main-td">Franz Ferdinand, student + еще 2</td>
                 </tr>
                 <tr class="tasks-main-trtd task-current">
                     <td class="tasks-main-td">21.11.2017</td>
@@ -298,6 +298,467 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Модальное окно новых задач-->
+        <div id="open-modal-new" class="modal-window">
+            <div>
+                <a href="#modal-close-new" title="Close" class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="modal-body">
+                    <div class="modal-lists-block">
+                        <ul class="modal-list-names">
+                            <li>ЗАДАНИЕ</li>
+                            <li>ОПИСАНИЕ</li>
+                            <li>ИСПОЛНИТЕЛЬ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Создать книгу</li>
+                            <li><a href="" class="change-book">"Бережливый стартап" (EN / RU), Textbooks - IT</a></li>
+                            <li class="editor-item">
+                                <span class="editor-item-name">Иванов Иван, мл. редактор</span>
+                                <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Choose editor"></span></a>
+                                <ul class="change-editor-list hide">
+                                    <li class="dropdown-comments-item">Иванов Иван, мл. ред.</li>
+                                    <li class="dropdown-comments-item">Петров Петр, студент</li>
+                                    <li class="dropdown-comments-item">Сидор Сидоров, студент</li>
+                                    <li class="dropdown-comments-item">Ованес Оганесян, редактор</li>
+                                </ul>                            
+                            </li>
+                        </ul>
+                        <ul class="modal-list-names">
+                            <li>ТЕКУЩИЙ СТАТУС</li>
+                            <li>&nbsp;</li>
+                            <li>ТАРИФ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Новое</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+                    <table class="modal-table">
+                        <tr>
+                            <th colspan='2'>ИСТОРИЯ ИЗМЕНЕНИЙ</th>
+                        </tr>
+                        <tr>
+                            <td>25.09.1027</td>
+                            <td>Задание создано</td>
+                        </tr>                        
+                    </table>                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Модальное окно задач на подтверждении-->
+        <div id="open-modal-check" class="modal-window">
+            <div>
+                <a href="#modal-close-check" title="Close" class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="modal-body">
+                    <div class="modal-lists-block">
+                        <ul class="modal-list-names">
+                            <li>ЗАДАНИЕ</li>
+                            <li>ОПИСАНИЕ</li>
+                            <li>ИСПОЛНИТЕЛЬ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Добавить перевод</li>
+                            <li><a href="" class="change-book">"Управление проектами" (добавить ES)</a></li>
+                            <li class="editor-item">
+                                <span class="editor-item-name">Выбрать исполнителя</span>
+                                <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Choose editor"></span></a>
+                                <ul class="change-editor-list hide">
+                                    <li class="dropdown-comments-item">Иванов Иван, мл. ред.</li>
+                                    <li class="dropdown-comments-item">Петров Петр, студент</li>
+                                    <li class="dropdown-comments-item">Сидор Сидоров, студент</li>
+                                    <li class="dropdown-comments-item">Ованес Оганесян, редактор</li>
+                                </ul>                            
+                            </li>
+                        </ul>
+                        <ul class="modal-list-names">
+                            <li>ТЕКУЩИЙ СТАТУС</li>
+                            <li>&nbsp;</li>
+                            <li>ТАРИФ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Ждет подтверждения</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+                    <table class="modal-table">
+                        <tr>
+                            <th colspan='2'>ИСТОРИЯ ИЗМЕНЕНИЙ</th>
+                        </tr>
+                        <tr>
+                            <td>25.09.1027</td>
+                            <td>Задание создано</td>
+                        </tr>                        
+                    </table>
+                    <button class="modal-button">Назначить исполнителя</button>                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Модальное окно задач в работе-->
+        <div id="open-modal-current" class="modal-window">
+            <div>
+                <a href="#modal-close-current" title="Close" class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="modal-body">
+                    <div class="modal-lists-block">
+                        <ul class="modal-list-names">
+                            <li>ЗАДАНИЕ</li>
+                            <li>ОПИСАНИЕ</li>
+                            <li>ИСПОЛНИТЕЛЬ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Добавить перевод</li>
+                            <li><a href="" class="change-book">"Управление проектами" (добавить ES)</a></li>
+                            <li class="editor-item">
+                                <span class="editor-item-name">Сидор Сидоров, студент</span>
+                                <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Choose editor"></span></a>
+                                <ul class="change-editor-list hide">
+                                    <li class="dropdown-comments-item">Иванов Иван, мл. ред.</li>
+                                    <li class="dropdown-comments-item">Петров Петр, студент</li>
+                                    <li class="dropdown-comments-item">Сидор Сидоров, студент</li>
+                                    <li class="dropdown-comments-item">Ованес Оганесян, редактор</li>
+                                </ul>                            
+                            </li>
+                        </ul>
+                        <ul class="modal-list-names">
+                            <li>ТЕКУЩИЙ СТАТУС</li>
+                            <li>&nbsp;</li>
+                            <li>ТАРИФ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>В работе</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+                    <table class="modal-table">
+                        <tr>
+                            <th colspan='2'>ИСТОРИЯ ИЗМЕНЕНИЙ</th>
+                        </tr>
+                        <tr>
+                            <td>25.09.1027</td>
+                            <td>Задание создано</td>
+                        </tr>
+                        <tr>
+                            <td>26.09.1027</td>
+                            <td>Задание принято в работу</td>
+                        </tr>                       
+                    </table>                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Модальное окно задач, отправленных на проверку-->
+        <div id="open-modal-sent" class="modal-window">
+            <div>
+                <a href="#modal-close-sent" title="Close" class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="modal-body">
+                    <div class="modal-lists-block">
+                        <ul class="modal-list-names">
+                            <li>ЗАДАНИЕ</li>
+                            <li>ОПИСАНИЕ</li>
+                            <li>ИСПОЛНИТЕЛЬ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Добавить перевод</li>
+                            <li><a href="" class="change-book">"Управление проектами" (добавить ES)</a></li>
+                            <li class="editor-item">
+                                <span class="editor-item-name">Сидор Сидоров, студент</span>
+                                <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Choose editor"></span></a>
+                                <ul class="change-editor-list hide">
+                                    <li class="dropdown-comments-item">Иванов Иван, мл. ред.</li>
+                                    <li class="dropdown-comments-item">Петров Петр, студент</li>
+                                    <li class="dropdown-comments-item">Сидор Сидоров, студент</li>
+                                    <li class="dropdown-comments-item">Ованес Оганесян, редактор</li>
+                                </ul>                            
+                            </li>
+                        </ul>
+                        <ul class="modal-list-names">
+                            <li>ТЕКУЩИЙ СТАТУС</li>
+                            <li>&nbsp;</li>
+                            <li>ТАРИФ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Отправлено на проверку</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+                    <table class="modal-table">
+                        <tr>
+                            <th colspan='2'>ИСТОРИЯ ИЗМЕНЕНИЙ</th>
+                        </tr>
+                        <tr>
+                            <td>25.09.1027</td>
+                            <td>Задание создано</td>
+                        </tr>
+                        <tr>
+                            <td>26.09.1027</td>
+                            <td>Задание принято в работу</td>
+                        </tr>
+                        <tr>
+                            <td>26.09.1027</td>
+                            <td>Задание отправлено на проверку</td>
+                        </tr>                         
+                    </table>
+                    <button class="modal-button">Принять на проверку</button>
+                    <button class="modal-button">Назначить наблюдателя</button>                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Модальное окно задач, принятых на проверку-->
+        <div id="open-modal-taken" class="modal-window">
+            <div>
+                <a href="#modal-close-taken" title="Close" class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="modal-body">
+                    <div class="modal-lists-block">
+                        <ul class="modal-list-names">
+                            <li>ЗАДАНИЕ</li>
+                            <li>ОПИСАНИЕ</li>
+                            <li>ИСПОЛНИТЕЛЬ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Добавить перевод</li>
+                            <li><a href="" class="change-book">"Управление проектами" (добавить ES)</a></li>
+                            <li class="editor-item">
+                                <span class="editor-item-name">Сидор Сидоров, студент</span>
+                                <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Choose editor"></span></a>
+                                <ul class="change-editor-list hide">
+                                    <li class="dropdown-comments-item">Иванов Иван, мл. ред.</li>
+                                    <li class="dropdown-comments-item">Петров Петр, студент</li>
+                                    <li class="dropdown-comments-item">Сидор Сидоров, студент</li>
+                                    <li class="dropdown-comments-item">Ованес Оганесян, редактор</li>
+                                </ul>                            
+                            </li>
+                        </ul>
+                        <ul class="modal-list-names">
+                            <li>ТЕКУЩИЙ СТАТУС</li>
+                            <li>&nbsp;</li>
+                            <li>ТАРИФ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Ожидает подтверждения</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+                    <table class="modal-table">
+                        <tr>
+                            <th colspan='2'>ИСТОРИЯ ИЗМЕНЕНИЙ</th>
+                        </tr>
+                        <tr>
+                            <td>25.09.1027</td>
+                            <td>Задание создано</td>
+                        </tr>
+                        <tr>
+                            <td>26.09.1027</td>
+                            <td>Задание принято в работу</td>
+                        </tr>
+                        <tr>
+                            <td>27.09.1027</td>
+                            <td>Принято на проверку</td>
+                        </tr>
+                        <tr>
+                            <td>27.09.1027</td>
+                            <td>
+                                Есть замечания <span class="collapse-comment fa js-notice" title="Hide"></span>
+                                <p class="modal-table-notice hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, magnam tempora error saepe perspiciatis corporis.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28.09.1027</td>
+                            <td>В последний раз редактировалось</td>
+                        </tr>
+                        <tr>
+                            <td>29.09.1027</td>
+                            <td>Отправлено на проверку</td>
+                        </tr>
+                        <tr>
+                            <td>29.09.1027</td>
+                            <td>Принято на проверку</td>
+                        </tr>
+                    </table>
+                    <button class="modal-button">Есть замечания</button>
+                    <button class="modal-button">Отправить на оплату</button>                       
+                    </table>                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Модальное окно задач, у которых есть замечания-->
+        <div id="open-modal-noticed" class="modal-window">
+            <div>
+                <a href="#modal-close-noticed" title="Close" class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="modal-body">
+                    <div class="modal-lists-block">
+                        <ul class="modal-list-names">
+                            <li>ЗАДАНИЕ</li>
+                            <li>ОПИСАНИЕ</li>
+                            <li>ИСПОЛНИТЕЛЬ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Добавить перевод</li>
+                            <li><a href="" class="change-book">"Управление проектами" (добавить ES)</a></li>
+                            <li class="editor-item">
+                                <span class="editor-item-name">Сидор Сидоров, студент</span>
+                                <a href="" class="change-editor"><span class="edit-comment fa modal-choose-editor" title="Choose editor"></span></a>
+                                <ul class="change-editor-list hide">
+                                    <li class="dropdown-comments-item">Иванов Иван, мл. ред.</li>
+                                    <li class="dropdown-comments-item">Петров Петр, студент</li>
+                                    <li class="dropdown-comments-item">Сидор Сидоров, студент</li>
+                                    <li class="dropdown-comments-item">Ованес Оганесян, редактор</li>
+                                </ul>                            
+                            </li>
+                        </ul>
+                        <ul class="modal-list-names">
+                            <li>ТЕКУЩИЙ СТАТУС</li>
+                            <li>&nbsp;</li>
+                            <li>ТАРИФ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Есть замечания</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+                    <table class="modal-table">
+                        <tr>
+                            <th colspan='2'>ИСТОРИЯ ИЗМЕНЕНИЙ</th>
+                        </tr>
+                        <tr>
+                            <td>25.09.1027</td>
+                            <td>Задание создано</td>
+                        </tr>
+                        <tr>
+                            <td>26.09.1027</td>
+                            <td>Задание принято в работу</td>
+                        </tr>                       
+                    </table>                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Модальное окно задач на оплату-->
+        <div id="open-modal-pay" class="modal-window">
+            <div>
+                <a href="#modal-close-pay" title="Close" class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="modal-body">
+                    <div class="modal-lists-block">
+                        <ul class="modal-list-names">
+                            <li>ЗАДАНИЕ</li>
+                            <li>ОПИСАНИЕ</li>
+                            <li>ИСПОЛНИТЕЛЬ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Добавить перевод</li>
+                            <li><a href="" class="change-book">"Управление проектами" (добавить ES)</a></li>
+                            <li class="editor-item">
+                                <span class="editor-item-name">Сидор Сидоров, студент</span>
+                                <a href="" class="change-editor hide"><span class="edit-comment fa modal-choose-editor" title="Choose editor"></span></a>
+                                <ul class="change-editor-list hide">
+                                    <li class="dropdown-comments-item">Иванов Иван, мл. ред.</li>
+                                    <li class="dropdown-comments-item">Петров Петр, студент</li>
+                                    <li class="dropdown-comments-item">Сидор Сидоров, студент</li>
+                                    <li class="dropdown-comments-item">Ованес Оганесян, редактор</li>
+                                </ul>                            
+                            </li>
+                        </ul>
+                        <ul class="modal-list-names">
+                            <li>ТЕКУЩИЙ СТАТУС</li>
+                            <li>&nbsp;</li>
+                            <li>ТАРИФ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Ожидает оплаты</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+                    <table class="modal-table">
+                        <tr>
+                            <th colspan='2'>ИСТОРИЯ ИЗМЕНЕНИЙ</th>
+                        </tr>
+                        <tr>
+                            <td>25.09.1027</td>
+                            <td>Задание создано</td>
+                        </tr>
+                        <tr>
+                            <td>26.09.1027</td>
+                            <td>Задание принято в работу</td>
+                        </tr>
+                        <tr>
+                            <td>29.09.1027</td>
+                            <td>Ожидает оплаты</td>
+                        </tr>                         
+                    </table>                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Модальное окно оплаченных задач-->
+        <div id="open-modal-paid" class="modal-window">
+            <div>
+                <a href="#modal-close-paid" title="Close" class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="modal-body">
+                    <div class="modal-lists-block">
+                        <ul class="modal-list-names">
+                            <li>ЗАДАНИЕ</li>
+                            <li>ОПИСАНИЕ</li>
+                            <li>ИСПОЛНИТЕЛЬ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Добавить перевод</li>
+                            <li><a href="" class="change-book">"Управление проектами" (добавить ES)</a></li>
+                            <li class="editor-item">
+                                <span class="editor-item-name">Сидор Сидоров, студент</span>
+                                <a href="" class="change-editor hide"><span class="edit-comment fa modal-choose-editor" title="Choose editor"></span></a>
+                                <ul class="change-editor-list hide">
+                                    <li class="dropdown-comments-item">Иванов Иван, мл. ред.</li>
+                                    <li class="dropdown-comments-item">Петров Петр, студент</li>
+                                    <li class="dropdown-comments-item">Сидор Сидоров, студент</li>
+                                    <li class="dropdown-comments-item">Ованес Оганесян, редактор</li>
+                                </ul>                            
+                            </li>
+                        </ul>
+                        <ul class="modal-list-names">
+                            <li>ТЕКУЩИЙ СТАТУС</li>
+                            <li>&nbsp;</li>
+                            <li>ТАРИФ</li>
+                        </ul>
+                        <ul class="modal-list-attr">
+                            <li>Оплачено</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+                    <table class="modal-table">
+                        <tr>
+                            <th colspan='2'>ИСТОРИЯ ИЗМЕНЕНИЙ</th>
+                        </tr>
+                        <tr>
+                            <td>25.09.1027</td>
+                            <td>Задание создано</td>
+                        </tr>
+                        <tr>
+                            <td>26.09.1027</td>
+                            <td>Задание принято в работу</td>
+                        </tr>
+                        <tr>
+                            <td>29.09.1027</td>
+                            <td>Ожидает оплаты</td>
+                        </tr>
+                        <tr>
+                            <td>30.09.1027</td>
+                            <td>Оплачено</td>
+                        </tr>                         
+                    </table>                    
+                </div>
+            </div>
+        </div>
 
     </div>
     <!--End tasks__overflow -->
@@ -395,7 +856,25 @@
             });
 
             $('.tasks-main-table tr td').on('click', function() {
-                $('.modal-window').addClass('opened');
+                var currentTab = $(this).parent().parent().parent().parent().attr('id');
+                console.log(currentTab);
+                if (($(this).parent().hasClass('task-new')) && (currentTab == 'tab-current-content')) {
+                    $('#open-modal-new.modal-window').addClass('opened');        
+                } else if (($(this).parent().hasClass('task-check')) && (currentTab == 'tab-current-content')) {
+                    $('#open-modal-check.modal-window').addClass('opened');     
+                } else if (($(this).parent().hasClass('task-current')) && (currentTab == 'tab-current-content')) { 
+                    $('#open-modal-current.modal-window').addClass('opened');     
+                } else if (($(this).parent().hasClass('task-new')) && (currentTab == 'tab-check-content')) { 
+                    $('#open-modal-sent.modal-window').addClass('opened');     
+                } else if (($(this).parent().hasClass('task-check')) && (currentTab == 'tab-check-content')) { 
+                    $('#open-modal-taken.modal-window').addClass('opened');     
+                } else if (($(this).parent().hasClass('task-current')) && (currentTab == 'tab-check-content')) { 
+                    $('#open-modal-noticed.modal-window').addClass('opened');     
+                } else if (($(this).parent().hasClass('task-check')) && (currentTab == 'tab-done-content')) { 
+                    $('#open-modal-pay.modal-window').addClass('opened');     
+                } else if (($(this).parent().hasClass('task-current')) && (currentTab == 'tab-done-content')) { 
+                    $('#open-modal-paid.modal-window').addClass('opened');     
+                };                
             });
 
             $('.modal-close').on('click', function() {
