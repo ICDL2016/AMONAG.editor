@@ -13,10 +13,10 @@
     <div class="tasks__overflow">
 
         <ul class="tabs-caption">
-            <li class="active">Создать</li>
-            <li>Текущие</li>
-            <li>На проверке</li>
-            <li>Выполненные</li>
+            <li class="active">CREATE</li>
+            <li>In work</li>
+            <li>On examination</li>
+            <li>Done</li>
         </ul>
         <ul class="right-filters-list list-current">
             <li class="right-filters-item task-new">Новые <span class="filter-close"></span></li>
@@ -37,13 +37,13 @@
         <div id="tab-create-content" class="tabs-content active">
             <div>
                 <div class="dropdown-comments-menu tab-create-list">
-                    <span class="dropdown-comments-top">Создать книгу</span>
+                    <span class="dropdown-comments-top">Add a book</span>
                     <span class="dropdown-comments-toggle down fa"></span>
                     <ul class="dropdown-comments-list hide">
-                        <li class="dropdown-comments-item">Создать книгу</li>
-                        <li class="dropdown-comments-item">Добавить перевод</li>
-                        <li class="dropdown-comments-item">Проверка</li>
-                        <li class="dropdown-comments-item">Другое</li>
+                        <li class="dropdown-comments-item">Add a book</li>
+                        <li class="dropdown-comments-item">Add a language version</li>
+                        <li class="dropdown-comments-item">Check</li>
+                        <li class="dropdown-comments-item">Other</li>
                     </ul>
                 </div>
             </div>
@@ -62,11 +62,11 @@
                 </ul>
             </div>
             <div class="create-task-symbols">
-                <span>Количество знаков (предварительное)</span>
+                <span>Number of characters including spaces (approximate)</span>
                 <input type="text">
             </div>
             <div class="create-task-difficulty">
-                <span>Выбрать сложность</span>
+                <span>Choose the complexity level</span>
                 <div class="dropdown-comments-menu task-difficulty-list">
                     <span class="dropdown-comments-top">1</span>
                     <span class="dropdown-comments-toggle down fa"></span>
@@ -80,14 +80,14 @@
             <div>
                 <a href="" id="booklink" class="disabled">
 					<i class="fa fa-link" aria-hidden="true"></i>
-					Выбрать книгу
+					Choose an existing book
 				</a>
-                <input id="task-description" type="text" class="task-description" placeholder="Описание задачи (Название и тип создаваемой книги, языки и т.д.">
+                <input id="task-description" type="text" class="task-description" placeholder="Description of the task (title and category of book, etc.)">
                 <a href="" id="choose-editor">
 					<i class="fa fa-user-plus" aria-hidden="true"></i>
-					Выбрать редактора
+					Choose an editor
 				</a>
-                <button class="btn-create-task">Создать задание</button>
+                <button class="btn-create-task">Create a task</button>
             </div>
         </div>
 
@@ -789,16 +789,23 @@
             $('.dropdown-comments-menu.tab-create-list .dropdown-comments-item').click(function(event) {
                 $(this).parent().find('.dropdown-comments-list').toggleClass('hide');
                 $(this).parent().parent().find('.dropdown-comments-top').text($(this).text());
-                if ($(this).text() == "Создать книгу") {
+                if ($(this).text() == "Add a book") {
                     $('#booklink').addClass('disabled');
                 } else {
                     $('#booklink').removeClass('disabled');
                 };
+                if (($(this).text() == "Add a book") || ($(this).text() == "Add a language version")) {
+                    $('.create-task-symbols').removeClass('hide');
+                    $('.create-task-difficulty').removeClass('hide');                    
+                } else {
+                    $('.create-task-symbols').addClass('hide');
+                    $('.create-task-difficulty').addClass('hide');                    
+                }
             });
 
             // Выбор языка книги или перевода
-            $('.tasks-choose-language').on('click', 'li:not(.active)', function() {
-                $(this).addClass('active').siblings().removeClass('active');
+            $('.tasks-choose-language').on('click', 'li', function() {
+                $(this).toggleClass('active');
             });
 
             // Выбор в списке сложности Создать
@@ -855,6 +862,7 @@
 
             });
 
+            //Выбор модального окна в зависимости от источника перехода
             $('.tasks-main-table tr td').on('click', function() {
                 var currentTab = $(this).parent().parent().parent().parent().attr('id');
                 console.log(currentTab);
