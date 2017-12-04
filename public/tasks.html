@@ -790,15 +790,15 @@
                 $(this).parent().find('.dropdown-comments-list').toggleClass('hide');
                 $(this).parent().parent().find('.dropdown-comments-top').text($(this).text());
                 if ($(this).text() == "Add a book") {
+                    $('.create-task-symbols').removeClass('hide');
                     $('#booklink').addClass('disabled');
                 } else {
+                    $('.create-task-symbols').addClass('hide');
                     $('#booklink').removeClass('disabled');
                 };
-                if (($(this).text() == "Add a book") || ($(this).text() == "Add a language version")) {
-                    $('.create-task-symbols').removeClass('hide');
+                if (($(this).text() == "Add a book") || ($(this).text() == "Add a language version")) {                    
                     $('.create-task-difficulty').removeClass('hide');                    
-                } else {
-                    $('.create-task-symbols').addClass('hide');
+                } else {                    
                     $('.create-task-difficulty').addClass('hide');                    
                 }
             });
