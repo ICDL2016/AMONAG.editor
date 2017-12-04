@@ -19,18 +19,18 @@
             <li>Done</li>
         </ul>
         <ul class="right-filters-list list-current">
-            <li class="right-filters-item task-new">Новые <span class="filter-close"></span></li>
-            <li class="right-filters-item task-check">Ждут подтверждения <span class="filter-close"></span></li>
-            <li class="right-filters-item task-current">В работе <span class="filter-close"></span></li>
+            <li class="right-filters-item task-new">New <span class="filter-close"></span></li>
+            <li class="right-filters-item task-check">Waiting for confirmation <span class="filter-close"></span></li>
+            <li class="right-filters-item task-current">In work <span class="filter-close"></span></li>
         </ul>
         <ul class="right-filters-list list-check">
-            <li class="right-filters-item task-new">Отправлены на проверку <span class="filter-close"></span></li>
-            <li class="right-filters-item task-check">Приняты на проверку <span class="filter-close"></span></li>
-            <li class="right-filters-item task-current">Есть замечания <span class="filter-close"></span></li>
+            <li class="right-filters-item task-new">Sent for examination <span class="filter-close"></span></li>
+            <li class="right-filters-item task-check">Accepted for examination <span class="filter-close"></span></li>
+            <li class="right-filters-item task-current">Remarked <span class="filter-close"></span></li>
         </ul>
         <ul class="right-filters-list list-done">
-            <li class="right-filters-item task-check">Ожидают оплаты <span class="filter-close"></span></li>
-            <li class="right-filters-item task-current">Оплачены <span class="filter-close"></span></li>
+            <li class="right-filters-item task-check">Awainting the payment <span class="filter-close"></span></li>
+            <li class="right-filters-item task-current">Paid <span class="filter-close"></span></li>
         </ul>
 
         <!-- Создать -->
@@ -95,10 +95,10 @@
         <div id="tab-current-content" class="tabs-content">
             <table class="tasks-main-table">
                 <tr class="tasks-main-trth">
-                    <th class="tasks-main-th">ДАТА</th>
-                    <th class="tasks-main-th">ЗАДАНИЕ</th>
-                    <th class="tasks-main-th">ОПИСАНИЕ</th>
-                    <th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
+                    <th class="tasks-main-th">DATE</th>
+                    <th class="tasks-main-th">TASK</th>
+                    <th class="tasks-main-th">DESCRIPTION</th>
+                    <th class="tasks-main-th">EXECUTANT</th>
                 </tr>
                 <tr class="tasks-main-trtd task-new">
                     <td class="tasks-main-td">25.11.2017</td>
@@ -149,10 +149,10 @@
         <div id="tab-check-content" class="tabs-content">
             <table class="tasks-main-table">
                 <tr class="tasks-main-trth">
-                    <th class="tasks-main-th">ДАТА</th>
-                    <th class="tasks-main-th">ЗАДАНИЕ</th>
-                    <th class="tasks-main-th">ОПИСАНИЕ</th>
-                    <th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
+                    <th class="tasks-main-th">DATE</th>
+                    <th class="tasks-main-th">TASK</th>
+                    <th class="tasks-main-th">DESCRIPTION</th>
+                    <th class="tasks-main-th">EXECUTANT</th>
                 </tr>
                 <tr class="tasks-main-trtd task-new">
                     <td class="tasks-main-td">25.11.2017</td>
@@ -179,10 +179,10 @@
         <div id="tab-done-content" class="tabs-content">
             <table class="tasks-main-table">
                 <tr class="tasks-main-trth">
-                    <th class="tasks-main-th">ДАТА</th>
-                    <th class="tasks-main-th">ЗАДАНИЕ</th>
-                    <th class="tasks-main-th">ОПИСАНИЕ</th>
-                    <th class="tasks-main-th">ИСПОЛНИТЕЛЬ</th>
+                    <th class="tasks-main-th">DATE</th>
+                    <th class="tasks-main-th">TASK</th>
+                    <th class="tasks-main-th">DESCRIPTION</th>
+                    <th class="tasks-main-th">EXECUTANT</th>
                 </tr>
                 <tr class="tasks-main-trtd task-current">
                     <td class="tasks-main-td">25.11.2017</td>
@@ -771,11 +771,11 @@
             $('ul.tabs-caption').on('click', 'li:not(.active)', function() {
                 $(this).addClass('active').siblings().removeClass('active').closest('div.tasks__overflow').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
                 $('.right-filters-list').removeClass('show-me');
-                if ($(this).text() == "Текущие") {
+                if ($(this).text() == "In work") {
                     if (!$('.list-current').hasClass('show-me')) $('.list-current').addClass('show-me');
-                } else if ($(this).text() == "На проверке") {
+                } else if ($(this).text() == "On examination") {
                     if (!$('.list-check').hasClass('show-me')) $('.list-check').addClass('show-me');
-                } else if ($(this).text() == "Выполненные") {
+                } else if ($(this).text() == "Done") {
                     if (!$('.list-done').hasClass('show-me')) $('.list-done').addClass('show-me');
                 } else {
 
