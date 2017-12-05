@@ -999,6 +999,15 @@ table {
     background-color: #6f751f;
 }
 
+.modal-button.disabled {
+    cursor: default;
+    background-color: #cdcdcd;
+}
+
+.modal-button.disabled:hover {
+    background-color: #cdcdcd;
+}
+
 .collapse-comment.fa.js-notice,
 .expand-comment.fa.js-notice {
     margin-top: -5px;
