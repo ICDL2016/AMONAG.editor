@@ -575,7 +575,10 @@
                             <td>The task was accepted for examination</td>
                         </tr>
                     </table>
-                    <button class="modal-button">Remark</button>
+                    <div class="modal-task-remark hide">
+                        <textarea class="remark-input" placeholder="Your remark is here."></textarea>
+                    </div>
+                    <button class="modal-button modal-remark-button">Remark</button>
                     <button class="modal-button">Send for payment</button>
                     </table>
                 </div>
@@ -900,6 +903,11 @@
                 $(this).parent().parent().find('.editor-item-name').text($(this).text());
                 $('#open-modal-check .modal-list-attr:nth-child(4) li:nth-child(3)').text('500');
                 $('#open-modal-check .modal-button').removeClass('disabled');
+            });
+            
+            // Поле ввода текста заметки в модальном окне
+            $('.modal-remark-button').on('click', function() {
+                $(this).parent().find('.modal-task-remark').removeClass('hide');
             });
             
             // Раскрытие заметок в модальном окне
