@@ -586,11 +586,12 @@
                             <td>The task was accepted for examination</td>
                         </tr>
                     </table>
-                    <div class="modal-task-remark hide">
+                    <div class="modal-task-remark hide">                       
                         <textarea class="remark-input" placeholder="Your remark is here."></textarea>
                     </div>
                     <button class="modal-button modal-remark-button">Remark</button>
                     <button class="modal-button">Send for payment</button>
+                    <button class="new-comment-send hide" type="submit"><i class="fa fa-paper-plane" aria-hidden="true" title="Send"></i></button>
                     </table>
                 </div>
             </div>
@@ -1014,6 +1015,7 @@
             // Поле ввода текста заметки в модальном окне
             $('.modal-remark-button').on('click', function() {
                 $(this).parent().find('.modal-task-remark').removeClass('hide');
+                $(this).parent().find('.new-comment-send').removeClass('hide');
             });
             
             // Раскрытие заметок в модальном окне

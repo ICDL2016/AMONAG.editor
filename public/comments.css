@@ -991,6 +991,15 @@ table {
     margin-bottom: 20px;
 }
 
+#open-modal-taken .new-comment-send {
+    margin-top: 5px;
+    float: right;
+}
+
+#open-modal-taken .new-comment-send:hover {
+    color: #6f751f;
+}
+
 .modal-button {
     width: 200px;
     margin-right: 10px;
