@@ -677,6 +677,7 @@
                             <td>
                                 The task is remarked <span class="collapse-comment fa js-notice" title="Hide"></span>
                                 <p class="modal-table-notice hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, magnam tempora error saepe perspiciatis corporis.</p>
+                                <a href="" class="modal-edit-remark hide"><span class="edit-comment fa modal-choose-editor" title="Edit"></span></a>
                             </td>
                         </tr>
                     </table>
@@ -1026,11 +1027,13 @@
                         title: 'Hide'
                     });
                     $(this).parent().find('p').removeClass('hide');
+                    $(this).parent().find('a').removeClass('hide');
                 } else {
                     $(this).attr({
                         title: 'Show'
                     });
                     $(this).parent().find('p').addClass('hide');
+                    $(this).parent().find('a').addClass('hide');
                 };
             });
 

@@ -1032,8 +1032,23 @@ table {
 .modal-table-notice {
     margin: 5px 0 0 5px;
     padding: 10px;
-
     background-color: #eee;
+}
+
+#open-modal-noticed .modal-table-notice {
+    width: calc( 100% - 30px ); 
+    display: inline-block;
+}
+
+.modal-edit-remark {
+    float: right;
+    display: inline-block;
+    margin-top: 15px;
+    color: #444;
+}
+
+.modal-edit-remark:hover {
+    color: #6f751f;
 }
 
 /*Responsive for modal*/
