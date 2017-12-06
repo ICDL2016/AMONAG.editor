@@ -1026,12 +1026,14 @@
                     $(this).attr({
                         title: 'Hide'
                     });
-                    $(this).parent().find('p').removeClass('hide');                    
+                    $(this).parent().find('p').removeClass('hide');
+                    $(this).parent().find('a').removeClass('hide');
                 } else {
                     $(this).attr({
                         title: 'Show'
                     });
-                    $(this).parent().find('p').addClass('hide');                    
+                    $(this).parent().find('p').addClass('hide');
+                    $(this).parent().find('a').addClass('hide');                    
                 };
             });
 
