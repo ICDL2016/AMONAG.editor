@@ -986,13 +986,14 @@ table {
 }
 
 .modal-task-remark textarea {    
-    width: 100%;
+    width: calc( 100% - 50px );
     height: 4em;
     margin-bottom: 20px;
 }
 
 #open-modal-taken .new-comment-send {
-    margin-top: 5px;
+    display: inline-block;
+    margin-top: 1em;
     float: right;
 }
 

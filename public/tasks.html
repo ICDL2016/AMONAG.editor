@@ -588,10 +588,10 @@
                     </table>
                     <div class="modal-task-remark hide">                       
                         <textarea class="remark-input" placeholder="Your remark is here."></textarea>
+                        <button class="new-comment-send" type="submit"><i class="fa fa-paper-plane" aria-hidden="true" title="Send"></i></button>
                     </div>
                     <button class="modal-button modal-remark-button">Remark</button>
-                    <button class="modal-button">Send for payment</button>
-                    <button class="new-comment-send hide" type="submit"><i class="fa fa-paper-plane" aria-hidden="true" title="Send"></i></button>
+                    <button class="modal-button">Send for payment</button>                    
                     </table>
                 </div>
             </div>
@@ -1026,14 +1026,12 @@
                     $(this).attr({
                         title: 'Hide'
                     });
-                    $(this).parent().find('p').removeClass('hide');
-                    $(this).parent().find('a').removeClass('hide');
+                    $(this).parent().find('p').removeClass('hide');                    
                 } else {
                     $(this).attr({
                         title: 'Show'
                     });
-                    $(this).parent().find('p').addClass('hide');
-                    $(this).parent().find('a').addClass('hide');
+                    $(this).parent().find('p').addClass('hide');                    
                 };
             });
 
