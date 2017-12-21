@@ -1061,10 +1061,10 @@ table {
 /*Responsive for modal*/
 
 
-@media (max-width: 1333px) {
+@media (max-width: 1370px) {
 
     .modal-table-div {
-        height: 400px;
+        height: 350px;
     }
 
 }
@@ -1100,7 +1100,5 @@ table {
 }
 
 @media (max-width: 800px) {
-    .modal-table-div {
-        height: 350px;
-    }
+
 }
