@@ -953,6 +953,11 @@ table {
     background-color: #6f751f;
 }
 
+.modal-table-div {
+    height: 500px;
+    overflow: auto;
+}
+
 .modal-table {
     width: 100%;
     margin: 10px 0 20px;
@@ -985,7 +990,7 @@ table {
     border-bottom: 2px solid #ccc;
 }
 
-.modal-task-remark textarea {    
+.modal-task-remark textarea {
     width: calc( 100% - 50px );
     height: 4em;
     margin-bottom: 20px;
@@ -1037,7 +1042,7 @@ table {
 }
 
 #open-modal-noticed .modal-table-notice {
-    width: calc( 100% - 30px ); 
+    width: calc( 100% - 30px );
     display: inline-block;
 }
 
