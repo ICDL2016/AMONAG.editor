@@ -836,7 +836,7 @@ table {
     position: relative;
 
     width: 80%;
-    height: 80vh;
+    max-height: 80vh;
     margin: 10vh auto;
     padding: 20px;
 
@@ -956,7 +956,7 @@ table {
 
 .modal-table-div {
     padding-right: 10px;
-    height: 450px;
+    max-height: 450px;
     overflow: auto;
 }
 
@@ -1065,7 +1065,7 @@ table {
 @media (max-width: 1370px) {
 
     .modal-table-div {
-        height: 400px;
+        max-height: 400px;
     }
 
 }
@@ -1102,6 +1102,6 @@ table {
 
 @media (max-width: 800px) {
     .modal-table-div {
-        height: 350px;
+        max-height: 350px;
     }
 }
