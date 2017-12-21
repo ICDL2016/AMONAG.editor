@@ -836,7 +836,8 @@ table {
     position: relative;
 
     width: 80%;
-    margin: 3% auto;
+    height: 80vh;
+    margin: 10vh auto;
     padding: 20px;
 
     color: #444;
