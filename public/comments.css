@@ -954,6 +954,7 @@ table {
 }
 
 .modal-table-div {
+    padding-right: 10px;
     height: 500px;
     overflow: auto;
 }
@@ -1059,6 +1060,15 @@ table {
 
 /*Responsive for modal*/
 
+
+@media (max-width: 1333px) {
+
+    .modal-table-div {
+        height: 400px;
+    }
+
+}
+
 @media (max-width: 1024px) {
     .tabs-caption li {
         margin-bottom: 5px;
@@ -1089,4 +1099,8 @@ table {
     }
 }
 
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+    .modal-table-div {
+        height: 350px;
+    }
+}
