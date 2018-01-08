@@ -853,7 +853,7 @@ table {
     top: 0;
     right: 0;
 
-    width: 70px;
+    width: 50px;
 
     text-align: center;
     text-decoration: none;
@@ -1012,7 +1012,6 @@ table {
     width: 200px;
     margin-right: 10px;
     padding: 10px;
-
     color: #fff;
     border: none;
     background-color: #626062;
@@ -1095,13 +1094,47 @@ table {
         margin-bottom: 10px;
     }
 
+    .modal-lists-block ul li {
+        font-size: 14px;
+    }
+
     .tasks-main-table th {
         font-size: 16px;
     }
 }
 
 @media (max-width: 800px) {
+
     .modal-table-div {
-        max-height: 350px;
+        max-height: 300px;
     }
+
+    .modal-lists-block ul {
+        width: 30%;
+    }
+
+    .modal-lists-block ul:nth-child(2) {
+        width: 70%;
+        clear: both;
+    }
+
+    .modal-lists-block ul:nth-child(3) {
+        width: 30%;
+    }
+
+    .modal-lists-block ul:nth-child(4) {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .tasks-choose-language li {
+        font-size: 12px;
+        padding: 7px;
+    }
+
+
+
 }
