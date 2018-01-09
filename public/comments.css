@@ -1135,6 +1135,18 @@ table {
         padding: 7px;
     }
 
+    .modal-lists-block ul li {
+        font-size: 12px;
+    }
+
+    .modal-table {
+        font-size: 12px;
+    }
+
+    .modal-button {
+        width: 150px;
+        font-size: 12px;
+    }
 
 
 }
