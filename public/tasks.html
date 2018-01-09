@@ -1116,7 +1116,9 @@
             function modalTableHeight() {
                 var windowHeight = $(window).height();
                 if (windowHeight < 600) {
-                    $('.modal-table-div').css('max-height','300px');
+                    $('.modal-table-div').css('max-height','200px');
+                } else if (windowHeight < 800) {
+                    $('.modal-table-div').css('max-height','250px');
                 } else {
                     $('.modal-table-div').css('max-height','400px');
                 }
