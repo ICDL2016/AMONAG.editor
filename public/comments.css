@@ -1105,6 +1105,12 @@ table {
 
 @media (max-width: 800px) {
 
+    .modal-window > div {
+        width: 80%;
+        max-height: 90vh;
+        margin: 5vh auto;
+    }
+
     .modal-table-div {
         max-height: 300px;
     }
