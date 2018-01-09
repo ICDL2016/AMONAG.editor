@@ -1112,6 +1112,19 @@
                 };
             });
 
+            // Определение высоты таблицы модального окна
+            function modalTableHeight() {
+                var windowHeight = $(window).height();
+                if (windowHeight < 600) {
+                    $('.modal-table-div').css('max-height','300px');
+                } else {
+                    $('.modal-table-div').css('max-height','400px');
+                }
+            };
+
+            $(window).on('load resize',modalTableHeight);
+
+
         }; // End main
 
         $(document).ready(main);
