@@ -607,7 +607,7 @@ table {
     content: '+';
 }
 
-/*Создать*/
+/*РЎРѕР·РґР°С‚СЊ*/
 
 #tab-create-content div {
     text-align: center;
@@ -728,7 +728,7 @@ table {
     background-color: #6f751f;
 }
 
-/*Текущие - На проверке - Выполненные*/
+/*РўРµРєСѓС‰РёРµ - РќР° РїСЂРѕРІРµСЂРєРµ - Р’С‹РїРѕР»РЅРµРЅРЅС‹Рµ*/
 
 .tasks-main-table {
     width: 100%;
@@ -808,7 +808,7 @@ table {
     color: #000;
 }
 
-/*Модальное окно*/
+/*РњРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ*/
 
 .modal-window {
     position: fixed;
@@ -839,6 +839,8 @@ table {
     max-height: 80vh;
     margin: 10vh auto;
     padding: 20px;
+    
+    overflow: auto;
 
     color: #444;
     border: 2px solid #ccc;
@@ -956,8 +958,10 @@ table {
 
 .modal-table-div {
     padding-right: 10px;
+/*
     max-height: 450px;
     overflow: auto;
+*/
 }
 
 .modal-table {
@@ -1154,5 +1158,9 @@ table {
         font-size: 12px;
     }
 
+
+}
+
+@media only screen and (max-device-width: 480px) {
 
 }
