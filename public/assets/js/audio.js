@@ -243,7 +243,7 @@ $(function () {
   var slideShowIndex;
   //запуск слайд шоу с воспроизведением
   $('.js-translation-slideshow').on('click', function (e) {
-    myPlaylist.play(currentIndex);
+//    myPlaylist.play(currentIndex);
     slideShowIndex = currentIndex;
     isSlideshow = true;
     $('.translations').addClass('slideshow-active');
